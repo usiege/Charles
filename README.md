@@ -10,6 +10,8 @@ Finally!
 
 ### wow
 
+* [wow插件是个什么鬼](https://blog.csdn.net/jianin45/article/details/52312859)
+
 ### 其它
 
 ### 或许可以有些开源
