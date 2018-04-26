@@ -12,6 +12,9 @@ Finally!
 
 ### iOS
 
+* [MGJRouter我的代码分析](https://www.jianshu.com/p/372560dcbc6f)
+
+
 ### wow
 
 * [I am a wower](https://blog.csdn.net/jianin45/article/details/52152345)
@@ -27,4 +30,4 @@ Finally!
 
 ### 一定有你想要的
 
-### 分享一些东西
+### 分享&总结
