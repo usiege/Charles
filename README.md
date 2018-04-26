@@ -10,6 +10,7 @@ Finally!
 
 ### wow
 
+* [I am a wower](https://blog.csdn.net/jianin45/article/details/52152345)
 * [wow插件是个什么鬼](https://blog.csdn.net/jianin45/article/details/52312859)
 
 ### 其它
