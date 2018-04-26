@@ -23,7 +23,7 @@ Finally!
 ### python
 
 * [首先你得有个Python个人博客](https://blog.csdn.net/jianin45/article/details/51339666)
-* [Django有个坑](https://blog.csdn.net/jianin45/article/details/78345758)
+* [安装Django有个坑](https://blog.csdn.net/jianin45/article/details/78345758)
 
 ### 其它
 
