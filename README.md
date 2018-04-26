@@ -12,7 +12,7 @@ Finally!
 
 ### iOS
 
-* [MGJRouter我的代码分析](https://www.jianshu.com/p/372560dcbc6f)
+* [MGJRouter你的代码分析](https://www.jianshu.com/p/372560dcbc6f)
 
 
 ### wow
