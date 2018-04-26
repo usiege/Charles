@@ -1,5 +1,9 @@
-# Charles
+# I am Charles 
+
+[@消失的指针](http://weibo.com/230126045)
+
 Finally! 
+
 你发现永远无法满足自己内心的完美，你多数情况下做事情总是陷入一个错误的循环：“下决心尽早好好完成 -------> 坏了没时间完成 -------> 加班尽量好好完成 -------> 来不及了凑合完成 -------> 算了反正也完成不了了 -------> 索性放弃吧，反正也没有什么用”。
 
 于是你把这个过程记录在这里，告诉自己，“首先你要完成 -------> 完成不了就写一句话 -------> 也许可以稍微再加点  -------> 看看还能不能做的更好 -------> 也许就是能做的够好呢”。
@@ -12,6 +16,10 @@ Finally!
 
 * [I am a wower](https://blog.csdn.net/jianin45/article/details/52152345)
 * [wow插件是个什么鬼](https://blog.csdn.net/jianin45/article/details/52312859)
+
+### python
+
+* [首先你得有个Python个人博客](https://blog.csdn.net/jianin45/article/details/51339666)
 
 ### 其它
 
