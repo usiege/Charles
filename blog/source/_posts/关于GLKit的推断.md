@@ -5,6 +5,7 @@ tags: [opengles, GLKit]
 -----------
 
 Summary:本篇是对OpenGLES_Ch2_1中的缓存管理代码的简单重用和重构，用以加深对GLKView的理解。苹果的GLKit框架封装了gl的具体实现，以便使用gl的用户减少编写gl的代码量以及避免不必要的错误。
+
 <!-- more -->
 
 本文介绍两个封装类，`AGLKContext`和`AGLKVertexAttribArrayBuffer`，前者是内建的`EAGLContext`的简单子类，后者封装了使用OpenGLES2.0顶点属性数组缓存的7个步骤；

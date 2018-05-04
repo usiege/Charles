@@ -7,7 +7,6 @@ tags: [opengles]
 Summary: 本篇通过一个AGLKView的示例来深入了解一下上篇中GLKView的工作原理，目的是为了消除GLKView、Core Animation、OpenGLES间交互的神秘感；
 <!-- more -->
 
-本篇通过一个AGLKView的示例来深入了解一下上篇中GLKView的工作原理，目的是为了消除GLKView、Core Animation、OpenGLES间交互的神秘感；
 本例位于[点击此处下载本文例子](https://github.com/usiege/OpenGLES/tree/master/OpenGLES_Ch2/OpenGLES_Ch2_2)，建议将例子下下来，边看本文解析，边自己实现该例子；
 
 ```OC

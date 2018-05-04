@@ -10,10 +10,6 @@ Setting up CocoaPods master repo
 ```
 <!-- more -->
 
-最近公司的项目需要添加几个依赖库，用pod更新的时候发现一直卡在了
-```
-Setting up CocoaPods master repo
-```
 
 继而是漫长的等待，在这个期间我不知道它发生了什么。
 

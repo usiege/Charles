@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="NOTHING">
 <meta property="og:description" content="Summary: 本篇通过一个AGLKView的示例来深入了解一下上篇中GLKView的工作原理，目的是为了消除GLKView、Core Animation、OpenGLES间交互的神秘感；">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-04T08:49:08.154Z">
+<meta property="og:updated_time" content="2018-05-04T10:26:01.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="GLKView是如何工作的">
 <meta name="twitter:description" content="Summary: 本篇通过一个AGLKView的示例来深入了解一下上篇中GLKView的工作原理，目的是为了消除GLKView、Core Animation、OpenGLES间交互的神秘感；">
@@ -353,7 +353,7 @@
 
       
         <p>Summary: 本篇通过一个AGLKView的示例来深入了解一下上篇中GLKView的工作原理，目的是为了消除GLKView、Core Animation、OpenGLES间交互的神秘感；<br><a id="more"></a></p>
-<p>本篇通过一个AGLKView的示例来深入了解一下上篇中GLKView的工作原理，目的是为了消除GLKView、Core Animation、OpenGLES间交互的神秘感；<br>本例位于<a href="https://github.com/usiege/OpenGLES/tree/master/OpenGLES_Ch2/OpenGLES_Ch2_2" target="_blank" rel="noopener">点击此处下载本文例子</a>，建议将例子下下来，边看本文解析，边自己实现该例子；</p>
+<p>本例位于<a href="https://github.com/usiege/OpenGLES/tree/master/OpenGLES_Ch2/OpenGLES_Ch2_2" target="_blank" rel="noopener">点击此处下载本文例子</a>，建议将例子下下来，边看本文解析，边自己实现该例子；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">+ (Class)layerClass</span><br><span class="line">&#123;</span><br><span class="line">   return [CAEAGLLayer class];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>每个UIView都有一个相关联的Core Animation层；Cocoa Touch会调用该方法决定生成一个什么样的层;<br>CAEAGLLayer会与一个OGE帧缓存共享它的像素仓库；CAEAGLLayer是Core Animation提供的标准层之一；</p>
 <blockquote>
