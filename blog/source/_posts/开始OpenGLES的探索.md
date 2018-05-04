@@ -35,14 +35,14 @@ Summary: 本系列文章是学习《OpenGL ES应用开发实践指南 iOS卷》�
 下面这个结构体用来保存一个坐标，它是一个起始于坐标系原点的矢量（X,Y,Z）
 
 
-```
+```C++
 //This data type is used to store information for each vertex
 typedef struct {
     GLKVector3  positionCoords;
 }SceneVertex;
 ```
 
-```
+```C++
 //用来定义三角形，以下空白部分是最后在屏幕上显示的结果，纯属娱乐
 /*
  *************
@@ -78,7 +78,7 @@ NSAssert([view isKindOfClass:[GLKView class]],
 
 OpenGL ES的上下文不仅会保存它的状态，还会控制GPU去执行渲染运算,EAGLContext会封装一个特定于某个平台的上下文，一个应用可以使用多个上下文;
 
-```
+```C++
 // Create an OpenGL ES 2.0 context and provide it to the
 // view
 view.context = [[EAGLContext alloc]
@@ -114,7 +114,7 @@ glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // background color
 
 3.复制数据到缓存；
 
-```
+```C++
 // Generate, bind, and initialize contents of a buffer to be
 // stored in GPU memory
 glGenBuffers(1,                // STEP 1
@@ -149,7 +149,7 @@ glBufferData(                  // STEP 3
 
 6.绘图；
 
-```
+```C++
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
     [self.baseEffect prepareToDraw];
@@ -186,7 +186,7 @@ CPU运算和GPU运算是异步的，这个例子的所有代码都是运行在CP
 
 ##viewDidUnload
     
-```
+```C++
 - (void)viewDidUnload
 {
     [super viewDidUnload];

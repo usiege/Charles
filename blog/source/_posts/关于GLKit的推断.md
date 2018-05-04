@@ -13,7 +13,7 @@ Summary:本篇是对OpenGLES_Ch2_1中的缓存管理代码的简单重用和重�
 
 ## `AGLKContext.m`
 
-```
+```C++
 // This method sets the clear (background) RGBA color.
 // The clear color is undefined until this method is called.
 - (void)setClearColor:(GLKVector4)clearColorRGBA
@@ -31,7 +31,7 @@ Summary:本篇是对OpenGLES_Ch2_1中的缓存管理代码的简单重用和重�
 }
 ```
 
-```
+```C++
 /////////////////////////////////////////////////////////////////
 // This method instructs OpenGL ES to set all data in the
 // current Context's Render Buffer(s) identified by mask to
@@ -69,7 +69,7 @@ glClear()函数的作用是用当前缓冲区清除值，也就是glClearColor�
  
 * glGenBuffers  
 
-```
+```C++
 // This method creates a vertex attribute array buffer in
 // the current OpenGL ES context for the thread upon which this 
 // method is called.
@@ -106,7 +106,7 @@ glClear()函数的作用是用当前缓冲区清除值，也就是glClearColor�
 
 glGenBuffers()创建缓存对象并且返回缓存对象的标示符。它需要2个参数：第一个为需要创建的缓存数量，第二个为用于存储单一ID或多个ID的GLuint变量或数组的地址。
 	
-```
+```C++
 void glGenBuffers(GLsizei n, GLuint *buffers);
 //在buffers数组中返回当前n个未使用的名称，表示缓冲区对象
 GLboolean glIsBuffer(GLuint buffer);
@@ -129,7 +129,7 @@ target告诉顶点缓存对象(VBO)该缓存对象将保存顶点数组数据还
  
 当缓存初始化之后，你可以使用glBufferData()将数据拷贝到缓存对象。    
 
-```
+```C++
 void glBufferData(GLenum target，GLsizeiptr size, const GLvoid* data, GLenum usage);
 ```
 
@@ -148,7 +148,7 @@ GL_STREAM_COPY
 
 
 
-```
+```C++
 // A vertex attribute array buffer must be prepared when your 
 // application wants to use the buffer to render any geometry. 
 // When your application prepares an buffer, some OpenGL ES state
@@ -202,7 +202,7 @@ GL_STREAM_COPY
 
 * glVertexAttribPointer 
  
-``` 
+```C++
 void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride,const GLvoid * pointer);
 ```
 
@@ -220,7 +220,7 @@ void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean nor
 *pointer*
 指定第一个组件在数组的第一个顶点属性中的偏移量。该数组与GL_ARRAY_BUFFER绑定，储存于缓冲区中。初始值为0；
 
-```
+```C++
 // Submits the drawing command identified by mode and instructs
 // OpenGL ES to use count vertices from the buffer starting from
 // the vertex at index first. Vertex indices start at 0.

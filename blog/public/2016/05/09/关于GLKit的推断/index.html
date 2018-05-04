@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="NOTHING">
 <meta property="og:description" content="Summary:本篇是对OpenGLES_Ch2_1中的缓存管理代码的简单重用和重构，用以加深对GLKView的理解。苹果的GLKit框架封装了gl的具体实现，以便使用gl的用户减少编写gl的代码量以及避免不必要的错误。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-04T10:24:02.221Z">
+<meta property="og:updated_time" content="2018-05-04T16:23:39.590Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于GLKit的推断">
 <meta name="twitter:description" content="Summary:本篇是对OpenGLES_Ch2_1中的缓存管理代码的简单重用和重构，用以加深对GLKView的理解。苹果的GLKit框架封装了gl的具体实现，以便使用gl的用户减少编写gl的代码量以及避免不必要的错误。">
@@ -192,7 +192,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+          <a href="/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -202,7 +202,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -212,7 +212,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -222,7 +222,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -355,8 +355,8 @@
         <p>Summary:本篇是对OpenGLES_Ch2_1中的缓存管理代码的简单重用和重构，用以加深对GLKView的理解。苹果的GLKit框架封装了gl的具体实现，以便使用gl的用户减少编写gl的代码量以及避免不必要的错误。</p>
 <a id="more"></a>
 <p>本文介绍两个封装类，<code>AGLKContext</code>和<code>AGLKVertexAttribArrayBuffer</code>，前者是内建的<code>EAGLContext</code>的简单子类，后者封装了使用OpenGLES2.0顶点属性数组缓存的7个步骤；</p>
-<h2 id="AGLKContext-m"><a href="#AGLKContext-m" class="headerlink" title="AGLKContext.m"></a><code>AGLKContext.m</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// This method sets the clear (background) RGBA color.</span><br><span class="line">// The clear color is undefined until this method is called.</span><br><span class="line">- (void)setClearColor:(GLKVector4)clearColorRGBA</span><br><span class="line">&#123;</span><br><span class="line">   clearColor = clearColorRGBA;</span><br><span class="line">    </span><br><span class="line">   NSAssert(self == [[self class] currentContext],</span><br><span class="line">      @&quot;Receiving context required to be current context&quot;);</span><br><span class="line">      </span><br><span class="line">   glClearColor(</span><br><span class="line">      clearColorRGBA.r, </span><br><span class="line">      clearColorRGBA.g, </span><br><span class="line">      clearColorRGBA.b, </span><br><span class="line">      clearColorRGBA.a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/////////////////////////////////////////////////////////////////</span><br><span class="line">// This method instructs OpenGL ES to set all data in the</span><br><span class="line">// current Context&apos;s Render Buffer(s) identified by mask to</span><br><span class="line">// colors (values) specified via -setClearColor: and/or</span><br><span class="line">// OpenGL ES functions for each Render Buffer type.</span><br><span class="line">- (void)clear:(GLbitfield)mask</span><br><span class="line">&#123;</span><br><span class="line">   NSAssert(self == [[self class] currentContext],</span><br><span class="line">      @&quot;Receiving context required to be current context&quot;);</span><br><span class="line">      </span><br><span class="line">   glClear(mask);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="AGLKContext-m"><a href="#AGLKContext-m" class="headerlink" title="AGLKContext.m"></a><code>AGLKContext.m</code></h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This method sets the clear (background) RGBA color.</span></span><br><span class="line"><span class="comment">// The clear color is undefined until this method is called.</span></span><br><span class="line">- (<span class="keyword">void</span>)setClearColor:(GLKVector4)clearColorRGBA</span><br><span class="line">&#123;</span><br><span class="line">   clearColor = clearColorRGBA;</span><br><span class="line">    </span><br><span class="line">   NSAssert(self == [[self class] currentContext],</span><br><span class="line">      @<span class="string">"Receiving context required to be current context"</span>);</span><br><span class="line">      </span><br><span class="line">   glClearColor(</span><br><span class="line">      clearColorRGBA.r, </span><br><span class="line">      clearColorRGBA.g, </span><br><span class="line">      clearColorRGBA.b, </span><br><span class="line">      clearColorRGBA.a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/////////////////////////////////////////////////////////////////</span></span><br><span class="line"><span class="comment">// This method instructs OpenGL ES to set all data in the</span></span><br><span class="line"><span class="comment">// current Context's Render Buffer(s) identified by mask to</span></span><br><span class="line"><span class="comment">// colors (values) specified via -setClearColor: and/or</span></span><br><span class="line"><span class="comment">// OpenGL ES functions for each Render Buffer type.</span></span><br><span class="line">- (<span class="keyword">void</span>)clear:(GLbitfield)mask</span><br><span class="line">&#123;</span><br><span class="line">   NSAssert(self == [[self class] currentContext],</span><br><span class="line">      @<span class="string">"Receiving context required to be current context"</span>);</span><br><span class="line">      </span><br><span class="line">   glClear(mask);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>函数原型: <code>void glClear(GLbitfield mask);</code><br>参数说明：<br>GLbitfield：可以使用 | 运算符组合不同的缓冲标志位，表明需要清除的缓冲，例如glClear（GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT）表示要清除颜色缓冲以及深度缓冲，可以使用以下标志位    </p>
 </blockquote>
@@ -373,9 +373,9 @@ GL_STENCIL_BUFFER_BIT:  模板缓冲
 <li><p>glGenBuffers  </p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">// This method creates a vertex attribute array buffer in</span><br><span class="line">// the current OpenGL ES context for the thread upon which this </span><br><span class="line">// method is called.</span><br><span class="line">- (id)initWithAttribStride:(GLsizei)aStride</span><br><span class="line">   numberOfVertices:(GLsizei)count</span><br><span class="line">   bytes:(const GLvoid *)dataPtr</span><br><span class="line">   usage:(GLenum)usage;</span><br><span class="line">&#123;</span><br><span class="line">   NSParameterAssert(0 &lt; aStride);</span><br><span class="line">   NSAssert((0 &lt; count &amp;&amp; NULL != dataPtr) ||</span><br><span class="line">      (0 == count &amp;&amp; NULL == dataPtr),</span><br><span class="line">      @&quot;data must not be NULL or count &gt; 0&quot;);</span><br><span class="line">      </span><br><span class="line">   if(nil != (self = [super init]))</span><br><span class="line">   &#123;</span><br><span class="line">      stride = aStride;</span><br><span class="line">      bufferSizeBytes = stride * count;</span><br><span class="line">      </span><br><span class="line">      glGenBuffers(1,                // STEP 1</span><br><span class="line">         &amp;name);</span><br><span class="line">      glBindBuffer(GL_ARRAY_BUFFER,  // STEP 2</span><br><span class="line">         self.name); </span><br><span class="line">      glBufferData(                  // STEP 3</span><br><span class="line">         GL_ARRAY_BUFFER,  // Initialize buffer contents</span><br><span class="line">         bufferSizeBytes,  // Number of bytes to copy</span><br><span class="line">         dataPtr,          // Address of bytes to copy</span><br><span class="line">         usage);           // Hint: cache in GPU memory</span><br><span class="line">         </span><br><span class="line">      NSAssert(0 != name, @&quot;Failed to generate name&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">   return self;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This method creates a vertex attribute array buffer in</span></span><br><span class="line"><span class="comment">// the current OpenGL ES context for the thread upon which this </span></span><br><span class="line"><span class="comment">// method is called.</span></span><br><span class="line">- (id)initWithAttribStride:(GLsizei)aStride</span><br><span class="line">   numberOfVertices:(GLsizei)count</span><br><span class="line">   bytes:(<span class="keyword">const</span> GLvoid *)dataPtr</span><br><span class="line">   usage:(GLenum)usage;</span><br><span class="line">&#123;</span><br><span class="line">   NSParameterAssert(<span class="number">0</span> &lt; aStride);</span><br><span class="line">   NSAssert((<span class="number">0</span> &lt; count &amp;&amp; <span class="literal">NULL</span> != dataPtr) ||</span><br><span class="line">      (<span class="number">0</span> == count &amp;&amp; <span class="literal">NULL</span> == dataPtr),</span><br><span class="line">      @<span class="string">"data must not be NULL or count &gt; 0"</span>);</span><br><span class="line">      </span><br><span class="line">   <span class="keyword">if</span>(nil != (self = [super init]))</span><br><span class="line">   &#123;</span><br><span class="line">      stride = aStride;</span><br><span class="line">      bufferSizeBytes = stride * count;</span><br><span class="line">      </span><br><span class="line">      glGenBuffers(<span class="number">1</span>,                <span class="comment">// STEP 1</span></span><br><span class="line">         &amp;name);</span><br><span class="line">      glBindBuffer(GL_ARRAY_BUFFER,  <span class="comment">// STEP 2</span></span><br><span class="line">         self.name); </span><br><span class="line">      glBufferData(                  <span class="comment">// STEP 3</span></span><br><span class="line">         GL_ARRAY_BUFFER,  <span class="comment">// Initialize buffer contents</span></span><br><span class="line">         bufferSizeBytes,  <span class="comment">// Number of bytes to copy</span></span><br><span class="line">         dataPtr,          <span class="comment">// Address of bytes to copy</span></span><br><span class="line">         usage);           <span class="comment">// Hint: cache in GPU memory</span></span><br><span class="line">         </span><br><span class="line">      NSAssert(<span class="number">0</span> != name, @<span class="string">"Failed to generate name"</span>);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> self;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>glGenBuffers()创建缓存对象并且返回缓存对象的标示符。它需要2个参数：第一个为需要创建的缓存数量，第二个为用于存储单一ID或多个ID的GLuint变量或数组的地址。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">void glGenBuffers(GLsizei n, GLuint *buffers);</span><br><span class="line">//在buffers数组中返回当前n个未使用的名称，表示缓冲区对象</span><br><span class="line">GLboolean glIsBuffer(GLuint buffer);</span><br><span class="line">//判断是否是缓冲区对象</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">glGenBuffers</span><span class="params">(GLsizei n, GLuint *buffers)</span></span>;</span><br><span class="line"><span class="comment">//在buffers数组中返回当前n个未使用的名称，表示缓冲区对象</span></span><br><span class="line"><span class="function">GLboolean <span class="title">glIsBuffer</span><span class="params">(GLuint buffer)</span></span>;</span><br><span class="line"><span class="comment">//判断是否是缓冲区对象</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>glBindBuffer  </li>
 </ul>
@@ -386,9 +386,9 @@ GL_STENCIL_BUFFER_BIT:  模板缓冲
 <li>glBufferData   </li>
 </ul>
 <p>当缓存初始化之后，你可以使用glBufferData()将数据拷贝到缓存对象。    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void glBufferData(GLenum target，GLsizeiptr size, const GLvoid* data, GLenum usage);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">glBufferData</span><span class="params">(GLenum target，GLsizeiptr size, <span class="keyword">const</span> GLvoid* data, GLenum usage)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>第一个参数target可以为GL_ARRAY_BUFFER或GL_ELEMENT_ARRAY。size为待传递数据字节数量。第三个参数为源数据数组指针，如data为NULL，则VBO仅仅预留给定数据大小的内存空间。最后一个参数usage标志位VBO的另一个性能提示，它提供缓存对象将如何使用：static、dynamic或stream、与read、copy或draw。<br>VBO为usage标志指定9个枚举值：<br>GL_STATIC_DRAW<br>GL_STATIC_READ<br>GL_STATIC_COPY<br>GL_DYNAMIC_DRAW<br>GL_DYNAMIC_READ<br>GL_DYNAMIC_COPY<br>GL_STREAM_DRAW<br>GL_STREAM_READ<br>GL_STREAM_COPY<br>”static“表示VBO中的数据将不会被改动（一次指定多次使用），”dynamic“表示数据将会被频繁改动（反复指定与使用），”stream“表示每帧数据都要改变（一次指定一次使用）。”draw“表示数据将被发送到GPU以待绘制（应用程序到GL），”read“表示数据将被客户端程序读取（GL到应用程序），”copy“表示数据可用于绘制与读取（GL到GL）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">// A vertex attribute array buffer must be prepared when your </span><br><span class="line">// application wants to use the buffer to render any geometry. </span><br><span class="line">// When your application prepares an buffer, some OpenGL ES state</span><br><span class="line">// is altered to allow bind the buffer and configure pointers.</span><br><span class="line">- (void)prepareToDrawWithAttrib:(GLuint)index</span><br><span class="line">   numberOfCoordinates:(GLint)count</span><br><span class="line">   attribOffset:(GLsizeiptr)offset</span><br><span class="line">   shouldEnable:(BOOL)shouldEnable</span><br><span class="line">&#123;</span><br><span class="line">   NSParameterAssert((0 &lt; count) &amp;&amp; (count &lt; 4));</span><br><span class="line">   NSParameterAssert(offset &lt; self.stride);</span><br><span class="line">   NSAssert(0 != name, @&quot;Invalid name&quot;);</span><br><span class="line">	</span><br><span class="line">   glBindBuffer(GL_ARRAY_BUFFER,     // STEP 2</span><br><span class="line">      self.name);</span><br><span class="line">	</span><br><span class="line">   if(shouldEnable)</span><br><span class="line">   &#123;</span><br><span class="line">      glEnableVertexAttribArray(     // Step 4</span><br><span class="line">         index); </span><br><span class="line">   &#125;</span><br><span class="line">	</span><br><span class="line">   glVertexAttribPointer(            // Step 5</span><br><span class="line">      index,               // Identifies the attribute to use</span><br><span class="line">      count,               // number of coordinates for attribute</span><br><span class="line">      GL_FLOAT,            // data is floating point</span><br><span class="line">      GL_FALSE,            // no fixed point scaling</span><br><span class="line">      (self.stride),       // total num bytes stored per vertex</span><br><span class="line">      NULL + offset);      // offset from start of each vertex to </span><br><span class="line">                           // first coord for attribute</span><br><span class="line">	#ifdef DEBUG</span><br><span class="line">	   &#123;  // Report any errors </span><br><span class="line">	      GLenum error = glGetError();</span><br><span class="line">	      if(GL_NO_ERROR != error)</span><br><span class="line">	      &#123;</span><br><span class="line">	         NSLog(@&quot;GL Error: 0x%x&quot;, error);</span><br><span class="line">	      &#125;</span><br><span class="line">	   &#125;</span><br><span class="line">	#endif</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A vertex attribute array buffer must be prepared when your </span></span><br><span class="line"><span class="comment">// application wants to use the buffer to render any geometry. </span></span><br><span class="line"><span class="comment">// When your application prepares an buffer, some OpenGL ES state</span></span><br><span class="line"><span class="comment">// is altered to allow bind the buffer and configure pointers.</span></span><br><span class="line">- (<span class="keyword">void</span>)prepareToDrawWithAttrib:(GLuint)index</span><br><span class="line">   numberOfCoordinates:(GLint)count</span><br><span class="line">   attribOffset:(GLsizeiptr)offset</span><br><span class="line">   shouldEnable:(BOOL)shouldEnable</span><br><span class="line">&#123;</span><br><span class="line">   NSParameterAssert((<span class="number">0</span> &lt; count) &amp;&amp; (count &lt; <span class="number">4</span>));</span><br><span class="line">   NSParameterAssert(offset &lt; self.stride);</span><br><span class="line">   NSAssert(<span class="number">0</span> != name, @<span class="string">"Invalid name"</span>);</span><br><span class="line">	</span><br><span class="line">   glBindBuffer(GL_ARRAY_BUFFER,     <span class="comment">// STEP 2</span></span><br><span class="line">      self.name);</span><br><span class="line">	</span><br><span class="line">   <span class="keyword">if</span>(shouldEnable)</span><br><span class="line">   &#123;</span><br><span class="line">      glEnableVertexAttribArray(     <span class="comment">// Step 4</span></span><br><span class="line">         index); </span><br><span class="line">   &#125;</span><br><span class="line">	</span><br><span class="line">   glVertexAttribPointer(            <span class="comment">// Step 5</span></span><br><span class="line">      index,               <span class="comment">// Identifies the attribute to use</span></span><br><span class="line">      count,               <span class="comment">// number of coordinates for attribute</span></span><br><span class="line">      GL_FLOAT,            <span class="comment">// data is floating point</span></span><br><span class="line">      GL_FALSE,            <span class="comment">// no fixed point scaling</span></span><br><span class="line">      (self.stride),       <span class="comment">// total num bytes stored per vertex</span></span><br><span class="line">      <span class="literal">NULL</span> + offset);      <span class="comment">// offset from start of each vertex to </span></span><br><span class="line">                           <span class="comment">// first coord for attribute</span></span><br><span class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG</span></span><br><span class="line">	   &#123;  <span class="comment">// Report any errors </span></span><br><span class="line">	      GLenum error = glGetError();</span><br><span class="line">	      <span class="keyword">if</span>(GL_NO_ERROR != error)</span><br><span class="line">	      &#123;</span><br><span class="line">	         NSLog(@<span class="string">"GL Error: 0x%x"</span>, error);</span><br><span class="line">	      &#125;</span><br><span class="line">	   &#125;</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>glEnableVertexAttribArray    </li>
 </ul>
@@ -399,9 +399,9 @@ GL_STENCIL_BUFFER_BIT:  模板缓冲
 <ul>
 <li>glVertexAttribPointer </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void glVertexAttribPointer( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride,const GLvoid * pointer);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">glVertexAttribPointer</span><span class="params">( GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride,<span class="keyword">const</span> GLvoid * pointer)</span></span>;</span><br></pre></td></tr></table></figure>
 <p>参数：<br><em>index</em><br>指定要修改的顶点属性的索引值<br><em>size</em><br>指定每个顶点属性的组件数量。必须为1、2、3或者4。初始值为4。（如position是由3个（x,y,z）组成，而颜色是4个（r,g,b,a））<br><em>type</em><br>指定数组中每个组件的数据类型。可用的符号常量有GL_BYTE, GL_UNSIGNED_BYTE, GL_SHORT,GL_UNSIGNED_SHORT, GL_FIXED, 和 GL_FLOAT，初始值为GL_FLOAT。<br><em>normalized</em><br>指定当被访问时，固定点数据值是否应该被归一化（GL_TRUE）或者直接转换为固定点值（GL_FALSE）。<br><em>stride</em><br>指定连续顶点属性之间的偏移量。如果为0，那么顶点属性会被理解为：它们是紧密排列在一起的。初始值为0。<br><em>pointer</em><br>指定第一个组件在数组的第一个顶点属性中的偏移量。该数组与GL_ARRAY_BUFFER绑定，储存于缓冲区中。初始值为0；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// Submits the drawing command identified by mode and instructs</span><br><span class="line">// OpenGL ES to use count vertices from the buffer starting from</span><br><span class="line">// the vertex at index first. Vertex indices start at 0.</span><br><span class="line">- (void)drawArrayWithMode:(GLenum)mode</span><br><span class="line">   startVertexIndex:(GLint)first</span><br><span class="line">   numberOfVertices:(GLsizei)count</span><br><span class="line">&#123;</span><br><span class="line">   NSAssert(self.bufferSizeBytes &gt;= </span><br><span class="line">      ((first + count) * self.stride),</span><br><span class="line">      @&quot;Attempt to draw more vertex data than available.&quot;);</span><br><span class="line">      </span><br><span class="line">   glDrawArrays(mode, first, count); // Step 6</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Submits the drawing command identified by mode and instructs</span></span><br><span class="line"><span class="comment">// OpenGL ES to use count vertices from the buffer starting from</span></span><br><span class="line"><span class="comment">// the vertex at index first. Vertex indices start at 0.</span></span><br><span class="line">- (<span class="keyword">void</span>)drawArrayWithMode:(GLenum)mode</span><br><span class="line">   startVertexIndex:(GLint)first</span><br><span class="line">   numberOfVertices:(GLsizei)count</span><br><span class="line">&#123;</span><br><span class="line">   NSAssert(self.bufferSizeBytes &gt;= </span><br><span class="line">      ((first + count) * self.stride),</span><br><span class="line">      @<span class="string">"Attempt to draw more vertex data than available."</span>);</span><br><span class="line">      </span><br><span class="line">   glDrawArrays(mode, first, count); <span class="comment">// Step 6</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>glDrawArrays</li>
 </ul>
@@ -475,32 +475,6 @@ GL_STENCIL_BUFFER_BIT:  模板缓冲
 
     <div class="post-spread">
       
-        <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-<span class="jiathis_txt">分享到：</span>
-<a class="jiathis_button_fav">收藏夹</a>
-<a class="jiathis_button_copy">复制网址</a>
-<a class="jiathis_button_email">邮件</a>
-<a class="jiathis_button_weixin">微信</a>
-<a class="jiathis_button_qzone">QQ空间</a>
-<a class="jiathis_button_tqq">腾讯微博</a>
-<a class="jiathis_button_douban">豆瓣</a>
-<a class="jiathis_button_share">一键分享</a>
-
-<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-var jiathis_config={
-  data_track_clickback:true,
-  summary:"",
-  shortUrl:false,
-  hideMore:false
-}
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-      
     </div>
   </div>
 
@@ -557,7 +531,7 @@ var jiathis_config={
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/archives">
+                <a href="/archives/">
               
                   <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
@@ -591,40 +565,6 @@ var jiathis_config={
 
           
 
-          
-            <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/usiege" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://www.jianshu.com/u/8a7d7e6876ab" target="_blank" title="Jianshu">
-                      
-                        <i class="fa fa-fw fa-globe"></i>Jianshu</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="https://blog.csdn.net/jianin45" target="_blank" title="CSDN">
-                      
-                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="http://weibo.com/jianin45" target="_blank" title="Weibo">
-                      
-                        <i class="fa fa-fw fa-globe"></i>Weibo</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="http://blog.sina.com.cn/tjfcg45" target="_blank" title="Blog">
-                      
-                        <i class="fa fa-fw fa-globe"></i>Blog</a>
-                  </span>
-                
-            </div>
           
 
           

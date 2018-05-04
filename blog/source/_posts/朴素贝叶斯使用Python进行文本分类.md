@@ -1,4 +1,4 @@
-﻿title: 朴素贝叶斯使用Python进行文本分类
+title: 朴素贝叶斯使用Python进行文本分类
 date: 2018-04-17 23:08:00
 categories: coder
 tags: [Python, Mechine-Learning]
@@ -8,7 +8,7 @@ tags: [Python, Mechine-Learning]
 
 1. 从文本中创建词向量bayes.py
 
-```
+```python
 #!usr/bin/python
 #-*-encoding:utf-8-*-
 
@@ -49,11 +49,12 @@ def setOfWords2Vec(vocabList, inputSet):
 			print("the word: %s is not in my Vocabulary!" % word)
 	return returnVec
 ```
+
 ![image_1cb7dhd105761rg11lkq1mgjpt19.png-132.9kB][1]
 
 2. 朴素贝叶斯训练函数
 
-```
+```python
 #朴素贝叶斯训练函数
 def trainNB0(trainMatrix, trainCategory):
 	numTrainDocs = len(trainMatrix)
@@ -82,6 +83,7 @@ def trainNB0(trainMatrix, trainCategory):
 
 	return p0Vect, p1Vect, pAbusive
 ```
+
 ![image_1cb7gr8l6tli1gq8515ev19i013.png-368.4kB][2]
 
 ![image_1cb7gs04bmv319kp11841cvq73i1g.png-125.3kB][3]
@@ -89,21 +91,28 @@ def trainNB0(trainMatrix, trainCategory):
 3. 修改分类器
 
 * Problem1:计算多个概率的乘积以获得文档属于某个类别概率，如果其中有一个概率值为0，那最后乘积也为0；为降低这种影响，可以将所有词出现初始化为1，并将分母初始化为2
-```
+
+
+```python
 	p0Num = ones(numWords); 
 	p1Num = ones(numWords)
 	p0Denom = 2.0;	
 	p1Denom = 2.0
 ```
+
 * Problem2: 下溢出，太多很小的数相乘会造成下溢出，解决办法是取自然对数，把乘法转换成加法，通过求对数避免下溢出或者浮点数舍入导致错误
+
+
+```python
+p1Vect = log(p1Num/p1Denom)
+p0Vect = log(p0Num/p0Denom)
 ```
-    p1Vect = log(p1Num/p1Denom)
-	p0Vect = log(p0Num/p0Denom)
-```   
+
 
 4. 分类器编写
 
-```
+
+```python
 #构建朴素贝叶斯分类函数
 def classityNB(vec2Classify, p0Vec, p1Vec, pClass1):
 	p1 = sum(vec2Classify * p1Vec) + log(pClass1)
@@ -129,12 +138,15 @@ def testingNB():
 	thisDoc = array(setOfWords2Vec(myVocabList, testEntry))
 	print(testEntry, 'classified as:', classityNB(thisDoc, p0V, p1V, pAb))	
 ```
+
 通过训练器分类得出结果：
 ![image_1cba21hoeuca2kt17n5bdu3e9p.png-38.4kB][4]
 
+
 5. 文档词袋模型
 
-```
+
+```python
 #文档词袋模型
 def bagofWords2VecMN(vocabList, inputSet):
 	returnVec = [0] * len(vocabList)
