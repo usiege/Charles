@@ -1,6 +1,6 @@
 title: OpenGL-初识
 date: 2016-06-15 10:00:00
-categories: wower
+categories: coder
 tags: [opengl, glut]
 -----------
 
