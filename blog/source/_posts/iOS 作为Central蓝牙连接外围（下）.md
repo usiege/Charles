@@ -1,6 +1,6 @@
 title: iOS 作为Central蓝牙连接外围（下）
 date: 2016-05-29 20:48:00
-categories: wower
+categories: coder
 tags: [iOS, bluetooth]
 -----------
 
