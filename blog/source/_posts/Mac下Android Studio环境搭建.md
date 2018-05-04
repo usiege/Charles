@@ -5,6 +5,7 @@ tags: [Android Studio, mac]
 -----------
 
 本篇还原了本人在Macbook pro上安装Android Studio2.0的过程，安装环境是OS X EI Capitan 10.11.4；
+<!-- more -->
 
 下载Java SDK包，Android Studio安装包，android SDK包，这些资源在http://www.android-studio.org/index.php/download这个网站上都可以找到；
 

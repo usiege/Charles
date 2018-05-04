@@ -79,23 +79,23 @@
 
 
 
-<meta name="description" content="今天来聊聊组件化，之前一直听说大厂在搞，什么淘宝架构，什么蘑菇街，既然谈到了架构的问题，那必属重中之重。接下来分析一下蘑菇街开源的代码，自己做个总结。 引入类书本的文章个人感觉还是写不来的，再搬到自己写的东西这来也不合适，所以直接上一链接，通过链接文章大致可了解下它的前身后世，产生原因，以及整体宏观架构设计，而我接下来要做的是细化，以及转化，便于自己吸收———&amp;gt; 组件化架构漫谈  话不多说，">
+<meta name="description" content="今天来聊聊组件化，之前一直听说大厂在搞，什么淘宝架构，什么蘑菇街，既然谈到了架构的问题，那必属重中之重。接下来分析一下蘑菇街开源的代码，自己做个总结。">
 <meta name="keywords" content="iOS,modularization">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MGJRouter代码分析">
 <meta property="og:url" content="http://uwuneng.com/2018/01/07/MGJRouter代码分析/index.html">
 <meta property="og:site_name" content="NOTHING">
-<meta property="og:description" content="今天来聊聊组件化，之前一直听说大厂在搞，什么淘宝架构，什么蘑菇街，既然谈到了架构的问题，那必属重中之重。接下来分析一下蘑菇街开源的代码，自己做个总结。 引入类书本的文章个人感觉还是写不来的，再搬到自己写的东西这来也不合适，所以直接上一链接，通过链接文章大致可了解下它的前身后世，产生原因，以及整体宏观架构设计，而我接下来要做的是细化，以及转化，便于自己吸收———&amp;gt; 组件化架构漫谈  话不多说，">
+<meta property="og:description" content="今天来聊聊组件化，之前一直听说大厂在搞，什么淘宝架构，什么蘑菇街，既然谈到了架构的问题，那必属重中之重。接下来分析一下蘑菇街开源的代码，自己做个总结。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/f0dci325k3jmmrh2l9uy51s4/image_1c25qj3m5ejq111g1v5lvkgjek9.png">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/xn1r7ergmr6xr6msy2p5tyrh/WX20180107-134538@2x.png">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/wr5j4jwfcaov7yfmx3u82nyk/WX20180107-150437@2x.png">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/j23e7t541u0wcoohza0ktqmb/WX20180107-151956@2x.png">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/cbn7v2xkwlfy3c19m322o7mg/WX20180107-160319@2x.png">
-<meta property="og:updated_time" content="2018-05-04T08:10:59.876Z">
+<meta property="og:updated_time" content="2018-05-04T08:49:19.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MGJRouter代码分析">
-<meta name="twitter:description" content="今天来聊聊组件化，之前一直听说大厂在搞，什么淘宝架构，什么蘑菇街，既然谈到了架构的问题，那必属重中之重。接下来分析一下蘑菇街开源的代码，自己做个总结。 引入类书本的文章个人感觉还是写不来的，再搬到自己写的东西这来也不合适，所以直接上一链接，通过链接文章大致可了解下它的前身后世，产生原因，以及整体宏观架构设计，而我接下来要做的是细化，以及转化，便于自己吸收———&amp;gt; 组件化架构漫谈  话不多说，">
+<meta name="twitter:description" content="今天来聊聊组件化，之前一直听说大厂在搞，什么淘宝架构，什么蘑菇街，既然谈到了架构的问题，那必属重中之重。接下来分析一下蘑菇街开源的代码，自己做个总结。">
 <meta name="twitter:image" content="http://static.zybuluo.com/usiege/f0dci325k3jmmrh2l9uy51s4/image_1c25qj3m5ejq111g1v5lvkgjek9.png">
 
 
@@ -358,7 +358,7 @@
       
 
       
-        <p>今天来聊聊组件化，之前一直听说大厂在搞，什么淘宝架构，什么蘑菇街，既然谈到了架构的问题，那必属重中之重。接下来分析一下蘑菇街开源的代码，自己做个总结。</p>
+        <p>今天来聊聊组件化，之前一直听说大厂在搞，什么淘宝架构，什么蘑菇街，既然谈到了架构的问题，那必属重中之重。接下来分析一下蘑菇街开源的代码，自己做个总结。<br><a id="more"></a></p>
 <h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>类书本的文章个人感觉还是写不来的，再搬到自己写的东西这来也不合适，所以直接上一链接，通过链接文章大致可了解下它的前身后世，产生原因，以及整体宏观架构设计，而我接下来要做的是细化，以及转化，便于自己吸收<br>———&gt; <a href="https://www.jianshu.com/p/67a6004f6930" target="_blank" rel="noopener">组件化架构漫谈</a></p>
 <ol>
 <li>话不多说，先看入口：</li>

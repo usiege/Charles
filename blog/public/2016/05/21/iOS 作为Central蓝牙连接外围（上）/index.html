@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Summary: 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。难点主要集中在与蓝牙卡连">
+<meta name="description" content="Summary: 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。">
 <meta name="keywords" content="iOS,bluetooth">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 作为Central蓝牙连接外围（上）">
 <meta property="og:url" content="http://uwuneng.com/2016/05/21/iOS 作为Central蓝牙连接外围（上）/index.html">
 <meta property="og:site_name" content="NOTHING">
-<meta property="og:description" content="Summary: 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。难点主要集中在与蓝牙卡连">
+<meta property="og:description" content="Summary: 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-04T07:55:27.439Z">
+<meta property="og:updated_time" content="2018-05-04T08:49:10.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 作为Central蓝牙连接外围（上）">
-<meta name="twitter:description" content="Summary: 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。难点主要集中在与蓝牙卡连">
+<meta name="twitter:description" content="Summary: 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。">
 
 
 
@@ -352,7 +352,7 @@
       
 
       
-        <p>Summary: 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。</p>
+        <p>Summary: 今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。<br><a id="more"></a></p>
 <p>今天说一说iOS蓝牙相关的东西，本文背景是公司的蓝牙项目，项目要求是利用手机蓝牙模块与低功耗蓝牙卡进行通信，蓝牙卡信息解析由卡厂商提供，而我们先要做的就是建立手机与蓝牙卡的连接。难点主要集中在与蓝牙卡连接断开部分，因为蓝牙卡是低能耗的，每开启蓝牙卡片蓝牙后它会在8秒后自动断开连接，所以在处理蓝牙连接的的部分逻辑较为复杂。接下来我们把重点放在与蓝牙建立连接的部分，Google之，先来搞清楚与iOS有关的蓝牙库。    </p>
 <p>先说一下蓝牙版本问题，如果你的设备支持的是蓝牙4.0之前的版本，那么会涉及到一个MFI的概念，MFI（Make For ipod/ipad/iphone）是苹果的一套认证，只有少数的硬件厂商才有苹果的MFI认证，做之前需要搞定这个认证。使用蓝牙4.0的话，由于4.0苹果开放了BLE（Bluetooth Low Energy）通道，就不会有认证的问题了，而且向下兼容。<br>我们用到的蓝牙库为CoreBluetooth，而蓝牙库中首先要介绍下两个概念Central和Peripheral；</p>
 <h1 id="Central-和-Peripheral-在蓝牙交互中的角色"><a href="#Central-和-Peripheral-在蓝牙交互中的角色" class="headerlink" title="Central 和 Peripheral 在蓝牙交互中的角色"></a>Central 和 Peripheral 在蓝牙交互中的角色</h1><blockquote>

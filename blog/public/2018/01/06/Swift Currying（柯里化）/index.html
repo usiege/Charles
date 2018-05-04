@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="函数式编程思想  先举一个小例子：1234567891011121314151617181920212223242526func addOne(count: Int) -&amp;gt; Int &amp;#123;    return count + 1&amp;#125;//上面这个代码我们是返回一个加和，和是使参数增加1；//一个更加灵活的方法，我们可以取消上面的硬编码1；func add(count: Int,">
+<meta name="description" content="Currying">
 <meta name="keywords" content="swift">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift Currying(柯里化)">
 <meta property="og:url" content="http://uwuneng.com/2018/01/06/Swift Currying（柯里化）/index.html">
 <meta property="og:site_name" content="NOTHING">
-<meta property="og:description" content="函数式编程思想  先举一个小例子：1234567891011121314151617181920212223242526func addOne(count: Int) -&amp;gt; Int &amp;#123;    return count + 1&amp;#125;//上面这个代码我们是返回一个加和，和是使参数增加1；//一个更加灵活的方法，我们可以取消上面的硬编码1；func add(count: Int,">
+<meta property="og:description" content="Currying">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-04T07:22:33.510Z">
+<meta property="og:updated_time" content="2018-05-04T08:49:29.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift Currying(柯里化)">
-<meta name="twitter:description" content="函数式编程思想  先举一个小例子：1234567891011121314151617181920212223242526func addOne(count: Int) -&amp;gt; Int &amp;#123;    return count + 1&amp;#125;//上面这个代码我们是返回一个加和，和是使参数增加1；//一个更加灵活的方法，我们可以取消上面的硬编码1；func add(count: Int,">
+<meta name="twitter:description" content="Currying">
 
 
 
@@ -352,7 +352,8 @@
       
 
       
-        <ol>
+        <p>Currying<br><a id="more"></a></p>
+<ol>
 <li>函数式编程思想</li>
 </ol>
 <p>先举一个小例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">func addOne(count: Int) -&gt; Int &#123;</span><br><span class="line">    return count + 1</span><br><span class="line">&#125;</span><br><span class="line">//上面这个代码我们是返回一个加和，和是使参数增加1；</span><br><span class="line">//一个更加灵活的方法，我们可以取消上面的硬编码1；</span><br><span class="line"></span><br><span class="line">func add(count: Int, addition: Int) -&gt; Int &#123;</span><br><span class="line">    return count + addition</span><br><span class="line">&#125;</span><br><span class="line">//然而这个函数还并不是那么友好，我们用另外一种方法实现看一下：</span><br><span class="line">func add(_ addition: Int) -&gt; (Int) -&gt; Int &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        count in </span><br><span class="line">        return count + addition</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//调用一下以上方法，看看有什么区别：</span><br><span class="line">let number = add(count: 10, addition: 2)    //函数2</span><br><span class="line"></span><br><span class="line">let add2 = add(2)           //函数3</span><br><span class="line">let number = add2(10)</span><br><span class="line"></span><br><span class="line">let number = add(2)(10)     //函数3调用连起来是</span><br><span class="line">//是不是觉得这种调用方式很熟悉，有点类似于</span><br><span class="line">//classname.property.subproperty，点语法链</span><br></pre></td></tr></table></figure></p>

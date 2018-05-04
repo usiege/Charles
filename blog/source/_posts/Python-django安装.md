@@ -3,7 +3,8 @@ date: 2017-10-25 19:56:00
 categories: coder
 tags: [python, django]
 -----------
-
+django 
+<!-- more -->
 
 1. 发现错误
 ![image_1bt9d9b27bv5glj1a0m15hr1ncn9.png-258.7kB][1]

@@ -5,7 +5,7 @@ tags: [python, request, beautifulsoup4]
 -----------
 
 Summary: 本文是从微信推送内容中摘取下来的，其中某些内容进行了小的改动，本文作者在Mac 10.11.4下运行正常，脚本会存取网页上的内容并保存到本地txt文件中，文件中内容以json格式保存。
-
+<!-- more -->
 
 # 1.python环境搭建
 

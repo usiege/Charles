@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="第一件：今天在Nothing项目中添加了一个小的功能，就是按压屏幕出现一个有弹出效果的Label，涉及到的点；  thereis   touches我们知道，UIResponder处理函数，根据不同的触摸状态会调用不同的函数，以下：1234567-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;-(void)touche">
+<meta name="description" content="大家好，我是花木兰。">
 <meta name="keywords" content="iOS,paradigm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="本行三件事：猎龙 训龙 调教龙">
 <meta property="og:url" content="http://uwuneng.com/2018/04/27/本行三件事：猎龙 训龙 调教龙/index.html">
 <meta property="og:site_name" content="NOTHING">
-<meta property="og:description" content="第一件：今天在Nothing项目中添加了一个小的功能，就是按压屏幕出现一个有弹出效果的Label，涉及到的点；  thereis   touches我们知道，UIResponder处理函数，根据不同的触摸状态会调用不同的函数，以下：1234567-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;-(void)touche">
+<meta property="og:description" content="大家好，我是花木兰。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1429775-e58a9faeb3c885d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1429775-1aea7d4c63680f89.jpg">
-<meta property="og:updated_time" content="2018-05-04T07:35:39.633Z">
+<meta property="og:updated_time" content="2018-05-04T08:49:00.123Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="本行三件事：猎龙 训龙 调教龙">
-<meta name="twitter:description" content="第一件：今天在Nothing项目中添加了一个小的功能，就是按压屏幕出现一个有弹出效果的Label，涉及到的点；  thereis   touches我们知道，UIResponder处理函数，根据不同的触摸状态会调用不同的函数，以下：1234567-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;-(void)touche">
+<meta name="twitter:description" content="大家好，我是花木兰。">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1429775-e58a9faeb3c885d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -355,14 +355,15 @@
       
 
       
-        <h2 id="第一件："><a href="#第一件：" class="headerlink" title="第一件："></a>第一件：</h2><p>今天在<strong>Nothing</strong>项目中添加了一个小的功能，就是按压屏幕出现一个有弹出效果的<em>Label</em>，涉及到的点；</p>
+        <p>大家好，我是花木兰。<br><a id="more"></a></p>
+<h2 id="第一件"><a href="#第一件" class="headerlink" title="第一件"></a>第一件</h2><p>今天在<strong>Nothing</strong>项目中添加了一个小的功能，就是按压屏幕出现一个有弹出效果的<em>Label</em>，涉及到的点；</p>
 <ol>
 <li>thereis</li>
 </ol>
 <ul>
-<li>touches<br>我们知道，UIResponder处理函数，根据不同的触摸状态会调用不同的函数，以下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;</span><br><span class="line"></span><br><span class="line">-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;</span><br><span class="line"></span><br><span class="line">-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;</span><br><span class="line"></span><br><span class="line">-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;</span><br></pre></td></tr></table></figure>
-</li>
+<li>touches</li>
 </ul>
+<p>我们知道，UIResponder处理函数，根据不同的触摸状态会调用不同的函数，以下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;</span><br><span class="line"></span><br><span class="line">-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;</span><br><span class="line"></span><br><span class="line">-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;</span><br><span class="line"></span><br><span class="line">-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;</span><br></pre></td></tr></table></figure></p>
 <p>注意第四个取消函数，调用时机是触摸被取消，一定要注意是被取消，自己主动点击然后结束这不叫取消，举个例子如在触摸过程中被来电打断，这种情况才算；<br>回调中可以通过<em>UITouch</em>来操作点击次数和手指数，<em>UIEvent</em>可以操作屏幕点信息，这样就把手指与屏幕的交互处理完成。</p>
 <ul>
 <li>transform<br>这里出现了一个现象，原代码如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//进入时的设置</span><br><span class="line">        //向x y轴方向平移 0 0</span><br><span class="line">        self.transform = CGAffineTransform(translationX: 0, y: 0) //(1)</span><br><span class="line">        self.transform = CGAffineTransform(rotationAngle: 0) // (2)</span><br><span class="line">        </span><br><span class="line">        self.transform = CGAffineTransform(scaleX: 0.1, y: 0.1) //(3)</span><br><span class="line">        //transform scale 改变中间不能添加其他变换</span><br><span class="line">        //动画播放</span><br><span class="line">        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: &#123;</span><br><span class="line">            self.transform = CGAffineTransform(scaleX: 1, y: 1)</span><br><span class="line">        &#125;, completion: nil) //(4)</span><br></pre></td></tr></table></figure>
@@ -621,7 +622,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一件："><span class="nav-number">1.</span> <span class="nav-text">第一件：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二件"><span class="nav-number">2.</span> <span class="nav-text">第二件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三件"><span class="nav-number">3.</span> <span class="nav-text">第三件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一件"><span class="nav-number">1.</span> <span class="nav-text">第一件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二件"><span class="nav-number">2.</span> <span class="nav-text">第二件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三件"><span class="nav-number">3.</span> <span class="nav-text">第三件</span></a></li></ol></div>
             
 
           </div>

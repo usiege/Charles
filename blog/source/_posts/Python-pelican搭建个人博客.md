@@ -5,6 +5,7 @@ tags: [python, pelican]
 -----------
 
 Summary:  本文使用python pelican搭建个人静态博客，并上传到个人git仓库，实现访问个人博客，本文作者所用就是基于该博客的个人主页。
+<!-- more -->
 
 >PS：提升到系统root权限：$ sudo -s；
 

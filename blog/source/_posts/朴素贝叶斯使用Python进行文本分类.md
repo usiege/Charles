@@ -3,7 +3,8 @@ date: 2018-04-17 23:08:00
 categories: coder
 tags: [Python, Mechine-Learning]
 -----------
-
+这是我第一篇关于机器学习的文章。
+<!-- more -->
 
 1. 从文本中创建词向量bayes.py
 

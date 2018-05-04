@@ -3,6 +3,8 @@ date: 2018-01-06 16:34:00
 categories: coder
 tags: [swift]
 -----------
+Currying
+<!-- more -->
 
 1. 函数式编程思想
 

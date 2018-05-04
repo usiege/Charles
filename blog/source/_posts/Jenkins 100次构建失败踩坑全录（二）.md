@@ -5,6 +5,7 @@ tags: [jenkins]
 -----------
 
 接上篇，继续踩坑，下面到构建触发器环节：
+<!-- more -->
 
 + 构建触发器
 ![image_1c0qnmug31v0hvkf1pp1kqf1bir9.png-91.5kB][1]

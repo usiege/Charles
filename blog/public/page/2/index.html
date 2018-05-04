@@ -354,29 +354,14 @@
 
       
         
-          
-            <ol>
-<li><p>发现错误<br><img src="http://static.zybuluo.com/usiege/tvcs5iet0ge1yypcquu2swdq/image_1bt9d9b27bv5glj1a0m15hr1ncn9.png" alt="image_1bt9d9b27bv5glj1a0m15hr1ncn9.png-258.7kB"><br>怀疑是pip版本的问题；</p>
-</li>
-<li><p>于是查了下更新pip的方法： </p>
-</li>
-</ol>
-<p>查看pip版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip -version</span><br></pre></td></tr></table></figure></p>
-<p>升级方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -U pip</span><br></pre></td></tr></table></figure></p>
-<p>如果pip出现有问题，或者你花了很长的时间想用pip安装，例如使用下面这种方式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Django==1.8.16</span><br></pre></td></tr></table></figure></p>
-<p>如果你刚好安装成功，那么恭喜你；如果不是，那么我们就要使用另外一种方法； </p>
-<ol start="3">
-<li>下载安装</li>
-</ol>
-<p><a href="https://github.com/django/django/archive/master.tar.gz" target="_blank" rel="noopener">gzip压缩包</a></p>
-<p>或者：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/django/django.git</span><br></pre></td></tr></table></figure></p>
-<p>下载完成之后：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf django-master.tar.gz</span><br><span class="line">cd django-master</span><br><span class="line">python setup.py install</span><br></pre></td></tr></table></figure></p>
-<p>会出现下面的问题：<br><img src="http://static.zybuluo.com/usiege/skgzjd12wfs2u973aidsrk7o/image_1bt9ib15m8juqh01adb1hlb154k9.png" alt="image_1bt9ib15m8juqh01adb1hlb154k9.png-97.5kB"><br>继续找：<br>Because you’re trying to install it on Python2, but the latest version of Django requires Python 3;<br>所以使用安装方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -e django</span><br></pre></td></tr></table></figure></p>
-<p>这个仍然是联网安装，但是貌似<code>pytz</code>并不能连接上，vpn也不行；<br>所以:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd django</span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure></p>
-<p>终于，你的django完成了；</p>
-<p>续：<br>隔天使用以上的所有方法均可以，可能是十九大开会期间被墙掉了吧。<br><img src="http://static.zybuluo.com/usiege/06h0phv3szekmv2l4x2cmurb/image_1btbid9ijfnd1q2i15npd78l9p9.png" alt="image_1btbid9ijfnd1q2i15npd78l9p9.png-253.6kB"></p>
-
-          
+          <p>django<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/25/Python-django安装/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -515,31 +500,14 @@
 
       
         
-          
-            <p>最近公司的项目需要添加几个依赖库，用pod更新的时候发现一直卡在了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Setting up CocoaPods master repo</span><br></pre></td></tr></table></figure></p>
-<p>继而是漫长的等待，在这个期间我不知道它发生了什么。</p>
-<p>在这种等待中，程序员一般会选择做一些别的事情。于是我上网验证了一下我的行为，结论告诉我：</p>
-<p>1.我要开个VPN；</p>
-<p>2.我需要重新安装一下pod，因为它已经不工作了；</p>
-<p>首先要先检查一下ruby源：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem sources -l</span><br></pre></td></tr></table></figure>
-<p>返回的结果是<a href="https://rubygems.org/，如果你在网上找到过其他源并且修改过它，并且你不确定你的源是否可以使用的话，那么请修改回来，买个VPN，这会让你节省很多不必要的劳动，你可以用以下代码修改源：" target="_blank" rel="noopener">https://rubygems.org/，如果你在网上找到过其他源并且修改过它，并且你不确定你的源是否可以使用的话，那么请修改回来，买个VPN，这会让你节省很多不必要的劳动，你可以用以下代码修改源：</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#移除旧源</span><br><span class="line">gem sources --remove 旧源址</span><br><span class="line">#添加新源</span><br><span class="line">gem sources -a https://rubygems.org/</span><br></pre></td></tr></table></figure>
-<p>PS:请确保你的源可用！！！</p>
-<p>接着如果你没有安装pod，请执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
-<p>如果你已经安装pod，请执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod setup</span><br></pre></td></tr></table></figure>
-<p>这个操作结束之后，又重现了一个漫长的等待过程，那么我们要清楚它是否在认真工作，请打开另外一个终端，我们要检查一下进度：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#进入到pod目录</span><br><span class="line">cd ~/.cocoapods</span><br><span class="line"></span><br><span class="line">#检查当前文件下所有文件的大小，此后如果你不放心，可以分时段检查一下</span><br><span class="line">du -sh *</span><br></pre></td></tr></table></figure>
-<p>这个过程会很漫长，取决于你VPN的速度，最后我这边出结果会反馈绿色的文字，Setup completed!文件总大小是1.2G，所以还是耐心的等待吧。。。</p>
-<p>另外还有一点，如果上述<code>pod setup</code>出现红色的错误信息，也有可能是gem没有到最新版本，那么你还需要用你的VPN更新一下gem到最新；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gem update --system</span><br></pre></td></tr></table></figure></p>
-<p>PS:顺便记一下寻找库代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod search AFNetworking</span><br></pre></td></tr></table></figure></p>
-<p>这个时候会遇到这样的提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[!] Unable to find a pod with name, author, summary, or descriptionmatching `AFNetworking`</span><br></pre></td></tr></table></figure></p>
-<p>你需要做如下操作，再进行搜索：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm ~/Library/Caches/CocoaPods/search_index.json</span><br></pre></td></tr></table></figure></p>
-<p>最后你将如愿以偿，感谢亲人：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Creating search index for spec repo &apos;master&apos;.. Done!</span><br></pre></td></tr></table></figure></p>
-
-          
+          <p>最近公司的项目需要添加几个依赖库，用pod更新的时候发现一直卡在了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Setting up CocoaPods master repo</span><br></pre></td></tr></table></figure></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/10/17/你的pod不工作了吗？/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -678,40 +646,14 @@
 
       
         
-          
-            <p>公司最近的一次App提交过程中遇到的一些问题，现贴在这里，有检索到本篇的朋友们可借鉴。</p>
-<p>首先是上传到iTunes Connect构建版本，点击以下蓝色按钮，之后会有苹果为你的代码进行检查：</p>
-<p><img src="http://static.zybuluo.com/usiege/n72bt0t4wwh45zw5c0kjcv01/image_1bu7k3nt22m3cmearq636qua9.png" alt="image_1bu7k3nt22m3cmearq636qua9.png-14.8kB"></p>
-<p>本人在ios11上做了提交，发现问题进行分类：</p>
-<ol>
-<li>第一个是第三方库存在x86_64,i386的链接库，有以下问题：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iTunes Store Operation Failed</span><br><span class="line">ERROR ITMS-90087: &quot;Unsupported Architectures. The executable for LeWaiJiao.app/Frameworks/GCDWebServers.framework contains unsupported architectures &apos;[x86_64, i386]&apos;.&quot;</span><br></pre></td></tr></table></figure>
-<p>PS:以下所有翻译来源于欧路词典，粘贴过来的，仅供参考；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iTunes Store Operation Failed</span><br><span class="line">ERROR ITMS-90209: &quot;Invalid Segment Alignment. The app binary at &apos;LeWaiJiao.app/Frameworks/GCDWebServers.framework/GCDWebServers&apos; does not have proper segment alignment. Try rebuilding the app with the latest Xcode version.&quot;</span><br><span class="line">无效段对齐。应用程序二进制的“lewaijiao。应用程序/框架/ gcdwebservers。框架/ gcdwebservers”没有正确对齐。尝试用新的Xcode版本重建应用程序。</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iTunes Store Operation Failed</span><br><span class="line">ERROR ITMS-90125: &quot;The binary is invalid. The encryption info in the LC_ENCRYPTION_INFO load command is either missing or invalid, or the binary is already encrypted. This binary does not seem to have been built with Apple&apos;s linker.&quot;</span><br><span class="line">“二进制无效。在lc_encryption_info负荷指令加密信息丢失或无效，或是已经加密的二进制。这个二进制文件似乎没有用苹果的链接器构建。”</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iTunes Store Operation Failed</span><br><span class="line">WARNING ITMS-90080: &quot;The executable &apos;Payload/LeWaiJiao.app/Frameworks/GCDWebServers.framework&apos; is not a Position Independent Executable. Please ensure that your build settings are configured to create PIE executables. For more information refer to Technical Q&amp;A QA1788 - Building a Position Independent Executable in the iOS Developer Library.&quot;</span><br><span class="line">“可执行的有效载荷/ lewaijiao。应用程序/框架/ gcdwebservers。框架”不是一个独立的可执行文件的位置。请确保您的构建设置配置为创建饼可执行文件。更多信息请参阅技术问答qa1788在iOS开发者库位置独立的可执行的建筑。”</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR ITMS-90362: &quot;Invalid Info.plist value. The value for the key &apos;MinimumOSVersion&apos; in bundle ***.app/Frameworks/SDK.framework is invalid. The minimum value is 8.0&quot;</span><br></pre></td></tr></table></figure>
-<p>后面这个<strong>90362</strong>貌似是连带问题，定位的时候发现与最小版本无关，所以一同被解决了；</p>
-<p>解决方法呢是在该工程里添加脚本处理这些被添加进来的第三方库，如下：<br><img src="http://static.zybuluo.com/usiege/mqh6ttzi6hsixpddv5nmcu03/image_1bu7kmq06140t1nmhkf11sfq1civm.png" alt="image_1bu7kmq06140t1nmhkf11sfq1civm.png-235.5kB"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">APP_PATH=&quot;$&#123;TARGET_BUILD_DIR&#125;/$&#123;WRAPPER_NAME&#125;&quot;</span><br><span class="line"></span><br><span class="line"># This script loops through the frameworks embedded in the application and</span><br><span class="line"># removes unused architectures.</span><br><span class="line">find &quot;$APP_PATH&quot; -name &apos;*.framework&apos; -type d | while read -r FRAMEWORK</span><br><span class="line">do</span><br><span class="line">FRAMEWORK_EXECUTABLE_NAME=$(defaults read &quot;$FRAMEWORK/Info.plist&quot; CFBundleExecutable)</span><br><span class="line">FRAMEWORK_EXECUTABLE_PATH=&quot;$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME&quot;</span><br><span class="line">echo &quot;Executable is $FRAMEWORK_EXECUTABLE_PATH&quot;</span><br><span class="line"></span><br><span class="line">EXTRACTED_ARCHS=()</span><br><span class="line"></span><br><span class="line">for ARCH in $ARCHS</span><br><span class="line">do</span><br><span class="line">echo &quot;Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME&quot;</span><br><span class="line">lipo -extract &quot;$ARCH&quot; &quot;$FRAMEWORK_EXECUTABLE_PATH&quot; -o &quot;$FRAMEWORK_EXECUTABLE_PATH-$ARCH&quot;</span><br><span class="line">EXTRACTED_ARCHS+=(&quot;$FRAMEWORK_EXECUTABLE_PATH-$ARCH&quot;)</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo &quot;Merging extracted architectures: $&#123;ARCHS&#125;&quot;</span><br><span class="line">lipo -o &quot;$FRAMEWORK_EXECUTABLE_PATH-merged&quot; -create &quot;$&#123;EXTRACTED_ARCHS[@]&#125;&quot;</span><br><span class="line">rm &quot;$&#123;EXTRACTED_ARCHS[@]&#125;&quot;</span><br><span class="line"></span><br><span class="line">echo &quot;Replacing original executable with thinned version&quot;</span><br><span class="line">rm &quot;$FRAMEWORK_EXECUTABLE_PATH&quot;</span><br><span class="line">mv &quot;$FRAMEWORK_EXECUTABLE_PATH-merged&quot; &quot;$FRAMEWORK_EXECUTABLE_PATH&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
-<p>以上代码来源于Google，解决方法经确认iOS11 + Xcode9.0有效；</p>
-<ol start="2">
-<li>项目有icon不合规定的错误<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iTunes Store Operation Failed</span><br><span class="line">ERROR ITMS-90717: &quot;Invalid App Store Icon. The App Store Icon in the asset catalog in &apos;LeWaiJiao.app&apos; can&apos;t be transparent nor contain an alpha channel.&quot;</span><br><span class="line">无效应用程序商店图标。在资产目录中的lewaijiao App Store图标，应用程序不能透明也包含alpha通道。”</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>该错误原因是上传的icon不符合苹果规定，公司项目存在的问题是1.使用了圆角；2.有透明alpha通道；<br>解决方法自然容易了，找设计重新做，自己解决的话第二个可以DIY，如下：</p>
-<p><img src="http://static.zybuluo.com/usiege/xtde6py269a5m4iusbumms4p/image_1bu7l6vhrvhm51b13pjvrlc0p13.png" alt="image_1bu7l6vhrvhm51b13pjvrlc0p13.png-100.4kB"></p>
-<p>用系统预览打开icon图片，点掉Alpha的勾，再保存就可以了；<br><img src="http://static.zybuluo.com/usiege/yql5tndy4d612fhqfsi9n4l2/image_1bu7l8bt61p6v1mp11csi15ri1dmg1g.png" alt="image_1bu7l8bt61p6v1mp11csi15ri1dmg1g.png-128.6kB"></p>
-<ol start="3">
-<li>提交上传结束后又出现了一个问题</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">App Installation failed, No code signature found.</span><br></pre></td></tr></table></figure>
-<p>真机无法运行了！这个问题纯属偶然，所以继续解决；打开终端，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 777 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk</span><br></pre></td></tr></table></figure>
-<p>修改文件权限，然后修改字段属性，打开：</p>
-<p><strong>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/SDKSettings.plist</strong></p>
-<p>，修改 <strong>CODE_SIGNING_REQUIRED</strong> 字段为 <strong>YES</strong> ，保存；</p>
-
-          
+          <p>公司最近的一次App提交过程中遇到的一些问题，现贴在这里，有检索到本篇的朋友们可借鉴。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/18/git checkout 与 reset/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -850,51 +792,14 @@
 
       
         
-          
-            <p>今天来说一说wow插件是个什么鬼？</p>
-<p>插件是魔兽世界开放的第三个接口，有朋友会问，什么是第三方？这个是软件业的一个术语，简单的说，就是游戏当中能让我们自己来定制DIY的部分，比方说对话界面，还有一些数据显示之类的功能。</p>
-<p>wow的插件全部保存在<em>World of Warcraft/Interface/AddOns</em>目录下，在这个目录下会有一些暴雪自带的功能插件，它们均是以<em>Blizzard_</em>开头的，我们自己做的插件可以随意命名，不同插件可以分别放在不同的文件夹下面（我们在做插件的过程中，强烈建议用英文命名，避免因为中文导致插件无法被识别的问题）。<a href="http://www.townlong-yak.com/framexml/" target="_blank" rel="noopener">http://www.townlong-yak.com/framexml/</a>这个网址可以下载暴雪自带插件。</p>
-<p>说一下插件的构成，打开插件目录，你会发现大致会有三种类型文件，分别是toc文件，xml文件和lua文件。</p>
-<h2 id="toc文件"><a href="#toc文件" class="headerlink" title="toc文件"></a>toc文件</h2><p>这个文件是一个必要文件，它的名字与你的插件文件夹名字同名，只不过带了一个后缀toc，如果不同名的话，打开魔兽客户端将会无法识别你的插件；</p>
-<p>注意！！！这个文件的每行开头不能有空格，每行仅作一个说明。</p>
-<p>用文本工具打开toc文件，内容说明分三种类型：</p>
-<h3 id="以-开头的数据"><a href="#以-开头的数据" class="headerlink" title="以##开头的数据"></a>以##开头的数据</h3><p>用来进行插件描述，一般会有插件名称，作者名称，功能描述等；它的基本格式是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">## 标签名：标签值</span><br></pre></td></tr></table></figure>
-<p>标签的名字可以随便写，但是有一些wow自带的标签名我们进行一下解释：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Interface:标记插件可用在的wow游戏版本，当该值小于低于当前游戏版本插件不会被加载；</span><br><span class="line">Title:插件名称，这个会被显示在游戏选择人物的插件列表里；</span><br><span class="line">Title-zhCN:插件的中文显示，如果想要在其他语言中显示，则修改-后面的就可以了；下面的Notes也是如此；</span><br><span class="line">Notes:插件列表中，鼠标移到插件名上时显示的信息；</span><br><span class="line">RequiredDeps, Dependencies, 或者任意以 &quot;Dep&quot; 开始的字符串：表示我们当前的插件必须需要加载的其他插件；</span><br><span class="line">OptionalDeps:与上面的对照，这里的插件是可选的；</span><br><span class="line">LoadOnDemand:值为1时，表示这个插件不会在游戏开始就加载，而是在需要的时候才加载；</span><br><span class="line">LoadWith:如果上面的值为1时，本条所描述的插件会随着本插件一起加载；</span><br><span class="line">LoadManagers:本条中所描述的插件如果都不存在的话，则会自动加载本插件；如果有一个存在，则按LoadOnDemand值为1处理；</span><br><span class="line">SavedVariables:一些以逗号分割的变量名称，这些变量会被保存在硬盘上，下次加载时可以被读取到；</span><br><span class="line">SavedVariablesPerCharacter:与上面的标签是相同的作用，不过该标签只用于保存不同角色的不同配置；</span><br><span class="line">DefaultState:本插件默认开启状态，值为disabled/enabled；</span><br><span class="line">Author:作者名字</span><br><span class="line">Version:插件的版本号</span><br></pre></td></tr></table></figure>
-<p>另外你可以定义自己的标签，以上中最重要的就是前两个，尽量不要出错；</p>
-<h3 id="本插件需要加载的代码文件"><a href="#本插件需要加载的代码文件" class="headerlink" title="本插件需要加载的代码文件"></a>本插件需要加载的代码文件</h3><p>列出需要加载的代码类文件，只支持lua和xml两种格式，这里的文件需要给出以当前目录为根目录的文件完整路径，就是说如果你插件目录下有一个<code>myaddon.lua</code>的文件则需要添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myaddon.lua</span><br></pre></td></tr></table></figure>
-<p>而如果你插件目录下有一个子文件夹<em>MyAddon</em>，而该目录下有一个<code>myaddon2.lua</code>的话，则需要添加：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyAddon/myaddon2.lua</span><br></pre></td></tr></table></figure>
-<h3 id="以-开头的文件"><a href="#以-开头的文件" class="headerlink" title="以#开头的文件"></a>以#开头的文件</h3><p>这些是注释文本，在toc中可以随便添加，主要用作插件制作者自己记录，这些不会被插件加载；</p>
-<h2 id="XML文件"><a href="#XML文件" class="headerlink" title="XML文件"></a>XML文件</h2><p>xml文件主要用于插件的界面制作，以及事件绑定，事件绑定通俗的讲就是你对插件做某些操作（按一个按钮之类的）游戏中会出现的事件，这些事件会以一个方法的形式出现在lua文件中，你可以把你自己想做的事情写在这个方法中，如果你学过些编程，应该知道我们这里说的方法就是lua函数；</p>
-<p>在你插件的根目录下会有一个叫做<strong>Bindings.xml</strong>的文件，这个文件会被游戏客户端自动读取，不必写在toc文件中；</p>
-<p>我们来看一个该文件的例子：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;Bindings&gt; </span><br><span class="line">    &lt;Binding name=&quot;CUBE_CODE&quot; header=&quot;CUBE&quot;&gt; </span><br><span class="line">      if IGAS.UIParent.Cube_Main then </span><br><span class="line">         IGAS.UIParent.Cube_Main.Visible = not IGAS.UIParent.Cube_Main.Visible </span><br><span class="line">      end </span><br><span class="line">    &lt;/Binding&gt; </span><br><span class="line">    &lt;Binding name=&quot;CUBE_DEBUG&quot;&gt; </span><br><span class="line">      if IGAS.UIParent.Cube_Debug then </span><br><span class="line">         IGAS.UIParent.Cube_Debug.Visible = not IGAS.UIParent.Cube_Debug.Visible </span><br><span class="line">      end </span><br><span class="line">    &lt;/Binding&gt; </span><br><span class="line">&lt;/Bindings&gt;</span><br></pre></td></tr></table></figure>
-<p>我们暂时先不要管这些代码的意思，只需要知道这个文件设置了界面元素与游戏事件的绑定，而绑定的事件是由Lua文件完成的；<strong>Bindings.xml</strong>文件绑定了一个与插件名同名的lua文件，并且还将界面上的元素与该文件所描述的事件绑定在了一起：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- Binding Text </span><br><span class="line">_G.BINDING_HEADER_CUBE = L[&quot;Cube&quot;] </span><br><span class="line">_G.BINDING_NAME_CUBE_CODE = L[&quot;Simple Dev Tool&quot;] </span><br><span class="line">_G.BINDING_NAME_CUBE_DEBUG = L[&quot;Simple Debug Tool&quot;]</span><br></pre></td></tr></table></figure>
-<p>我们现在先不要管他们是怎么联系起来的，具体我们在之后的写代码过程中会慢慢讲到，现在只要理解一点，xml会定义我们的界面，并且还可以设置界面元素与事件的绑定，而绑定的事件会交由lua文件处理；</p>
-<p>我们还可以加载其他的xml和lua文件，如下例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;Ui xmlns=&quot;http://www.blizzard.com/wow/ui/&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd&quot;&gt; </span><br><span class="line">   &lt;!-- Init --&gt; </span><br><span class="line">   &lt;Script file = &quot;IGAS_Toolkit.lua&quot;/&gt; </span><br><span class="line"></span><br><span class="line">   &lt;!-- Modules --&gt; </span><br><span class="line">   &lt;Include file = &quot;Modules\AutoRepair\AutoRepair.xml&quot;/&gt; </span><br><span class="line">   &lt;Include file = &quot;Modules\AutoSell\AutoSell.xml&quot;/&gt; </span><br><span class="line">&lt;/Ui&gt;</span><br></pre></td></tr></table></figure>
-<p>其中<strong>&lt;</strong> <strong>/&gt;</strong>这间的就是xml文件的标签，标签的类型会由<strong>&lt;</strong>后面的名称标识，如上<code>Script</code>这个标签用于加载lua文件，而<code>Include</code>用于加载其他的xml文件；</p>
-<h2 id="lua文件"><a href="#lua文件" class="headerlink" title="lua文件"></a>lua文件</h2><p>Lua是wow插件逻辑的主要语言，做插件前需要先熟悉一下lua的语法，感兴趣的不防去知乎下搜索一些学习的建议，找一些入门的资料，在我的公众号给我留言，我们可以一起学习探讨下；这里我们给一些简短的片断，目的是了解一下它的作用；</p>
-<p>假设我们现在做一个插件，名为DHAddon（想想DH是不是恶魔猎手的缩写呀？Devil Hunter?），插件里有两个Lua文件devil.lua hunter.lua;</p>
-<p>wow加载它们的方式，类似下面的代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- Load DHAddon </span><br><span class="line">local DHAddon = &#123;&#125; </span><br><span class="line"></span><br><span class="line">f = loadfile(&quot;devil.lua&quot;) </span><br><span class="line">f( &quot;DHAddon&quot;, DHAddon ) </span><br><span class="line"></span><br><span class="line">f = loadfile(&quot;hunter.lua&quot;) </span><br><span class="line">f( &quot;DHAddon&quot;, DHAddon )</span><br></pre></td></tr></table></figure>
-<p>loadfile就是加载文件，文件名称用字符串表示（lua语法“”表示字符串）；加载的结果保存在f中；</p>
-<p>devil.lua:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">local addonName, addon = ... </span><br><span class="line"></span><br><span class="line">print(addonName .. &quot; is loaded.&quot;) </span><br><span class="line"></span><br><span class="line">addon.DHAddon = 123</span><br></pre></td></tr></table></figure>
-<p>hunter.lua:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">local addonName, addon = ... </span><br><span class="line"></span><br><span class="line">print( &quot;DHAddon is &quot; .. addon.DHAddon )</span><br></pre></td></tr></table></figure>
-<p>不出意外的话，运行结果会是：</p>
-<p>DHAddon is loaded.<br>DHAddon is 123</p>
-<p>另外上面的两个lua文件也可以下面这么写，其中有好多lua的内容，暂不解释原因，贴在这里之后了解到了再来回顾：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- 插件第一个Lua文件使用，这行代码确保以下的代码以addon为环境，而不是以_G为环境， </span><br><span class="line">-- 并且在addon环境中可以访问_G的任意变量，访问的变量值也将存储到addon中，便于下次直接访问 </span><br><span class="line">-- 下面的代码定义的全局变量都将保存在addon表中，而非_G </span><br><span class="line">setfenv(1, setmetatable(select(2, ...), &#123; __index = function(self,  key) local v = _G[key]; rawset(self, key, v); return v end &#125;)) </span><br><span class="line"></span><br><span class="line">function testA() </span><br><span class="line">    print(&quot;devil case A&quot;) </span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- 插件的其他lua文件仅需要设置运行环境 </span><br><span class="line">setfenv(1, select(2, ...)) </span><br><span class="line"></span><br><span class="line">-- devil.lua 中定义的函数可以被直接调用 </span><br><span class="line">testA()</span><br></pre></td></tr></table></figure>
-<p>插件的构成就说这么多，好多东西不是很懂，慢慢深入了解就好了；本篇就到这了，有兴趣的可以关注公众号“艾泽拉斯日常”，我们一同来探讨…</p>
-
-          
+          <p>今天来说一说wow插件是个什么鬼？<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/08/25/wow插件的构成/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1033,40 +938,14 @@
 
       
         
-          
-            <p>如果你是一个游戏迷，或者说魔兽世界迷，那么你一定不会对插件这个东西感觉到陌生；如果你是一个用代码写人生的家伙，那么你一定要接触一下Lua这门语言；如果你只是对魔兽插件表示好奇，那么请保持这种好奇的态度。我们今天要说的，就是魔兽世界游戏插件的事情。</p>
-<p>那么在做插件之前，你得要了解几件事情。</p>
-<h2 id="下载游戏"><a href="#下载游戏" class="headerlink" title="下载游戏"></a>下载游戏</h2><p>魔兽世界从2004年在中国登录已经有十多年的历史，迭代过N个版本，客户端也由最初的不到10个G发展到现在的40多个G。然而下载游戏时，你除了要考虑到你硬盘是否够用，下载的问题可以交给战网客户端，暴雪自己的线路绝对可以保证你在一个晚上就下载下来整个客户端。这里我要提醒下各位，你最好将你的游戏下载到一个移动硬盘里，毕竟客户端体积较大，下载到硬盘里那么你就可以带着硬盘随时调试或者玩魔兽啦，而且USB3.0完全可以满足你硬盘的读写速度。</p>
-<p>那么我们要提到的就是战网客户端了。战网是暴雪为方便玩家对其游戏的管理制作的一个游戏管理客户端，在战网上你可以获取到所有暴雪官方游戏客户端。在战网下载页面，我们可以下载到各种语言的战网。同时要提一下，国服的战网是一个封闭的环境，如果我们下载国服的客户端，只能够登录国服的帐号，也就是在中国大陆申请的帐号，不包括台湾香港的帐号。而美国战网的客户端则是一个开放的环境，可以登录任何地区的帐号。</p>
-<p>我们在进行插件调试的过程中，会遇到插件本地化的问题，也就是如果你用中文进行插件制作，中途会遇到时不知明的问题，所以，我们强烈建议下载美服的客户端，下载纯正的美国魔兽世界客户端，之后再进行汉化，这样一来，我们省去了插件制作中中文编码导致插件错误的问题。后期我们会单独进行插件的汉化。</p>
-<p>接下来就是下载美国战网客户端，<a href="http://us.battle.net/en/" target="_blank" rel="noopener">下载地址</a>，你可能会需要用到vpn翻墙下载，可能。下载下来我们安装到电脑上。这个过程可能遇到的问题是，如果你第一次没有安装成功，那么你在接下来的安装过程中可能会遇到进度条卡在中间一直不动的情况，而且等了很久之后仍然是一动也不动。这个时候我们就不要再等它出现奇迹了，你要做的是关掉它，找到你的用户目录，找到你用户目录下关于<em>Battle.net</em>以及<em>Blizzard</em>的缓存，这些目录有可能是隐藏掉的，上网找一下如何让它们显现出来的方法，如果你找不到这些目录，那你仍然可以上网找一下，这里就不再贴目录了，windows和mac下的目录不一样，但是大致都差不多；找到这些文件，不要犹豫全部删掉它，一点不剩。然后重装你的战网。</p>
-<p>接下来安装完战网客户端之后就要安装游戏了，不过我们先不要安装游戏，首先去注册一个美服的战网让我们可以登录美服，注册的时候我们选台湾地区，因为是实名的，会让我们输入身份证号。</p>
-<p>帐号有了之后，我们并不马上打开客户端，打开你的战网客户端配置文件目录，过程如下：</p>
-<p>windows下，打开C盘(系统盘)，用户，你的机器名字，找到AppData；AppData这个文件默认是隐藏的，所以你需要在文件夹选项里点击查看，勾选显示 隐藏文件、文件夹，这样就可以看到AppData了！点击Roaming，找到Battle.net，如果很多可以按快捷键B，在用记事本打开Battle.net；</p>
-<p>在mac下，打开finder，command+shift+g打开，复制<code>~/Library/Application Support/Battle.net</code>，粘贴到输入框，用文本软件打开<em>Battle.net.config</em>文件；</p>
-<p>接下来修改修改Client语法下的AllowedRegions区域，将AllowedRegions区域加入CN;US;EU;KR ，Regions就是你的登录可以选择的区域，CN就是国服;US美服;EU欧服;KR韩/台服。(根据自己的喜好选择对应的区域)</p>
-<p>Locales是你的登录器语言，加入zhCN就是简体中文版登录器;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;Client&quot;:</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">　　&quot;AllowedRegions&quot;: &quot;CN;US;EU;KR&quot;,</span><br><span class="line">　　&quot;AllowedLocales&quot;: </span><br><span class="line">　　&quot;zhCN;deDE;enGB;enUS;esMX;esES;frFR;itIT;plPL;ptBR;ruRU;koKR;zhTW&quot;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>客户端测试及语言设置,Config.wtf文件修改为：(此项也可以不用修改)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SET portal &quot;US-test&quot;</span><br><span class="line"></span><br><span class="line">SET textLocale &quot;zhCN&quot;</span><br><span class="line"></span><br><span class="line">SET audioLocale &quot;enUS&quot;</span><br><span class="line"></span><br><span class="line">SET installLocale &quot;enUS&quot;</span><br></pre></td></tr></table></figure>
-<p>修改完成后进入客户端，选择北美地区，登入战网，之后点安装，战网就会下载美服客户端。下载完成后如果要登入国服帐号，选择中国地区，客户端会自动下载汉化更新，这样你的战网就可以既登录美服，也可登录国服了。</p>
-<h2 id="游戏语言"><a href="#游戏语言" class="headerlink" title="游戏语言"></a>游戏语言</h2><p>毫无疑问，接下来要说的就是插件的语言了。魔兽世界使用Lua配合xml对插件进行开发，游戏逻辑使用Lua，界面使用xml。做过Cocos2dx的朋友应该使用过Lua进行过快速开发，做为一个小巧的脚本语言，它在游戏开发中还是很有市场的。接下来我们要做的就是在电脑上安装Lua；</p>
-<p>lua官方网站上有详细的安装过程，英文好的同学可以自行看原文进行操作。<a href="https://www.lua.org/" target="_blank" rel="noopener">lua.org</a></p>
-<p>下载lua，<a href="https://www.lua.org/ftp/" target="_blank" rel="noopener">download</a>，页面显示了lua的各个版本，建议下载最新版本。下载后解压缩会生成一个目录。</p>
-<p>用终端进入到目录里，具体操作就是在终端里输入cd,中间加个空格，然后把你目录的路径复制到那里（把文件往终端里一拉就有了）。你不知道widows的终端怎么进？win+R，输入cmd，就出来了。</p>
-<p>接下来，终端输入<code>make xxx install</code>，这里的xxx，在下面选：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aix bsd c89 freebsd generic linux macosx mingw posix solaris</span><br></pre></td></tr></table></figure>
-<p>windows下建议下载一个Lua for windows的软件，不认为windows下用终端要方便好多。</p>
-<p>安装完成后在终端直接敲lua，看看安装是否成功。</p>
-<p>安装完成后我们就可以在终端进行lua的学习了，语法学习是一个枯燥的过程，建议找本书照着例子多敲，这里我们推荐书《Programming in Lua》，网上有中文的翻译，想快速上手写的话可以看这篇帖子，先大致了解下lua的语法，<a href="http://bbs.ngacn.cc/read.php?tid=6621402" target="_blank" rel="noopener">Lua学习</a>。</p>
-<h2 id="插件库"><a href="#插件库" class="headerlink" title="插件库"></a>插件库</h2><p>我们魔兽的所有插件都会以文件夹的形式保存在<em>World of Warcraft/Interface/AddOns</em>下，我们以后做的插件放在这里才会被系统识别。不过本篇我们不说插件制作的事情，这里只是告诉读者，这里是我们进入魔兽插件开发的入口。</p>
-<p>我们要用到的插件库叫做wowace,ACE3库以及其他的函数库是目前大多数插件必备的内置库，ACE3库集成了魔兽世界插件中经常用到功能的和函数，极大方便了插件作者提高开发效率。wowace现在更新到了3版本，且各个版本之间不向下向下兼容，所以你最好选择一个稳定的版本做开发。</p>
-<p>这里我们给出库的下载地址，<a href="http://www.wowace.com/addons/ace3/files/" target="_blank" rel="noopener">Ace3</a>以及API文档，<a href="http://wow.gamepedia.com/WelcomeHome_-_Your_first_Ace3_Addon" target="_blank" rel="noopener">API</a>。</p>
-<h2 id="与你的朋友合作"><a href="#与你的朋友合作" class="headerlink" title="与你的朋友合作"></a>与你的朋友合作</h2><p><a href="https://www.wowace.com" target="_blank" rel="noopener">https://www.wowace.com</a>上有wowace版本控制系统，注册一个帐号，你可以在svn或者git上与你的朋友一起写插件。</p>
-<h2 id="发布相关"><a href="#发布相关" class="headerlink" title="发布相关"></a>发布相关</h2><p><a href="https://mods.curse.com" target="_blank" rel="noopener">https://mods.curse.com</a>这个网站可以把你的插件发布到平台上，另外你也可以在这里下载别人的插件进行学习。</p>
-<p>大致能想到的现在就是这么多，我也是刚刚开始做，如果遇到问题，我们可以交流。我还会将我做插件的过程记录下来，同大家一同学习。</p>
-
-          
+          <p>如果你是一个游戏迷，或者说魔兽世界迷，那么你一定不会对插件这个东西感觉到陌生；如果你是一个用代码写人生的家伙，那么你一定要接触一下Lua这门语言；如果你只是对魔兽插件表示好奇，那么请保持这种好奇的态度。我们今天要说的，就是魔兽世界游戏插件的事情。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/08/08/关于wow游戏插件制作之前的几件事/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1205,78 +1084,14 @@
 
       
         
-          
-            <p>Summary:说到纹理，通俗的讲就是我们不用再自己去画图啦，用一些装有信息格式的文件去实现画图，这将为我们带来一个更加清新的展示效果。在纹理中涉及到许多概念也是需要我们去理解的，理解的部分我无法为你们完成，概念的部分我尽量写出自己的理解。希望可以帮到看本博客的同学。</p>
-<p>说到纹理，通俗的讲就是我们不用再自己去画图啦，用一些装有信息格式的文件去实现画图，这将为我们带来一个更加清新的展示效果。在纹理中涉及到许多概念也是需要我们去理解的，理解的部分我无法为你们完成，概念的部分我尽量写出自己的理解。希望可以帮到看本博客的同学。</p>
-<p><a href="https://github.com/usiege/OpenGL_S/tree/master/OpenGL_05_%E5%9F%BA%E7%A1%80%E7%BA%B9%E7%90%86/BaseTexture" target="_blank" rel="noopener">本文例子查看地址</a>，本例中展示了读取tag文件并加载纹理生成图像，mac用户可以把例子下下来看看效果。</p>
-<h2 id="纹理坐标自描述"><a href="#纹理坐标自描述" class="headerlink" title="纹理坐标自描述"></a>纹理坐标自描述</h2><p>典型情况下，纹理坐标是作为0.0到1.0范围内的浮点值指定的，坐标命名为s,t,r,q，分别对应顶点坐标的x,y,z,w；自己理解下就是纹理会被先加载到一个各边都视为单位1的坐标系下，然后再将这样的坐标系映射到真实的屏幕坐标系里，因为每个坐标系上的全长都是单位一，那么根据在第边上的比例即可计算纹理的真实像素。而且若三个坐标系的单位一不相同的情况下，得到的结果也不会是一个正方体，所以真实的纹理计算过程会进行拉伸或收缩。</p>
-<h2 id="读取像素"><a href="#读取像素" class="headerlink" title="读取像素"></a>读取像素</h2><p>Targa图像格式是一种方便且容易使用的图片格式，先贴上一个函数，该函数详细介绍了tga文件的加载过程：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line">/*自定义tga图片头信息结构*/</span><br><span class="line">#pragma pack(1)//结构体字节对齐</span><br><span class="line">typedef struct</span><br><span class="line">&#123;</span><br><span class="line">    GLbyte  identsize;              // Size of ID field that follows header (0)</span><br><span class="line">    GLbyte  colorMapType;           // 0 = None, 1 = paletted</span><br><span class="line">    GLbyte  imageType;              // 0 = none, 1 = indexed, 2 = rgb, 3 = grey, +8=rle</span><br><span class="line">    unsigned short  colorMapStart;          // First colour map entry</span><br><span class="line">    unsigned short  colorMapLength;         // Number of colors</span><br><span class="line">    unsigned char   colorMapBits;   // bits per palette entry</span><br><span class="line">    unsigned short  xstart;                 // image x origin</span><br><span class="line">    unsigned short  ystart;                 // image y origin</span><br><span class="line">    unsigned short  width;                  // width in pixels</span><br><span class="line">    unsigned short  height;                 // height in pixels</span><br><span class="line">    GLbyte  bits;                   // bits per pixel (8 16, 24, 32)</span><br><span class="line">    GLbyte  descriptor;             // image descriptor</span><br><span class="line">&#125; TGAHEADER;</span><br><span class="line">#pragma pack(8)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*tga图片读取*/</span><br><span class="line">//进行内存定位并载入targa位，返回指向新的缓冲区指针，纹理高宽，以及OpenGL数据格式</span><br><span class="line">//注：只支持targa,只能是8位、24位或32位色，没有调色板和RLE编码（这部分没看懂，应该是跟图像格式有关的）</span><br><span class="line">GLbyte *gltReadTGABits(const char *szFileName, GLint *iWidth, GLint *iHeight, GLint *iComponents, GLenum *eFormat)</span><br><span class="line">&#123;</span><br><span class="line">    FILE *pFile;            // File pointer</span><br><span class="line">    TGAHEADER tgaHeader;        // TGA file header</span><br><span class="line">    unsigned long lImageSize;       // Size in bytes of image</span><br><span class="line">    short sDepth;           // Pixel depth;</span><br><span class="line">    GLbyte  *pBits = NULL;          // Pointer to bits</span><br><span class="line">    </span><br><span class="line">    //默认或失败值</span><br><span class="line">    *iWidth = 0;</span><br><span class="line">    *iHeight = 0;</span><br><span class="line">    *eFormat = GL_RGB;</span><br><span class="line">    *iComponents = GL_RGB;</span><br><span class="line">    </span><br><span class="line">    //尝试打开文件</span><br><span class="line">    pFile = fopen(szFileName, &quot;rb&quot;);</span><br><span class="line">    if(pFile == NULL)</span><br><span class="line">        return NULL;</span><br><span class="line">    </span><br><span class="line">    // 读入文件头（二进制）</span><br><span class="line">    fread(&amp;tgaHeader, 18/* sizeof(TGAHEADER)*/, 1, pFile);</span><br><span class="line">    </span><br><span class="line">    // 为大小字节存储顺序问题而进行字节交换，这里有大神给解释下吗？</span><br><span class="line">//#ifdef __APPLE__</span><br><span class="line">//    LITTLE_ENDIAN_WORD(&amp;tgaHeader.colorMapStart);</span><br><span class="line">//    LITTLE_ENDIAN_WORD(&amp;tgaHeader.colorMapLength);</span><br><span class="line">//    LITTLE_ENDIAN_WORD(&amp;tgaHeader.xstart);</span><br><span class="line">//    LITTLE_ENDIAN_WORD(&amp;tgaHeader.ystart);</span><br><span class="line">//    LITTLE_ENDIAN_WORD(&amp;tgaHeader.width);</span><br><span class="line">//    LITTLE_ENDIAN_WORD(&amp;tgaHeader.height);</span><br><span class="line">//#endif</span><br><span class="line">    </span><br><span class="line">    // 获取纹理宽，高，深度</span><br><span class="line">    *iWidth = tgaHeader.width;</span><br><span class="line">    *iHeight = tgaHeader.height;</span><br><span class="line">    sDepth = tgaHeader.bits / 8;</span><br><span class="line">    </span><br><span class="line">    //进行有效性检验，我们需要关心8位、24位或32位</span><br><span class="line">    if(tgaHeader.bits != 8 &amp;&amp; tgaHeader.bits != 24 &amp;&amp; tgaHeader.bits != 32)</span><br><span class="line">        return NULL;</span><br><span class="line">    </span><br><span class="line">    // 计算图像缓冲区大小</span><br><span class="line">    lImageSize = tgaHeader.width * tgaHeader.height * sDepth;</span><br><span class="line">    </span><br><span class="line">    // 内存定位和成功检验</span><br><span class="line">    pBits = (GLbyte*)malloc(lImageSize * sizeof(GLbyte));</span><br><span class="line">    if(pBits == NULL)</span><br><span class="line">        return NULL;</span><br><span class="line">    </span><br><span class="line">    // 读入位</span><br><span class="line">    // 检查读取错误，这项操作应该发现RLE或者其他我们不想识别的格式</span><br><span class="line">    // RLE:一种压缩过的位图文件格式，RLE压缩方案是一种极其成熟的压缩方案，</span><br><span class="line">    // 特点是无损失压缩，既节省了磁盘空间又不损失任何图像数据;</span><br><span class="line">    if(fread(pBits, lImageSize, 1, pFile) != 1)</span><br><span class="line">    &#123;</span><br><span class="line">        free(pBits);</span><br><span class="line">        return NULL;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // 设置希望的OpenGL格式</span><br><span class="line">    switch(sDepth)</span><br><span class="line">    &#123;</span><br><span class="line">#ifndef OPENGL_ES</span><br><span class="line">        case 3:     // Most likely case</span><br><span class="line">            *eFormat = GL_BGR;</span><br><span class="line">            *iComponents = GL_RGB;</span><br><span class="line">            break;</span><br><span class="line">#endif</span><br><span class="line">        case 4:</span><br><span class="line">            *eFormat = GL_BGRA;</span><br><span class="line">            *iComponents = GL_RGBA;</span><br><span class="line">            break;</span><br><span class="line">        case 1:</span><br><span class="line">            *eFormat = GL_LUMINANCE;</span><br><span class="line">            *iComponents = GL_LUMINANCE;</span><br><span class="line">            break;</span><br><span class="line">        default:        // RGB</span><br><span class="line">            //如果是在iPhone上，TGA为BGR，并且iPhone不支持没有alpha的BGR</span><br><span class="line">            //iPhone支持RGB，所以只要将红色和蓝色调整一下就能符合要求</span><br><span class="line">            //但是为了加快iPhone的载入速度，请保存带有alpha的TGA</span><br><span class="line">#ifdef OPENGL_ES</span><br><span class="line">            for(int i = 0; i &lt; lImageSize; i+=3)</span><br><span class="line">            &#123;</span><br><span class="line">                GLbyte temp = pBits[i];</span><br><span class="line">                pBits[i] = pBits[i+2];</span><br><span class="line">                pBits[i+2] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">#endif</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 文件结束</span><br><span class="line">    fclose(pFile);</span><br><span class="line">    </span><br><span class="line">    // 返回指向图像的指针</span><br><span class="line">    return pBits;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>函数<code>gltReadTGABits</code>是自定义读取函数，大致的过程就是打开一个tga文件，然后以二进制的形式读取出来，进而对外部指针width等做修改，所以该函数返回了像素的宽高等的一些信息。</p>
-<h2 id="载入纹理"><a href="#载入纹理" class="headerlink" title="载入纹理"></a>载入纹理</h2><p>接下来载入缓冲区内的纹理：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">bool LoadTGATexture(const char *szFileName, GLenum minFilter, GLenum magFilter, GLenum wrapMode)</span><br><span class="line">&#123;</span><br><span class="line">	GLbyte *pBits;</span><br><span class="line">	int nWidth, nHeight, nComponents;</span><br><span class="line">	GLenum eFormat;</span><br><span class="line">	</span><br><span class="line">	// Read the texture bits</span><br><span class="line">	pBits = gltReadTGABits(szFileName, &amp;nWidth, &amp;nHeight, &amp;nComponents, &amp;eFormat);</span><br><span class="line">	if(pBits == NULL)</span><br><span class="line">		return false;</span><br><span class="line">	</span><br><span class="line">    //纹理环绕</span><br><span class="line">	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrapMode);</span><br><span class="line">	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrapMode);</span><br><span class="line">	</span><br><span class="line">    //纹理过滤（邻近过滤和线性过滤）</span><br><span class="line">	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, minFilter);</span><br><span class="line">	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, magFilter);</span><br><span class="line">    </span><br><span class="line">	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);</span><br><span class="line">	glTexImage2D(GL_TEXTURE_2D, 0, nComponents, nWidth, nHeight, 0,</span><br><span class="line">				 eFormat, GL_UNSIGNED_BYTE, pBits);</span><br><span class="line">	</span><br><span class="line">    free(pBits);</span><br><span class="line">    </span><br><span class="line">    if(minFilter == GL_LINEAR_MIPMAP_LINEAR || </span><br><span class="line">       minFilter == GL_LINEAR_MIPMAP_NEAREST ||</span><br><span class="line">       minFilter == GL_NEAREST_MIPMAP_LINEAR ||</span><br><span class="line">       minFilter == GL_NEAREST_MIPMAP_NEAREST)</span><br><span class="line">        glGenerateMipmap(GL_TEXTURE_2D);</span><br><span class="line">    </span><br><span class="line">	return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="glTexParameteri"><a href="#glTexParameteri" class="headerlink" title="glTexParameteri"></a><code>glTexParameteri</code></h3><p>OpenGL在拉伸和收缩时对纹理贴图计算颜色片段的过程称为纹理过滤；纹理坐标总是根据纹理图像的纹理单元进行求值和绘图；使用上面这个函数设置放大和缩小的过滤模式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);</span><br><span class="line">glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</span><br></pre></td></tr></table></figure>
-<p><code>GL_LINEAR</code>,是线性过滤，把纹理坐标周围的的纹理单元的加权平均值应用到纹理坐标上，这可以需要一些额外的开销；</p>
-<p><code>GL_NEAREST</code>是最邻近过滤，把最邻近的纹理单元应用到纹理坐标中，它我们能选择的最简单、最快速的过滤方法；</p>
-<p>前面说到纹理坐标坐落在一个0.0到1.0的范围内，当超过了范围，OpenGL使用这个函数处理纹理环绕模式；</p>
-<p><code>GL_REPEAT</code>模式下OpenGL在纹理坐标值超过1.0的方向上进行重复；</p>
-<p><code>GL_CLAMP</code>所需的纹理单元取自纹理边界或<code>TEXTURE_BORDER_COLOR</code>(glTexParameterfv函数设置的值)；</p>
-<p><code>GL_CLAMP_TO_EDGE</code>强制对范围外的纹理坐标沿着合法的纹理坐标的最后一行或一列进行渲染；</p>
-<p><code>GL_CLAMP_TO_BORDER</code>范围之外的纹理坐标使用边界纹理单元；</p>
-<p>注：在<code>GL_NEAREST</code>模式下过滤模式并不起作用，因为纹理坐标总是对齐到纹理贴图中的一些特定的纹理单元；</p>
-<h3 id="glPixelStorei"><a href="#glPixelStorei" class="headerlink" title="glPixelStorei"></a><code>glPixelStorei</code></h3><p><code>GL_UNPACK_ALIGNMENT</code>指定OpenGL如何从数据缓冲区中解包图像数据；关于这个函数我们暂时只说明这一点；这似乎跟OpenGL对像素的内存分配有关；</p>
-<h3 id="glTexImage2D"><a href="#glTexImage2D" class="headerlink" title="glTexImage2D"></a><code>glTexImage2D</code></h3><p>函数原型：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">glTexImage2D(GLenum target, GLint level, GLint internalformat, </span><br><span class="line">				GLsizei width, GLsizei height, GLsizei depth, GLint border,</span><br><span class="line">				GLeunm format, GLeunm type,void* data);</span><br></pre></td></tr></table></figure>
-<p>函数比较长，参数讲解：</p>
-<p>target变量分别是<code>GL_TEXTURE_1D</code>, <code>GL_TEXTURE_2D</code>, <code>GL_TEXTURE_3D</code>,这里我们选择<code>GL_TEXTURE_2D</code>；该函数之后会有详细说明；</p>
-<p>level指定了加载的mip贴图层次（你说你不知道mip贴图是什么，下次我们会讲，这里你理解成你们家铺地的瓷砖就好了）；</p>
-<p>我们必须指定纹理数据的internalformat，这个信息告诉我们希望在每个纹理中存储多少颜色成分，并在可能的情况下说明这些成分的存储大小，以及是否希望对纹理进行压缩；竟然一个参数有这么多作用，具体参数列表为：</p>
-<table>
-<thead>
-<tr>
-<th>常量</th>
-<th style="text-align:center">含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GL_ALPHA</td>
-<td style="text-align:center">按照alpha值存储纹理单元</td>
-</tr>
-<tr>
-<td>GL_LUMINANCE(亮度)</td>
-<td style="text-align:center">按照亮度值存储纹理单元</td>
-</tr>
-<tr>
-<td>GL_LUMINANCE_ALPHA</td>
-<td style="text-align:center">按照亮度值和alpha值存储纹理单元</td>
-</tr>
-<tr>
-<td>GL_RGB</td>
-<td style="text-align:center">按照红、绿、蓝成分存储纹理单元</td>
-</tr>
-<tr>
-<td>GL_RGBA</td>
-<td style="text-align:center">按照红、绿、蓝和alpha成分存储纹理单元</td>
-</tr>
-</tbody>
-</table>
-<p>width,height,depth指定了被加载纹理的宽、高和深，这些值必须是2的整数次方，这一点非常重要；纹理贴图并不要求是立方体，但是一个纹理在加载时如果使用了非2的整数次幂值，将会导致纹理贴图被禁用，意思就是你什么也显示不出来；</p>
-<p>border允许我们为纹理贴图指定一个边界宽度；</p>
-<p>format,type,data详见<code>glReadPixels()</code>函数中对应的解释；</p>
-<h3 id="glReadPixels"><a href="#glReadPixels" class="headerlink" title="glReadPixels"></a><code>glReadPixels</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">glReadPixels(GLint x,GLint y,GLSizei width,GLSizei height,</span><br><span class="line">GLenum format,GLeunm type,const void* pixels);</span><br></pre></td></tr></table></figure>
-<p>OpenGL提供了简洁的函数来操作像素：</p>
-<p>glReadPixels：读取一些像素。当前可以简单理解为“把已经绘制好的像素（它可能已经被保存到显卡的显存中）读取到内存”。</p>
-<p>glDrawPixels：绘制一些像素。当前可以简单理解为“把内存中一些数据作为像素数据，进行绘制”。</p>
-<p>glCopyPixels：复制一些像素。当前可以简单理解为“把已经绘制好的像素从一个位置复制到另一个位置”。虽然从功能上看，好象等价于先读取像素再绘制像素，但实际上它不需要把已经绘制的像素（它可能已经被保存到显卡的显存中）转换为内存数据，然后再由内存数据进行重新的绘制，所以要比先读取后绘制快很多。<br>这三个函数可以完成简单的像素读取、绘制和复制任务，但实际上也可以完成更复杂的任务。</p>
-<p>该函数总共有七个参数。前四个参数可以得到一个矩形，该矩形所包括的像素都会被读取出来；（第一、二个参数表示了矩形的左下角横、纵坐标，坐标以窗口最左下角为零，最右上角为最大值；第三、四个参数表示了矩形的宽度和高度）</p>
-<p>第五个参数表示读取的内容，例如：GL_RGB就会依次读取像素的红、绿、蓝三种数据，GL_RGBA则会依次读取像素的红、绿、蓝、alpha四种数据，GL_RED则只读取像素的红色数据（类似的还有GL_GREEN，GL_BLUE，以及GL_ALPHA）。如果采用的不是RGBA颜色模式，而是采用颜色索引模式，则也可以使用GL_COLOR_INDEX来读取像素的颜色索引。目前仅需要知道这些，但实际上还可以读取其它内容，例如深度缓冲区的深度数据等；</p>
-<p>第六个参数表示读取的内容保存到内存时所使用的格式，例如：GL_UNSIGNED_BYTE会把各种数据保存为GLubyte，GL_FLOAT会把各种数据保存为GLfloat等。</p>
-<p>第七个参数表示一个指针，像素数据被读取后，将被保存到这个指针所表示的地址。注意，需要保证该地址有足够的可以使用的空间，以容纳读取的像素数据。例如一幅大小为256<em>256的图象，如果读取其RGB数据，且每一数据被保存为GLubyte，总大小就是：256</em>256<em>3 = 196608字节，即192千字节。如果是读取RGBA数据，则总大小就是256</em>256*4 = 262144字节，即256千字节。<br>注意：glReadPixels实际上是从缓冲区中读取数据，如果使用了双缓冲区，则默认是从正在显示的缓冲（即前缓冲）中读取，而绘制工作是默认绘制到后缓冲区的。因此，如果需要读取已经绘制好的像素，往往需要先交换前后缓冲。</p>
-<p>本篇就先到这里吧，本人要下班了。</p>
-
-          
+          <p>Summary:说到纹理，通俗的讲就是我们不用再自己去画图啦，用一些装有信息格式的文件去实现画图，这将为我们带来一个更加清新的展示效果。在纹理中涉及到许多概念也是需要我们去理解的，理解的部分我无法为你们完成，概念的部分我尽量写出自己的理解。希望可以帮到看本博客的同学。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/08/06/OpenGL-纹理的初步应用/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1415,124 +1230,14 @@
 
       
         
-          
-            <p>Summary:本篇讲一下关于OpenGL图形管线的一些基础知识，刚开始的内容会比较枯燥，后面会用几个例子讲解几种渲染方法，下载git上的例子可以在xcode上看到几种渲染的效果。可展示的效果有，正面和背面剔除、深度测试、多边形偏移、裁剪、混合、多重采样。</p>
-<p>本篇讲一下关于OpenGL图形管线的一些基础知识，刚开始的内容会比较枯燥，后面会用几个例子讲解几种渲染方法，下载git上的例子可以在xcode上看到几种渲染的效果。可展示的效果有，正面和背面剔除、深度测试、多边形偏移、裁剪、混合、多重采样。</p>
-<p>git地址：<a href="https://github.com/usiege/OpenGL_S/tree/master/OpenGL_03_基础渲染/OGL_03_BaseRender" target="_blank" rel="noopener">点击这里</a>（这里做一下说明，在研究例子的过程中，请无视掉GLTools库，该库是原书作者对gl的一次封装，内部实现接下来会逐层展开，我们现在只讨论与gl有关的内容，后期的话我们可以自己实现封装。）</p>
-<h2 id="将点连接起来"><a href="#将点连接起来" class="headerlink" title="将点连接起来"></a>将点连接起来</h2><p>上篇讲了运用gl画线函数画出直线与折线，本篇作一些补充。</p>
-<ul>
-<li>点的大小</li>
-</ul>
-<p><code>void glPointSize(GLfloat size);</code></p>
-<p>该函数可以指定绘制点的像素，不过并不是所有点的大小都能够支持，使用前请确认指定的点大小是可用的；利用下面这段代码可以获得点大小的范围，以及最小间隔：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">GLfloat sizes[2];	//存储支持的点的大小范围</span><br><span class="line">GLfloat step;			//存储支持点的大小增量</span><br><span class="line"></span><br><span class="line">//获取支持的点的大小范围和增量</span><br><span class="line">glGetFloatv(GL_POINT_SIZE_RANGE,sizes);</span><br><span class="line">glGetFloatv(GL_POINT_SIZE_GRANULARITY,&amp;step);</span><br></pre></td></tr></table></figure>
-<p>点总是正方形的像素，改变点大小情况也如此；</p>
-<p>另外还可以通过使用程序点大小模式来设置点大小，这样的话需要在顶点着色器或几何着色器代码中设置点的大小，这两种编程方法将在后面讲到；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">glEnable(GL_PROGRAM_POINT_SIZE);</span><br><span class="line">//该模式允许通过着色器程序修改点大小</span><br><span class="line">gl_PointSize = 5.0;</span><br><span class="line">//在着色器程序中，修改该内建变量的值</span><br></pre></td></tr></table></figure>
-<ul>
-<li>线的宽度</li>
-</ul>
-<p><code>void glLineWidth(GLfloat width);</code></p>
-<p>该函数可以指定线段的宽度，它是改变线段宽度的唯一方式；</p>
-<ul>
-<li>线带</li>
-</ul>
-<p>连续的从一个顶点绘制线段，以形成一个连接起来的线带，使用<code>GL_LINE_STRIP</code>可绘制一组连接起来的线段；</p>
-<ul>
-<li>线环</li>
-</ul>
-<p>如果想要使上面的线带是闭合的，那么使用<code>GL_LINE_LOOP</code>会是不错的选择；</p>
-<ul>
-<li>三角形环绕</li>
-</ul>
-<blockquote>
-<p>指定三角形时，点绘制的顺序与方向是不同的，使用这种结合来指定的方式叫做环绕。</p>
-</blockquote>
-<p>默认情况下，OpenGL认为具有逆时针方向环绕的多边形是正面的，如想修改默认的行为：</p>
-<p><code>glFrontFace(GL_CW);</code></p>
-<p><code>GL_CW</code>参数告诉OpenGL顺时针环绕多边形将被认为是正面的；如需恢复逆时针，可以使用参数<code>GL_CCW</code>;</p>
-<ul>
-<li>三角形带</li>
-</ul>
-<p>当我们需要一串相连的三角形时，可以使用<code>GL_TRIANGLE_STRIP</code>图元绘制相连的三角形，这样可以节省大量时间；</p>
-<ul>
-<li>三角形扇</li>
-</ul>
-<p>使用<code>GL_TRIANGLE_FAN</code>可以创建一组围绕一个中心点的相连三角形；</p>
-<p>本文地址工程目录Primitives展示了以上几种图形的画法；</p>
-<h2 id="基础渲染方式"><a href="#基础渲染方式" class="headerlink" title="基础渲染方式"></a>基础渲染方式</h2><h3 id="油画法"><a href="#油画法" class="headerlink" title="- 油画法"></a>- 油画法</h3><p>绘制三角形时，如果出现覆盖的情况，通常的做法是对三角形进行排序，然后首先画那些较远的三角形，再在上方渲染那些较近的三角形，这种方式称做“油画法”；这种方法在图形处理中是非常低效的；</p>
-<h3 id="正面和背面剔除"><a href="#正面和背面剔除" class="headerlink" title="- 正面和背面剔除"></a>- 正面和背面剔除</h3><p>前面讲到三角形有正面与背面的区分，对其进行区分的原因之一就是为了进行剔除；选择不必要的面进行剔除会极大地提高性能；剔除按如下方式开启：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">glEnable(GL_CULL_FACE);		//开启</span><br><span class="line">glDisable(GL_CULL_FACE);	//关闭</span><br></pre></td></tr></table></figure>
-<p>我们并没有指明剔除的面，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void glCullFace(GLenum mode);</span><br><span class="line"></span><br><span class="line">GL_FRONT	//剔除正面</span><br><span class="line"></span><br><span class="line">GL_BACK	//剔除背面</span><br><span class="line"></span><br><span class="line">GL_FRONT_AND_BACK //正反面全部剔除</span><br></pre></td></tr></table></figure>
-<h3 id="深度测试"><a href="#深度测试" class="headerlink" title="- 深度测试"></a>- 深度测试</h3><p>在绘制一个像素时，将一个值（z值）分配给它，表示它到观察者的距离；当另外一个像素在同样位置进行绘制时，新像素z将与原来的进行比较，我们只绘制z值更小的像素；</p>
-<p>启用深度测试：</p>
-<p><code>glEnable(GL_DEPTH_TEST);</code></p>
-<h3 id="多边形模式"><a href="#多边形模式" class="headerlink" title="- 多边形模式"></a>- 多边形模式</h3><p>函数<em>glPolygonMode</em>允许将多边形渲染成实体、轮廓或只有点，而且可以选择在多边形的正反面上启用该模式；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">void glPolygonMode(GLenum face, GLenum mode);</span><br><span class="line"></span><br><span class="line">//face</span><br><span class="line"></span><br><span class="line">GL_FRONT</span><br><span class="line"></span><br><span class="line">GL_BACK</span><br><span class="line"></span><br><span class="line">GL_FRONT_AND_BACK</span><br><span class="line"></span><br><span class="line">//mode</span><br><span class="line"></span><br><span class="line">GL_FILL		//默认值，实心</span><br><span class="line"></span><br><span class="line">GL_LINE		//轮廓</span><br><span class="line"></span><br><span class="line">GL_POINT		//点</span><br></pre></td></tr></table></figure>
-<p>本文例子GeoTest会展示这些效果；</p>
-<h3 id="多边形偏移"><a href="#多边形偏移" class="headerlink" title="- 多边形偏移"></a>- 多边形偏移</h3><p>举个例子，我们可能想要绘制一架大型飞机，然后在飞机上一个较小的但却与飞机在同一物理空间的图形，这叫做“贴花”；这个小的图形的深度值将会与原来飞机的深度缓冲区中的值相同，这将导致深度测试不可预料的通过或者失败，这种情况叫做z冲突；</p>
-<p>另外一种情况，我们想要在绘制的实心几何图形上突出它的边；以上这些z冲突的情况下，通常我们解决的办法是当深度值相同时，适当的对深度进行偏移而并不改变实际3D空间中的物理位置：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void glPolygonOffset(GLfloat factor, GLfloat units);</span><br><span class="line">//函数通过 Depth offset = (DZ * factor) + (r * units) 公式计算新的深度值；</span><br><span class="line">//其中，DZ是深度值相对于多边形屏幕区域的变化量，r是使深度缓冲区值产生变化的最小值；</span><br></pre></td></tr></table></figure>
-<p>例子Primitives的<code>DrawWireFramedBatch</code>函数代码中展示了偏移的使用;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">### - 裁剪</span><br><span class="line"></span><br><span class="line">裁剪是将渲染限制在一个较小的矩形中，如要开启裁剪：</span><br><span class="line"></span><br><span class="line">`glEnalbe(GL_SCISSOR_TEST);`</span><br><span class="line"></span><br><span class="line">指定窗口：</span><br></pre></td></tr></table></figure>
-<p>void glScissor(GLint x, GLint y, GLsizei width, GLsizei height);<br>//x,y指定裁剪框左下角，width height则指定宽度和高度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">例子Scissor展示了该函数的用法:</span><br></pre></td></tr></table></figure></p>
-<pre><code>// Clear blue window
-glClearColor(0.0f, 0.0f, 1.0f, 0.0f);
-glClear(GL_COLOR_BUFFER_BIT);
-
-// Now set scissor to smaller red sub region
-glClearColor(1.0f, 0.0f, 0.0f, 0.0f);
-glScissor(100, 100, 600, 400);
-glEnable(GL_SCISSOR_TEST);
-glClear(GL_COLOR_BUFFER_BIT);
-
-// Finally, an even smaller green rectangle
-glClearColor(0.0f, 1.0f, 0.0f, 0.0f);
-glScissor(200, 200, 400, 200);
-glClear(GL_COLOR_BUFFER_BIT);
-
-// Turn scissor back off for next render
-glDisable(GL_SCISSOR_TEST);
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### - 混合</span><br><span class="line"></span><br><span class="line">当深度值相同时，使用混合也可以使下层的颜色值不会被清除；开启混合使用：</span><br><span class="line"></span><br><span class="line">`glEnable(GL_BLEND);`</span><br><span class="line"></span><br><span class="line">&gt; 目标颜色：已经存储在颜色缓冲区中的颜色值；</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 源颜色：作为当前渲染命令的结果进入颜色缓冲区的颜色；</span><br><span class="line"></span><br><span class="line">混合功能开启后，目标颜色和源颜色的组合方式是由混合方程式控制的；</span><br><span class="line"></span><br><span class="line">&gt;&gt; Cf = (Cs * S) + (Cd * D)</span><br><span class="line"></span><br><span class="line">&gt;Cf是最终计算产生的颜色，Cs是源颜色，Cd是目标颜色，S、D分别是源和目标混合因子；</span><br><span class="line"></span><br><span class="line">&gt;注意Cs和Cd都是向量，以上进行的是向量乘法和加法；</span><br><span class="line"></span><br><span class="line">混合因子是用函数进行设置的：</span><br></pre></td></tr></table></figure>
-<p>glBlendFunc(GLenum S, GLenum D);<br>//S D都是枚举值，详细请自行google，这里给出枚举值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">混合方程式并不是唯一的，如需改变则：</span><br></pre></td></tr></table></figure></p>
-<p>void glBlendEquation(GLenum mode);</p>
-<p>GL_FUNC_ADD                        //Cf = (Cs <em> S) + (Cd </em> D)</p>
-<p>GL_FUNC_SUBTRACT                    //Cf = (Cs <em> S) - (Cd </em> D)</p>
-<p>GL_FUNC_REVDRSE_SUBTRACT        //Cf = (Cs <em> D) - (Cd </em> S)</p>
-<p>GL_MIN                                //Cf = min(Cs,Cd)</p>
-<p>GL_MAX                                //Cf = max(Cs,Cd)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">另外：</span><br><span class="line"></span><br><span class="line">`void glBlendFuncSeparate(GLenum srcRGB,GLenum dstRGB,GLenum srcAlpha,GLenum dstAlpha);`</span><br><span class="line"></span><br><span class="line">可以指定源和目标的RGB颜色与Alpha颜色不同的混合函数；</span><br><span class="line"></span><br><span class="line">`vodi glBlendColor(GLclampf red,GLclampf green,GLclampf blue,GLclampf alpha);`</span><br><span class="line"></span><br><span class="line">可以指定混合一个常量混合颜色，初始为黑色（0,0,0,0）；</span><br><span class="line"></span><br><span class="line">### - 抗锯齿</span><br><span class="line"></span><br><span class="line">由于像素是正方形的，混合时通常可以相当清楚地看到两种颜色的分界，它们常常被称为锯齿，为了消除锯齿，使用混合功能并开启锯齿，使边缘变得平滑；具体使用方法如下代码：</span><br></pre></td></tr></table></figure></p>
-<pre><code> switch(value)
-{
-case 1:
-    // 打开抗锯齿，并给出关于尽可能进行最佳的处理的提示
-      glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glEnable(GL_BLEND);
-    glEnable(GL_POINT_SMOOTH);
-    glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
-    glEnable(GL_LINE_SMOOTH);
-    glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
-    glEnable(GL_POLYGON_SMOOTH);
-    glHint(GL_POLYGON_SMOOTH_HINT, GL_NICEST);
-    break;
-
-case 2:
-    // 关闭混合和所有的平滑处理
-      glDisable(GL_BLEND);
-    glDisable(GL_LINE_SMOOTH);
-    glDisable(GL_POINT_SMOOTH);
-    break;
-
-default:
-    break;
-}
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">`glEnable(GL_POINT_SMOOTH);`就是开启抗锯齿；</span><br><span class="line"></span><br><span class="line">`glHint(GLenum target, GLenum mode)`函数中target参数指定希望进行修改的行为类型，mode参数告诉OpenGL我们最关心的是什么，或渲染速度或输出质量；该函数是gl唯一一个行为完全依赖生产商的函数，总结呢是跟渲染的性能有关的函数，具体情况具体分析吧，这种函数一般很难实际看出效果；</span><br><span class="line"></span><br><span class="line">### -多重采样</span><br><span class="line"></span><br><span class="line">最后讲一下多重采样，上边讲到的平滑处理在点和直线上是广泛支持的，但是多边形的平滑处理并没有在所有平台上都得到实现，然而在`GL_POLYGON_SMOOTH`时，由于抗锯齿处理是基于混合操作的，需要对从前到后所有图元进行排序，这显然相当麻烦，使用多重采样可以解决这个问题；</span><br><span class="line"></span><br><span class="line">多重采样时，当某一点上的像素进行更新时，gl会在一个缓冲区内对该像素上的值进行采样，结果会通过采样值产生一个单独的值，这可能对性能造成一定的影响；</span><br><span class="line"></span><br><span class="line">打开多重采样：</span><br><span class="line"></span><br><span class="line">`glEnable(GL_MULTISAMPLE);`</span><br><span class="line"></span><br><span class="line">值得注意的一点是，当启用多重采样时，点、直线和多边形的平滑特性会被忽略；</span><br><span class="line"></span><br><span class="line">多重采样的采样值是会被保存在一个单独的缓存区内的，如果没有多重采样缓存区，OpenGL就当作该功能是被禁用的；</span><br><span class="line"></span><br><span class="line">&gt;&gt;状态排序</span><br><span class="line"></span><br><span class="line">&gt;打开或关闭不同的OpenGL特性将会修改驱动程序的内部状态，这种状态的改变可能会对渲染的性能造成影响。对性能非常敏感的程序员常常会不辞辛苦地对所有绘图命令进行排序，这样需要相同状态的几何图形就可以在一起绘制。这种状态排序是在游戏中常用的提高速度的方法之一。</span><br><span class="line"></span><br><span class="line">多重采样缓和区在默认情况下使用片断的RGB值，并不包括颜色的alpha成分；我们可以调用`glEnable`来修改这个行为</span><br></pre></td></tr></table></figure>
-<p>GL_SAMPLE_ALPHA_TO_COVERAGE            //使用alpha值</p>
-<p>GL_SAMPLE_ALPHA_TO_ON                    //将alpha值设为1并使用它</p>
-<p>GL_SAMPLE_COVERAGE                        //使用glSampleCoverage设置的值<br><code>`</code></p>
-<p><code>void glSampleCoverage(GLclampf value, GLboolean invert);</code>函数允许指定一个特定的值，它是与片断覆盖值进行按位与操作的结果；</p>
-
-          
+          <p>Summary:本篇讲一下关于OpenGL图形管线的一些基础知识，刚开始的内容会比较枯燥，后面会用几个例子讲解几种渲染方法，下载git上的例子可以在xcode上看到几种渲染的效果。可展示的效果有，正面和背面剔除、深度测试、多边形偏移、裁剪、混合、多重采样。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/07/10/OpenGL-由实例理解概念/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1671,150 +1376,14 @@ default:
 
       
         
-          
-            <p>公司最近在做一个NFC卡片的工程，经过几天的时间，终于写了一个Demo出来，在此记录下在此过程中遇到的问题。由于之前本人是做iOS的，Android写起来并不是那么的顺手，其中有一些比较基础的问题也会做出解答，水平不高，唯愿不被吐槽。另外最近写java发现，不得不说java还是比较好写的，不用考虑循环引用的问题，而且没有指针的存在理解起来也不是很费劲，内部类用起来的便捷性，底层库也比较好用，下面直接进入Demo吧；</p>
-<p>项目地址：<a href="https://github.com/usiege/Android_S/tree/NFC-master/NFCDemo" target="_blank" rel="noopener">NFCDemo</a></p>
-<h2 id="NFC"><a href="#NFC" class="headerlink" title="NFC"></a>NFC</h2><p>由于本篇主要讲的是Android手机对NFC卡片的处理，所以先来介绍几个NFC的概念，定义并不完全，如需了解更多请自行谷歌；</p>
-<blockquote>
-<blockquote>
-<p>NFC,全称是近场通信（Near Field Communication）,是一种短距离无线技术；</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>一个带有NFC支持的android设备通常是一个发起者。也可以作为NFC的读写设备。他将检测NFC tags并且打开一个Activity来处理. Android 2.3.3还有支持有限的P2P。;</p>
-</blockquote>
-<blockquote>
-<p>Android NFC同时支持三个主要的操作模式:</p>
-</blockquote>
-<blockquote>
-<p><strong>设备读/写模式，允许NFC设备的读/写NFC目标设备</strong>(本例中我们用的是这种操作模式);</p>
-</blockquote>
-<blockquote>
-<p>P2P模式，使NFC设备与其他NFC节点交换数据；这种运作模式被使用在Android Beam中;</p>
-</blockquote>
-<blockquote>
-<p>卡仿真模式，使NFC设备本身作为一个NFC卡。然后模拟NFC卡可以通过一个外部的NFC读写访问，如销售终端NFC点。</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>NDEF(NFC data exchange format)</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>为实现NFC标签、NFC设备以及NFC设备之间的交互通信，NFC论坛(NFC Forum)定义了称为NFC数据交换格式（NDEF）的通用数据格式;</p>
-</blockquote>
-<blockquote>
-<p>NDEF是轻量级的紧凑的二进制格式，可带有URL，vCard和NFC定义的各种数据类型;</p>
-</blockquote>
-<blockquote>
-<p>NDEF使NFC的各种功能更加容易的使用各种支持的标签类型进行数据传输，因为NDEF已经封装了NFC标签的种类细节信息，使得应用不用关心是在与何种标签通信;</p>
-</blockquote>
-<blockquote>
-<p><strong>大致可以理解为就是NFC通信用的一种传输格式；</strong></p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>Android Beam</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>Android Beam是一个基于近场通信所做的新功能，这个功能可以为其他手机分享你正在使用的功能。 Android升级到4.1后，Android Beam现在可以在两台支持NFC的Android设备间分享照片和视频，还可以与支持NFC的蓝牙设备相连。</p>
-</blockquote>
-<blockquote>
-<p><em>？这里有一个标签的概念比较模糊，原文是“当Android设备扫描包含NDEF格式数据的NFC标签，它对消息进行解析，试图找出其中的数据的MIME类型或URI标识”，从该句可看，所谓的标签就是基于NDEF格式的捆绑数据，从标签可获取到NFC设备数据；这里有待确认！</em></p>
-</blockquote>
-<h2 id="NFC逻辑封装"><a href="#NFC逻辑封装" class="headerlink" title="NFC逻辑封装"></a>NFC逻辑封装</h2><p>由于NFC相关是独立于Activity的，所以将NFC的逻辑全部封装在了一个叫做<code>NfcManager</code>的类中，注意该类并不需要做成一个单例；</p>
-<ul>
-<li>获取权限</li>
-</ul>
-<p>在<code>AndroidManifest.xml</code>文件中添加NFC权限：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;uses-permission android:name=&quot;android.permission.NFC&quot;/&gt;</span><br></pre></td></tr></table></figure>
-<p>另外获取NFC设备数据需要在<code>&lt;activity/&gt;</code>内添加如下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;intent-filter&gt;</span><br><span class="line">    &lt;action android:name=&quot;android.nfc.action.TECH_DISCOVERED&quot;/&gt;</span><br><span class="line">&lt;/intent-filter&gt;</span><br><span class="line"></span><br><span class="line">&lt;meta-data</span><br><span class="line">	android:name=&quot;android.nfc.action.TECH_DISCOVERED&quot;</span><br><span class="line">	android:resource=&quot;@xml/nfc_tech_filter&quot;/&gt;</span><br></pre></td></tr></table></figure>
-<p>上面的<code>nfc_tech_filter</code>是在res/xml文件下的自定义xml文件，用于对NFC服务的筛选：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line"></span><br><span class="line">&lt;resources&gt;</span><br><span class="line">    &lt;tech-list&gt;</span><br><span class="line">        &lt;tech&gt;android.nfc.tech.IsoDep&lt;/tech&gt;</span><br><span class="line">    &lt;/tech-list&gt;</span><br><span class="line">    &lt;tech-list&gt;</span><br><span class="line">        &lt;tech&gt;android.nfc.tech.NfcA&lt;/tech&gt;</span><br><span class="line">    &lt;/tech-list&gt;</span><br><span class="line">&lt;/resources&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Intent</li>
-</ul>
-<blockquote>
-<blockquote>
-<p>Intent是Android中的一个用于传递信息的封装类，可以理解为不同组件通信的媒介或者信使。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>在进行<code>Intent</code>的查询过程中了解到Android开发的四大组件，分别是<em>Activity</em>,<em>Service</em>,<em>Broadcast</em>,<em>ContentProvider</em>，而<code>Intent</code>可作为前三者的传递者；</p>
-</blockquote>
-<blockquote>
-<p>在SDK中给出了Intent作用的表现形式为：</p>
-</blockquote>
-<blockquote>
-<ul>
-<li>通过Context.startActivity() orActivity.startActivityForResult() 启动一个Activity；</li>
-</ul>
-</blockquote>
-<blockquote>
-<ul>
-<li>通过 Context.startService() 启动一个服务，或者通过Context.bindService() 和后台服务交互；</li>
-<li>通过广播方法(比如 Context.sendBroadcast(),Context.sendOrderedBroadcast(),  Context.sendStickyBroadcast()) 发给broadcast receivers。</li>
-</ul>
-</blockquote>
-<p>本例中，我们的NFC卡片信息就是从Intent中读取到的；</p>
-<ul>
-<li>初始化NFC</li>
-</ul>
-<p>自定义<code>NFCActivity</code>，并在其中声明并定义一个实例变量：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NfcManager  nfcManager_  = new NfcManager();</span><br></pre></td></tr></table></figure>
-<p>这里要说一下从谷歌开源项目风格中吸收到的一种命名规则，私有实例变量会在名称后加下划线，而OC的风格是在前面加，不管哪种命名风格，都会有可能性的增加程序的易读性，易用，宜用；</p>
-<p>接下来初始化nfc模块，在<code>onCreat()</code>函数中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nfcManager_.initAdapter(this);</span><br></pre></td></tr></table></figure>
-<p><code>NFCManager</code>声明：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class NfcManager&#123;</span><br><span class="line"></span><br><span class="line">	//NFC</span><br><span class="line">    private NfcAdapter nfcAdapter_;</span><br><span class="line">    private PendingIntent pendingIntent_;</span><br><span class="line">    private NFCActivity activity_;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">	//初始化</span><br><span class="line">    public void initAdapter(NFCActivity activity)&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println (&quot;初始化NFC&quot;);</span><br><span class="line">        //初始化nfc适配器</span><br><span class="line">        nfcAdapter_ = NfcAdapter.getDefaultAdapter(activity);</span><br><span class="line">        //初始化卡片信息</span><br><span class="line">        pendingIntent_ = PendingIntent.getActivity(activity, 0,</span><br><span class="line">                            new Intent(activity, activity.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);</span><br><span class="line">        //保留外部变量</span><br><span class="line">        activity_ = activity;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>从这里可以看到，<code>NFCActivity</code>保留了<code>NfcManager</code>的实例变量，而反过来<code>NfcManager</code>也保留了<code>NFCActivity</code>的实例变量，这如果是在OC中会造成循环引用问题的；</p>
-<ul>
-<li>接收Intent</li>
-</ul>
-<p>同样，在<code>onCreat()</code>中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onNewIntent (getIntent ());</span><br></pre></td></tr></table></figure>
-<p>这里这个貌似不用主动调用，<code>onNewIntent()</code>方法也会初调用；这个<code>onNewIntent()</code>是<code>Activity</code>的重写方法，Activity检测到有新的Intent时就会调用该方法，我们的NFC事件也是通过这个方法被传送回来的。</p>
-<p>接下来：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//处理NFC触发</span><br><span class="line">    @Override</span><br><span class="line">    protected void onNewIntent(Intent intent) &#123;</span><br><span class="line">        //读取数据</span><br><span class="line">        nfcManager_.readData(intent);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>我们再来看看这个<code>readData()</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">private IsoDep isodep_; //ISO14443-4 NFC操作</span><br><span class="line">//从Intent中读卡</span><br><span class="line">  public void readData(Intent intent)&#123;</span><br><span class="line"></span><br><span class="line">      if (!NfcAdapter.ACTION_TECH_DISCOVERED.equals(intent.getAction()))&#123;</span><br><span class="line">      		//这里我们做了一个判断，即如果返回的不是NFC事件，直接返回，不做处理；</span><br><span class="line">          return;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      System.out.println (&quot;从intent中获取标签信息！&quot;);</span><br><span class="line">      </span><br><span class="line">      //从intent中获取标签信息</span><br><span class="line">      Parcelable p = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);</span><br><span class="line">      if (p != null) &#123;</span><br><span class="line">          Tag tag = (Tag) p;</span><br><span class="line">          isodep_ = IsoDep.get(tag);</span><br><span class="line">          if (isodep_ != null)&#123;</span><br><span class="line">              readData();</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;else &#123;</span><br><span class="line">          //那么这里就是没有获取到Intent喽</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  private void readData() &#123;</span><br><span class="line">  	//毫无疑问，这里就是读卡的操作了</span><br><span class="line">  	//如果想要了解读卡的具体细节，那么这就与外围的NFC设备有关了，Tag里的逻辑将是由NFC设备厂商定义</span><br><span class="line">  	//本工程中的是调用NFC卡厂商的sdk进行读卡的，在实际工程中具体问题需要具体分析，本文中只讨论过程</span><br><span class="line">  	//如果读者有兴趣，稍后会贴出本工程git地址，本例读卡写卡处理sdk为 package com.broadstar.nfccardsdk;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>另外在activity生命周期函数内：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//程序恢复</span><br><span class="line">   @Override</span><br><span class="line">   protected void onResume() &#123;</span><br><span class="line">       super.onResume();</span><br><span class="line">       nfcManager_.enableForegroundDispatch(this);</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   //程序暂停</span><br><span class="line">   @Override</span><br><span class="line">   protected void onPause() &#123;</span><br><span class="line">       super.onPause();</span><br><span class="line">       nfcManager_.disableForegroundDispatch(this);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>同样<code>NfcManager</code>内部实现：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public static String[][] TECHLISTS; //NFC技术列表</span><br><span class="line">  public static IntentFilter[] FILTERS; //过滤器</span><br><span class="line"></span><br><span class="line">  static &#123;</span><br><span class="line">      try &#123;</span><br><span class="line">          TECHLISTS = new String[][] &#123; &#123; IsoDep.class.getName() &#125;, &#123; NfcA.class.getName() &#125; &#125;;</span><br><span class="line"></span><br><span class="line">          FILTERS = new IntentFilter[] &#123; new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED, &quot;*/*&quot;) &#125;;</span><br><span class="line">      &#125; catch (Exception ignored) &#123;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;	</span><br><span class="line">  </span><br><span class="line">  public void enableForegroundDispatch(NFCActivity activity)&#123;</span><br><span class="line">      if (nfcAdapter_ != null) &#123;</span><br><span class="line">          nfcAdapter_.enableForegroundDispatch(activity, pendingIntent_, FILTERS, TECHLISTS);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  public void disableForegroundDispatch(NFCActivity activity)&#123;</span><br><span class="line">      if (nfcAdapter_ != null)</span><br><span class="line">          nfcAdapter_.disableForegroundDispatch(activity);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h2 id="一些其他的问题"><a href="#一些其他的问题" class="headerlink" title="一些其他的问题"></a>一些其他的问题</h2><ul>
-<li>String parseInt(,)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str=&quot;123&quot;;</span><br><span class="line">int i = Integer.parseInt(str,8);</span><br></pre></td></tr></table></figure>
-<p><code>parseInt(,)</code>后面的参数表示当str被看作是多少进制时，i所得到的值(i 是10进制)</p>
-<ul>
-<li>instanceOf关键字</li>
-</ul>
-<p>判断某个子类对象是否属于某个子类的方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class CardInfo&#123;&#125;</span><br><span class="line">public class ReadCardInfo extends CardInfo&#123;&#125;</span><br><span class="line"></span><br><span class="line">public void someMethod(CardInfo info) &#123;</span><br><span class="line">    if (info instanceof ReadCardInfo) &#123;</span><br><span class="line">    	//是否是ReadCardInfo的实例</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>手机访问网络权限</li>
-</ul>
-<p>出现java.net.SocketException: socket failed: EACCES (Permission denied)抱错时，AndroidManifest.xml中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--网络访问权限--&gt;</span><br><span class="line">&lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>Android Studio第三方Sdk无法识别的问题</li>
-</ul>
-<p>安卓工程的第三方sdk都是放在libs文件夹下的，当无法识别时，点击工程树目录处点击Project，右键libs里的jar包，点击Add as a library，然后再点击同步工程即可解决；</p>
-<ul>
-<li>不要在子线程中更新UI，切记，网上有方法可以调用，如果想这样做，那么请自行研究</li>
-</ul>
-<ul>
-<li>外部类中new另外一个类的内部类</li>
-</ul>
-<p>例如本例中，<code>NFCActivity</code>中有一个<code>CardHandler</code>的实例：</p>
-<p><code>CardHandler</code>中有一个内部公共类：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class CardHandler&#123;</span><br><span class="line"></span><br><span class="line">	//内部类</span><br><span class="line">	public class sendCommand implements Runnable &#123;</span><br><span class="line">	</span><br><span class="line">        private Map&lt;String, Object&gt; param_ = null;</span><br><span class="line">        private Message msg = null;</span><br><span class="line"></span><br><span class="line">        public sendCommand(Map&lt;String, Object&gt; param) &#123;</span><br><span class="line">            sendCommand.this.param_ = param;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        //子线程中不可以操作UI，使用Handler进行消息传递</span><br><span class="line">        @Override</span><br><span class="line">        public void run() &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>NFCActivity</code>中<code>operateCard()</code>函数想要实例化一个<code>sendCommand</code>的内部类对象，那么：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CardHandler cardHandler_ = new CardHandler(this,nfcManager_);</span><br><span class="line">private void operateCard(Map&lt;String, Object&gt; param) &#123;</span><br><span class="line">        //内部类的用法</span><br><span class="line">        ThreadPoolUtils.execute(cardHandler_.new sendCommand(param));</span><br><span class="line">        //上面的这个方法把sendCommnad操作放在了子线程中</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
+          <p>公司最近在做一个NFC卡片的工程，经过几天的时间，终于写了一个Demo出来，在此记录下在此过程中遇到的问题。由于之前本人是做iOS的，Android写起来并不是那么的顺手，其中有一些比较基础的问题也会做出解答，水平不高，唯愿不被吐槽。另外最近写java发现，不得不说java还是比较好写的，不用考虑循环引用的问题，而且没有指针的存在理解起来也不是很费劲，内部类用起来的便捷性，底层库也比较好用，下面直接进入Demo吧；<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/07/08/Android NFC卡实例详解/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1953,49 +1522,14 @@ default:
 
       
         
-          
-            <p>Summary:看了OpenGLES已经有一段时间了，大致对这个3D库有了一些了解，之后就开始对这套API进行一下深入的研究学习。</p>
-<p>看了OpenGLES已经有一段时间了，大致对这个3D库有了一些了解，之后就开始对这套API进行一下深入的研究学习。<br>学习主要是通过《计算机图形学》一书开展的，网上有什么红宝书蓝皮书什么的回头再看吧，学习要专注，你懂得。</p>
-<p>首先要先了解一下GL和GLUT的概念，自己详细Google下，总之你得先了解你所要用的库以及库的功能，在这里简单提一下，GL是3D库的主要API框架，而GLUT则是一些工具，我们在x86_64或i386架构下使用Xcode所对应的头文件是：</p>
-<h2 id="GLUT"><a href="#GLUT" class="headerlink" title="GLUT"></a>GLUT</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;OpenGL/gl.h&gt;</span><br><span class="line">#include &lt;GLUT/GLUT.h&gt;</span><br></pre></td></tr></table></figure>
-<p>GLUT在这里会提供一些创建桌面窗口之类的工具，用于显示opengl画出图的效果；话不多说，直接上例子。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;GLUT/GLUT.h&gt;</span><br><span class="line"></span><br><span class="line">int main(int argc, char * argv[]) &#123;</span><br><span class="line">    // insert code here...</span><br><span class="line">    std::cout &lt;&lt; &quot;Hello, World!\n&quot;;</span><br><span class="line">    </span><br><span class="line">    glutInit(&amp;argc, argv);</span><br><span class="line">    glutInitWindowPosition(100, 100); //初始位置</span><br><span class="line">    glutInitWindowSize(600, 450);//大小</span><br><span class="line">    glutCreateWindow(&quot;显示图元&quot;);</span><br><span class="line">    </span><br><span class="line">    gluOrtho2D(0, 200, 0, 150);</span><br><span class="line">    </span><br><span class="line">    //只调用最后一次的</span><br><span class="line">    glutDisplayFunc(drawLine);</span><br><span class="line">    glutDisplayFunc(drawPolyline);</span><br><span class="line">    glutMainLoop();</span><br><span class="line">    </span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>先不着急，一点一点解释：</p>
-<p><code>glutInit</code></p>
-<p>glut初始化，在这里提一下第二个参数，因为之前用xcode创建例子的时候，函数主入口是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int main(int argc, const char * argv[])</span><br></pre></td></tr></table></figure></p>
-<p>然而进行传参时，<code>glutInit(&amp;argc,argv)</code>提示没有匹配的函数，经查证后得知是参数传错了，理由是：指向const的指针不能被赋给指向非const的指针；解决办法倒不是没有，应该用strcpy，也就是另开一块内存，把字符一个个复制过去，但是这样太麻烦了，索性直接改掉main()的参数好了；</p>
-<p><code>glutInitWindowPosition</code></p>
-<p>设置窗口的初始位置，以桌面左上角为零点；</p>
-<p><code>glutInitWindowSize</code></p>
-<p>设置窗口的大小；</p>
-<p><code>glutCreateWindow</code></p>
-<p>创建窗口，给定一个窗口标题；</p>
-<p><code>gluOrtho2D</code></p>
-<p>接下来的这个函数是在&lt;OpenGL/glu.h&gt;中的，这个函数给定了一个坐标系，该坐标系将与上面设置的坐标系对齐，具体对齐规则书中暂时还没有说到，后面会详细讲，这里先大致清楚它是在做一件什么事情就好了,gl画图的函数坐标将以该坐标系为基准进行画图；</p>
-<p><code>glutDisplayFunc</code></p>
-<p>接下来要进行画图了，这个函数接收一个函数指针，类型为<code>void (*func)(void)</code>;很明显是传入的将是一系列的画图动作，这个形式有点类似于OC的SEL，显然是GPU内部的回调；还有一点是我试图重复调用该函数，结果会发现它并不是会对两个函数分别调用，实验显示只对最后一次的调用起作用。</p>
-<p><code>glutMainLoop()</code></p>
-<p>这是一个运行循环，貌似所有交互系统都是需要有一个死循环的，否则无法进行交互处理。说到“交互”，这真是一个神奇的词语。</p>
-<p>然后就进入我们今天的重点，画图，先上代码；</p>
-<h2 id="GL"><a href="#GL" class="headerlink" title="GL"></a>GL</h2><p>画一条线：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">void drawLine(void)&#123;</span><br><span class="line">    printf(&quot;画一条线\n&quot;);</span><br><span class="line">    </span><br><span class="line">    glClearColor(0, 0, 0, 1);</span><br><span class="line">    glClear(GL_COLOR_BUFFER_BIT);</span><br><span class="line">    glMatrixMode(GL_PROJECTION);</span><br><span class="line">    </span><br><span class="line">    glColor3f(0, 1, 0);</span><br><span class="line">    </span><br><span class="line">    int point1[] = &#123;0,0&#125;;</span><br><span class="line">    int point2[] = &#123;200,150&#125;;</span><br><span class="line">    int point3[] = &#123;0,200&#125;;</span><br><span class="line">    </span><br><span class="line">    glBegin(GL_LINES);</span><br><span class="line">    glVertex2iv(point1);</span><br><span class="line">    glVertex2iv(point2);</span><br><span class="line">    glVertex2iv(point3);</span><br><span class="line">    glEnd();</span><br><span class="line">    /**</span><br><span class="line">     *  如果列出的端点数为奇数，则最后一个端点被忽略；</span><br><span class="line">     */</span><br><span class="line">    glFlush();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>glClearColor</code></p>
-<p>使用该函数设置图形背景颜色，四个参数分别是我们熟悉的RGBA；然而该函数只是将颜色值保存在了颜色缓存中，必须要通过调用<code>glClear</code>才能将颜色值取出来；</p>
-<p><code>glColor3f</code></p>
-<p>使用该函数设置的颜色对要进行画的像素着色；如果是一条线，它将是线的颜色；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">glBegin(GL_LINES);</span><br><span class="line">	</span><br><span class="line">glEnd();</span><br></pre></td></tr></table></figure>
-<p>画图需要被包含在以上两个函数之间，<code>glBegin</code>的参数将决定画的是什么图形，各图形画图时有各自的规则，之后慢慢讲解；画点函数<code>glVertex*</code>，在Vertex后的2,3,4数字表示维数（在几维的空间坐标系中）；之后接的是类型，表示浮点还是整形等；最后如果加v的话，表示传入的将是一个用数组表示的点，本例中就是这样表示的；</p>
-<p><code>glFlush</code></p>
-<p>最后这个函数非常重要，没有它，之前所做的一切都白费了；原文解释，该函数强制由计算机系统存放在不同位置的缓存中的OpenGL函数执行，其位置依赖于OpenGL的实现，暂时还不是能太搞懂，之后可能会详细介绍，本章只是做了一个引入。</p>
-<p>另外如果要画一个点则可以这样做：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">glBegin(GL_POINTS);</span><br><span class="line">glVertex2i(x, y);</span><br><span class="line">glEnd();</span><br></pre></td></tr></table></figure>
-<p>这样可以通过循环，画一些不规则的图形，如果你自己设计算法，也许圆也可以画的出来；另外如果要从一个像素点上取得颜色，则需要使用<code>getPixel</code>。</p>
-<p>画一条折线：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">void drawPolyline(void)&#123;</span><br><span class="line">    printf(&quot;画折线&quot;);</span><br><span class="line">    </span><br><span class="line">    glClearColor(0, 0, 0, 1);</span><br><span class="line">    glClear(GL_COLOR_BUFFER_BIT);</span><br><span class="line">    </span><br><span class="line">    glColor3f(0, 0, 1);</span><br><span class="line">    int point[5][2] = &#123;&#123;0,0&#125;,&#123;100,20&#125;,&#123;30,100&#125;,&#123;150,10&#125;,&#123;150,150&#125;&#125;;</span><br><span class="line">    </span><br><span class="line">    glBegin(GL_LINE_STRIP);//strip条状，剥去</span><br><span class="line">    for (int i=0; i&lt;5; i++) &#123;</span><br><span class="line">        glVertex2iv(point[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    glEnd();</span><br><span class="line">    /**</span><br><span class="line">     *  使用图元常量GL_LINE_STRIP可获得折线；</span><br><span class="line">     *  如果不列出至少两个点，则什么也不显示；</span><br><span class="line">     *</span><br><span class="line">     */</span><br><span class="line">    </span><br><span class="line">    glColor3f(1, 0, 0);</span><br><span class="line">    int pointLoop[5][2] = &#123;&#123;100,100&#125;,&#123;20,20&#125;,&#123;50,50&#125;,&#123;150,10&#125;,&#123;70,10&#125;&#125;;</span><br><span class="line">    </span><br><span class="line">    glBegin(GL_LINE_LOOP);</span><br><span class="line">    for (int i=0; i&lt;5; i++) &#123;</span><br><span class="line">        glVertex2iv(pointLoop[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    glEnd();</span><br><span class="line">    /**</span><br><span class="line">     *  使用图元常量GL_LINE_LOOP可获得闭合折线；</span><br><span class="line">     *  如果不列出至少两个点，则什么也不显示；</span><br><span class="line">     *  最后一个端点与第一个端点相连接；</span><br><span class="line">     *</span><br><span class="line">     */</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    glFlush();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面的例子会教你如何画一条折线或者闭合折线，注意看里面的注释。</p>
-<p>本篇就讲到这里，持续学习并更新中…</p>
-
-          
+          <p>Summary:看了OpenGLES已经有一段时间了，大致对这个3D库有了一些了解，之后就开始对这套API进行一下深入的研究学习。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/06/15/OpenGL-初识/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2134,70 +1668,14 @@ default:
 
       
         
-          
-            <p>Summary:  上周看书学习OpenGLES关于纹理的知识，云里雾里的，看完的感觉是好多东西都明白，涉及到许多opengl的内容，不过照着书里的内容运行了几个Demo，大致算是有些总结，现做一下回顾，上几个例子。</p>
-<p>上周看书学习OpenGLES关于纹理的知识，云里雾里的，看完的感觉是好多东西都明白，涉及到许多opengl的内容，不过照着书里的内容运行了几个Demo，大致算是有些总结，现做一下回顾，上几个例子。不过这里有一点，这本书看完下一步还是要细研究一下opengl，初步决定从《计算机图形学》这本书入手。好了，之后的事情不多说，先做好当下的事情。</p>
-<h2 id="Demo-渲染图片Demo代码"><a href="#Demo-渲染图片Demo代码" class="headerlink" title="Demo:渲染图片Demo代码"></a>Demo:渲染图片<a href="https://github.com/usiege/OpenGLES/tree/master/OpenGLES_Ch_3_纹理/OpenGLES_Ch3_2" target="_blank" rel="noopener">Demo代码</a></h2><p>首先是关于纹理的一些概念:</p>
-<blockquote>
-<p>纹理是什么？纹理是一个用来保存图像的元素值的OGE缓存,就是颜色缓存；</p>
-</blockquote>
-<blockquote>
-<p>当用一个图像初始化一个纹理缓存后，每一个像素就变成了纹理中的纹素（texel）；</p>
-</blockquote>
-<blockquote>
-<p>像素通常表示屏幕上的一个实际的颜色点，纹素是在一个虚拟的坐标系中;</p>
-</blockquote>
-<blockquote>
-<p>GPU会转换OGE坐标系中的每个点为帧缓存中的真实像素坐标（视口viewport坐标）；</p>
-</blockquote>
-<blockquote>
-<p>转换几何形状数据为帧缓存中的颜色像素的过程叫做点阵化（rasterizing），每个颜色像素叫做片元（fragment）;</p>
-</blockquote>
-<blockquote>
-<p>纹素决定片元的对齐过程，叫做映射（mapping）；</p>
-</blockquote>
-<blockquote>
-<p>取样（sampling）是GPU从每个片元的U、V位置选择纹素的过程；</p>
-</blockquote>
-<blockquote>
-<p>MIP贴图是为一个纹理存储多个细节的技术，它通过减少GPU的取样来提高渲染的性能；</p>
-</blockquote>
-<p>下面的例子展示了使用一个图片渲染的图片缓存：</p>
-<p>在<code>GLKViewController</code>中，设置OGE的上下文：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">GLKView *view = (GLKView *)self.view;</span><br><span class="line">   view.backgroundColor = [UIColor whiteColor];</span><br><span class="line">  NSAssert([view isKindOfClass:[GLKView class]],</span><br><span class="line">     @&quot;View controller&apos;s view is not a GLKView&quot;);</span><br><span class="line">  </span><br><span class="line">  view.context = [[AGLKContext alloc] </span><br><span class="line">     initWithAPI:kEAGLRenderingAPIOpenGLES2];</span><br><span class="line">  </span><br><span class="line">  // Make the new context current</span><br><span class="line">  [AGLKContext setCurrentContext:view.context];</span><br></pre></td></tr></table></figure>
-<p>上面的<code>AGLKContext</code>是<code>EAGLContext</code>的子类，<code>setCurrentContext:</code>是继承自父类的方法，设备当前上下文；</p>
-<p>设置提供基础功能:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// Create a base effect that provides standard OpenGL ES 2.0</span><br><span class="line">   // shading language programs and set constants to be used for </span><br><span class="line">   // all subsequent rendering</span><br><span class="line">   self.baseEffect = [[GLKBaseEffect alloc] init];</span><br><span class="line">   self.baseEffect.useConstantColor = GL_TRUE;</span><br><span class="line">   self.baseEffect.constantColor = GLKVector4Make(</span><br><span class="line">      1.0f, // Red</span><br><span class="line">      1.0f, // Green</span><br><span class="line">      1.0f, // Blue</span><br><span class="line">      1.0f);// Alpha</span><br></pre></td></tr></table></figure>
-<p>上面的这个constantColor,说是顶点缓冲，这里可能是顶点的颜色缓存，具体应该是与opengl相关的东西，这里这么用着，我改过这里的值，会修改渲染出来图的背景色，暂且认为是渲染用的一个底色吧；</p>
-<p>设置当前上下文的“清除颜色”：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// Set the background color stored in the current context</span><br><span class="line">GLKVector4 clearColorRGBA = GLKVector4Make(</span><br><span class="line">      1.0f, // Red</span><br><span class="line">      1.0f, // Green</span><br><span class="line">      1.0f, // Blue</span><br><span class="line">      1.0f);// Alpha </span><br><span class="line">glClearColor(</span><br><span class="line">      clearColorRGBA.r, </span><br><span class="line">      clearColorRGBA.g, </span><br><span class="line">      clearColorRGBA.b, </span><br><span class="line">      clearColorRGBA.a);</span><br></pre></td></tr></table></figure>
-<p>接下来要进行渲染图片了，大致与渲染一个三角形的过程差不多，可对照<a href="http://uwuneng.com/opengles_start.html">开始OpenGLES的探索</a>，同样也是6步：</p>
-<p>这里我们自定义了一个<code>AGLKVertexAttribArrayBuffer</code>封装了关于一些OGE的操作，来说明一下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// This data type is used to store information for each vertex</span><br><span class="line">//这个类型用来保存每个顶点的信息</span><br><span class="line"> typedef struct &#123;</span><br><span class="line">   GLKVector3  positionCoords;</span><br><span class="line">   GLKVector2  textureCoords;</span><br><span class="line">&#125;SceneVertex;</span><br><span class="line"></span><br><span class="line">// Define    data for a triangle to use in example</span><br><span class="line">//定义三角形顶点</span><br><span class="line">static const SceneVertex vertices[] = </span><br><span class="line">&#123;</span><br><span class="line">   &#123;&#123;-0.5f, -0.5f, 0.0f&#125;, &#123;0.0f, 0.0f&#125;&#125;, // lower left corner</span><br><span class="line">   &#123;&#123; 0.5f, -0.5f, 0.0f&#125;, &#123;1.0f, 0.0f&#125;&#125;, // lower right corner</span><br><span class="line">   &#123;&#123;-0.5f,  0.5f, 0.0f&#125;, &#123;0.0f, 1.0f&#125;&#125;, // upper left corner</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// Create vertex buffer containing vertices to draw</span><br><span class="line">//这里是定义渲染区域</span><br><span class="line">   self.vertexBuffer = [[AGLKVertexAttribArrayBuffer alloc]</span><br><span class="line">      initWithAttribStride:sizeof(SceneVertex)</span><br><span class="line">      numberOfVertices:sizeof(vertices) / sizeof(SceneVertex)</span><br><span class="line">      bytes:vertices</span><br><span class="line">      usage:GL_STATIC_DRAW];</span><br><span class="line"></span><br><span class="line">self.baseEffect.texture2d0.name = textureInfo.name;</span><br><span class="line">self.baseEffect.texture2d0.target = textureInfo.target;</span><br></pre></td></tr></table></figure>
-<p>下面是init方法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">// This method creates a vertex attribute array buffer in</span><br><span class="line">// the current OpenGL ES context for the thread upon which this </span><br><span class="line">// method is called.</span><br><span class="line">- (id)initWithAttribStride:(GLsizei)aStride</span><br><span class="line">   numberOfVertices:(GLsizei)count</span><br><span class="line">   bytes:(const GLvoid *)dataPtr</span><br><span class="line">   usage:(GLenum)usage;</span><br><span class="line">&#123;</span><br><span class="line">   NSParameterAssert(0 &lt; aStride);</span><br><span class="line">   NSAssert((0 &lt; count &amp;&amp; NULL != dataPtr) ||</span><br><span class="line">      (0 == count &amp;&amp; NULL == dataPtr),</span><br><span class="line">      @&quot;data must not be NULL or count &gt; 0&quot;);</span><br><span class="line">      </span><br><span class="line">   if(nil != (self = [super init]))</span><br><span class="line">   &#123;</span><br><span class="line">      stride = aStride;</span><br><span class="line">      bufferSizeBytes = stride * count;</span><br><span class="line">      </span><br><span class="line">      glGenBuffers(1,                // STEP 1</span><br><span class="line">         &amp;name);</span><br><span class="line">      glBindBuffer(GL_ARRAY_BUFFER,  // STEP 2</span><br><span class="line">         self.name); </span><br><span class="line">      glBufferData(                  // STEP 3</span><br><span class="line">         GL_ARRAY_BUFFER,  // Initialize buffer contents</span><br><span class="line">         bufferSizeBytes,  // Number of bytes to copy</span><br><span class="line">         dataPtr,          // Address of bytes to copy</span><br><span class="line">         usage);           // Hint: cache in GPU memory</span><br><span class="line">         </span><br><span class="line">      NSAssert(0 != name, @&quot;Failed to generate name&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   return self;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>从这里可以看到图形渲染的前三步，生成缓存<code>glGenBuffers</code>，绑定缓存<code>glBindBuffer</code>，复制数据到缓存<code>glBufferData</code>；</p>
-<p>下面我们来进入今天的重点：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// Setup texture</span><br><span class="line">CGImageRef imageRef = </span><br><span class="line">   [[UIImage imageNamed:@&quot;leaves.gif&quot;] CGImage];</span><br><span class="line">   </span><br><span class="line">AGLKTextureInfo *textureInfo = [AGLKTextureLoader </span><br><span class="line">   textureWithCGImage:imageRef </span><br><span class="line">   options:nil </span><br><span class="line">   error:NULL];</span><br><span class="line"></span><br><span class="line">self.baseEffect.texture2d0.name = textureInfo.name;</span><br><span class="line">self.baseEffect.texture2d0.target = textureInfo.target;</span><br></pre></td></tr></table></figure>
-<p><code>textureWithCGImage:</code>实现具体细节：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">// This method generates a new OpenGL ES texture buffer and </span><br><span class="line">// initializes the buffer contents using pixel data from the </span><br><span class="line">// specified Core Graphics image, cgImage. This method returns an</span><br><span class="line">// immutable AGLKTextureInfo instance initialized with </span><br><span class="line">// information about the newly generated texture buffer.</span><br><span class="line">//    The generated texture buffer has power of 2 dimensions. The</span><br><span class="line">// provided image data is scaled (re-sampled) by Core Graphics as</span><br><span class="line">// necessary to fit within the generated texture buffer.</span><br><span class="line"></span><br><span class="line">+ (AGLKTextureInfo *)textureWithCGImage:(CGImageRef)cgImage</span><br><span class="line">                                options:(NSDictionary *)options</span><br><span class="line">   error:(NSError **)outError;</span><br><span class="line">&#123;</span><br><span class="line">   // Get the bytes to be used when copying data into new texture</span><br><span class="line">   // buffer</span><br><span class="line">   size_t width;</span><br><span class="line">   size_t height;</span><br><span class="line">   NSData *imageData = AGLKDataWithResizedCGImageBytes(</span><br><span class="line">      cgImage,</span><br><span class="line">      &amp;width,</span><br><span class="line">      &amp;height);</span><br><span class="line">   </span><br><span class="line">   // Generation, bind, and copy data into a new texture buffer</span><br><span class="line">   GLuint      textureBufferID;</span><br><span class="line">   </span><br><span class="line">   glGenTextures(1, &amp;textureBufferID);                  // Step 1</span><br><span class="line">   glBindTexture(GL_TEXTURE_2D, textureBufferID);       // Step 2</span><br><span class="line">   </span><br><span class="line">    //该函数是OGE最复杂的函数</span><br><span class="line">   glTexImage2D(                                        // Step 3</span><br><span class="line">      GL_TEXTURE_2D, //用于2D纹理</span><br><span class="line">      0, //指定MIP帖图的初始细节级别</span><br><span class="line">      GL_RGBA, //指定每个纹素需要保存信息的数量</span><br><span class="line">      (GLuint)width,//</span><br><span class="line">      (GLuint)height,</span><br><span class="line">      0, //围绕纹素的边界的大小,总是被设置为0</span><br><span class="line">      GL_RGBA, </span><br><span class="line">      GL_UNSIGNED_BYTE, </span><br><span class="line">      [imageData bytes]);</span><br><span class="line">   </span><br><span class="line">   // Set parameters that control texture sampling for the bound</span><br><span class="line">   // texture</span><br><span class="line">  glTexParameteri(GL_TEXTURE_2D,</span><br><span class="line">     GL_TEXTURE_MIN_FILTER, </span><br><span class="line">     GL_LINEAR); </span><br><span class="line">   </span><br><span class="line">   // Allocate and initialize the AGLKTextureInfo instance to be</span><br><span class="line">   // returned</span><br><span class="line">   AGLKTextureInfo *result = [[AGLKTextureInfo alloc] </span><br><span class="line">      initWithName:textureBufferID</span><br><span class="line">      target:GL_TEXTURE_2D</span><br><span class="line">      width:(GLuint)width</span><br><span class="line">      height:(GLuint)height];</span><br><span class="line">   </span><br><span class="line">   return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>上面这个方法使用Core Graphics图像的像素数据生成一个新的OGE缓存并初始化它，此方法返回一个不变的AGLKtextureinfo实例。</p>
-<p>解释一下这个方法<code>glTexParameteri</code>，该方法为创建的纹理缓存设置OGE取样和循环模式。如果使用了MIP贴图，第二个参数会被设置成GL_LINEAR_MIPMAP_LINEAR，这会告诉OGE使用与被取样的S,T坐标最接近的纹素的线性插值取样两个最合适的MIP贴图图像尺寸。然后，来自MIP贴图的两个样本被线性差值来产生最终的片元颜色。这里涉及的两个概念需要对opengl进行深入了解。</p>
-<p>其中<code>AGLKDataWithResizedCGImageBytes</code>把指定的cgImmage拖入imageData提供的字节中，Core Graphics把cgImage拖入一个适当大小的Core Graphics上下文中，这个过程会把图像的尺寸调整为2的幂，图像在绘制的时候还会被上下翻转，这是因为OGE的原点在左下角而iOS的实现原点却是在左上角，翻转Y轴确保了图像字节拥有适用于纹理缓存的正确的方向。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">static NSData *AGLKDataWithResizedCGImageBytes(</span><br><span class="line">   CGImageRef cgImage,</span><br><span class="line">   size_t *widthPtr,</span><br><span class="line">   size_t *heightPtr)</span><br><span class="line">&#123;</span><br><span class="line">   NSCParameterAssert(NULL != cgImage);</span><br><span class="line">   NSCParameterAssert(NULL != widthPtr);</span><br><span class="line">   NSCParameterAssert(NULL != heightPtr);</span><br><span class="line">   </span><br><span class="line">   GLuint originalWidth = (GLuint)CGImageGetWidth(cgImage);</span><br><span class="line">   GLuint originalHeight = (GLuint)CGImageGetWidth(cgImage);</span><br><span class="line">   </span><br><span class="line">   NSCAssert(0 &lt; originalWidth, @&quot;Invalid image width&quot;);</span><br><span class="line">   NSCAssert(0 &lt; originalHeight, @&quot;Invalid image width&quot;);</span><br><span class="line">   </span><br><span class="line">   // Calculate the width and height of the new texture buffer</span><br><span class="line">   // The new texture buffer will have power of 2 dimensions.</span><br><span class="line">   GLuint width = AGLKCalculatePowerOf2ForDimension(</span><br><span class="line">      originalWidth);</span><br><span class="line">   GLuint height = AGLKCalculatePowerOf2ForDimension(</span><br><span class="line">      originalHeight);</span><br><span class="line">      </span><br><span class="line">      //注意这个函数AGLKCalculatePowerOf2ForDimension就是用来取整用的</span><br><span class="line">      </span><br><span class="line">   // Allocate sufficient storage for RGBA pixel color data with </span><br><span class="line">   // the power of 2 sizes specified</span><br><span class="line">   NSMutableData    *imageData = [NSMutableData dataWithLength:</span><br><span class="line">      height * width * 4];  // 4 bytes per RGBA pixel</span><br><span class="line"></span><br><span class="line">   NSCAssert(nil != imageData, </span><br><span class="line">      @&quot;Unable to allocate image storage&quot;);</span><br><span class="line">   </span><br><span class="line">   // Create a Core Graphics context that draws into the </span><br><span class="line">   // allocated bytes</span><br><span class="line">   CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();</span><br><span class="line">   CGContextRef cgContext = CGBitmapContextCreate( </span><br><span class="line">      [imageData mutableBytes], width, height, 8, </span><br><span class="line">      4 * width, colorSpace, </span><br><span class="line">      kCGImageAlphaPremultipliedLast);</span><br><span class="line">   CGColorSpaceRelease(colorSpace);</span><br><span class="line">   </span><br><span class="line">   // Flip the Core Graphics Y-axis for future drawing</span><br><span class="line">   CGContextTranslateCTM (cgContext, 0, height);</span><br><span class="line">   CGContextScaleCTM (cgContext, 1.0, -1.0);</span><br><span class="line">   </span><br><span class="line">   // Draw the loaded image into the Core Graphics context </span><br><span class="line">   // resizing as necessary</span><br><span class="line">   CGContextDrawImage(cgContext, CGRectMake(0, 0, width, height),</span><br><span class="line">      cgImage);</span><br><span class="line">   </span><br><span class="line">   CGContextRelease(cgContext);</span><br><span class="line">   </span><br><span class="line">   *widthPtr = width;</span><br><span class="line">   *heightPtr = height;</span><br><span class="line">   </span><br><span class="line">   return imageData;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>最后在glk回调中实现真正画图：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect</span><br><span class="line">&#123;</span><br><span class="line">   [self.baseEffect prepareToDraw];</span><br><span class="line">   </span><br><span class="line">   // Clear back frame buffer (erase previous drawing)</span><br><span class="line">   [(AGLKContext *)view.context clear:GL_COLOR_BUFFER_BIT];</span><br><span class="line">   </span><br><span class="line">   [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribPosition</span><br><span class="line">      numberOfCoordinates:3</span><br><span class="line">      attribOffset:offsetof(SceneVertex, positionCoords)</span><br><span class="line">      shouldEnable:YES];</span><br><span class="line">   [self.vertexBuffer prepareToDrawWithAttrib:GLKVertexAttribTexCoord0</span><br><span class="line">      numberOfCoordinates:2</span><br><span class="line">      attribOffset:offsetof(SceneVertex, textureCoords)</span><br><span class="line">      shouldEnable:YES];</span><br><span class="line">      </span><br><span class="line">   // Draw triangles using the first three vertices in the </span><br><span class="line">   // currently bound vertex buffer</span><br><span class="line">   [self.vertexBuffer drawArrayWithMode:GL_TRIANGLES</span><br><span class="line">      startVertexIndex:0</span><br><span class="line">      numberOfVertices:3];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>glEnableVertexAttribArray</code>,</p>
-<p><code>glVertexAttribPointer</code>,</p>
-<p><code>glDrawArrays</code></p>
-<p>这里提前熟悉一下这些函数，虽然现在还是对它们不是太理解。</p>
-<p>后面的例子就不一一写了，过程笔记都在代码中，分别涉及到一些概念</p>
-<p><a href="https://github.com/usiege/OpenGLES_iOS/tree/master/OpenGLES_Ch_3_纹理/OpenGLES_Ch3_3" target="_blank" rel="noopener">OpenGLES_Ch3_3取样循环等</a></p>
-<p><a href="https://github.com/usiege/OpenGLES_iOS/tree/master/OpenGLES_Ch_3_纹理/OpenGLES_Ch3_4" target="_blank" rel="noopener">OpenGLES_Ch3_4混合片元颜色</a></p>
-<p><a href="https://github.com/usiege/OpenGLES_iOS/tree/master/OpenGLES_Ch_3_纹理/OpenGLES_Ch3_5" target="_blank" rel="noopener">OpenGLES_Ch3_5多重纹理</a></p>
-<p><a href="https://github.com/usiege/OpenGLES_iOS/tree/master/OpenGLES_Ch_3_纹理/OpenGLES_Ch3_6" target="_blank" rel="noopener">OpenGLES_Ch3_6自定义纹理</a></p>
-
-          
+          <p>Summary:  上周看书学习OpenGLES关于纹理的知识，云里雾里的，看完的感觉是好多东西都明白，涉及到许多opengl的内容，不过照着书里的内容运行了几个Demo，大致算是有些总结，现做一下回顾，上几个例子。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/06/04/OpenGLES-纹理的初步认识/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

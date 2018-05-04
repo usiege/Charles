@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Summary: 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下… 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下… 解决蓝牙写数据等问题更正读数据的一个问题更正一个问题，就是读数据时notify和read的两个回调，本人实测回调notification只是在之后回调一次">
+<meta name="description" content="Summary: 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下…">
 <meta name="keywords" content="iOS,bluetooth">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 作为Central蓝牙连接外围（下）">
 <meta property="og:url" content="http://uwuneng.com/2016/05/29/iOS 作为Central蓝牙连接外围（下）/index.html">
 <meta property="og:site_name" content="NOTHING">
-<meta property="og:description" content="Summary: 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下… 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下… 解决蓝牙写数据等问题更正读数据的一个问题更正一个问题，就是读数据时notify和read的两个回调，本人实测回调notification只是在之后回调一次">
+<meta property="og:description" content="Summary: 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下…">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-04T07:54:51.664Z">
+<meta property="og:updated_time" content="2018-05-04T08:49:12.081Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS 作为Central蓝牙连接外围（下）">
-<meta name="twitter:description" content="Summary: 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下… 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下… 解决蓝牙写数据等问题更正读数据的一个问题更正一个问题，就是读数据时notify和read的两个回调，本人实测回调notification只是在之后回调一次">
+<meta name="twitter:description" content="Summary: 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下…">
 
 
 
@@ -352,7 +352,7 @@
       
 
       
-        <p>Summary: 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下…</p>
+        <p>Summary: 仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下…<br><a id="more"></a></p>
 <p>仍然是公司蓝牙卡项目，搞了两周，现在大致搞定，作一个总结；首先要把上篇遗留下来的蓝牙外围设备写数据等问题解决下…</p>
 <h2 id="解决蓝牙写数据等问题"><a href="#解决蓝牙写数据等问题" class="headerlink" title="解决蓝牙写数据等问题"></a>解决蓝牙写数据等问题</h2><h3 id="更正读数据的一个问题"><a href="#更正读数据的一个问题" class="headerlink" title="更正读数据的一个问题"></a>更正读数据的一个问题</h3><p>更正一个问题，就是读数据时notify和read的两个回调，本人实测回调notification只是在之后回调一次，而不论读数据采用以上哪种，updataValue方法总是会执行，而且有时还不只是一次；</p>
 <p>总结：</p>

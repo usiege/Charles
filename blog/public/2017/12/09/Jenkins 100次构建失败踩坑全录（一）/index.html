@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="本文将以问题与解决方案的方式对Jenkins构建过程中的问题进行收录，后期会在评论中持续收集，如果有相同情况，请自行对照解决； 本文参考：手把手教你利用Jenkins持续集成iOS项目http://www.jianshu.com/p/41ecb06ae95f关于iOS-Jenkins进行持续集成项目部署http://www.jianshu.com/p/54c7daae6c94iOS持续集成：Jen">
+<meta name="description" content="本文将以问题与解决方案的方式对Jenkins构建过程中的问题进行收录，后期会在评论中持续收集，如果有相同情况，请自行对照解决；">
 <meta name="keywords" content="jenkins">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Jenkins 100次构建失败踩坑全录（一）">
 <meta property="og:url" content="http://uwuneng.com/2017/12/09/Jenkins 100次构建失败踩坑全录（一）/index.html">
 <meta property="og:site_name" content="NOTHING">
-<meta property="og:description" content="本文将以问题与解决方案的方式对Jenkins构建过程中的问题进行收录，后期会在评论中持续收集，如果有相同情况，请自行对照解决； 本文参考：手把手教你利用Jenkins持续集成iOS项目http://www.jianshu.com/p/41ecb06ae95f关于iOS-Jenkins进行持续集成项目部署http://www.jianshu.com/p/54c7daae6c94iOS持续集成：Jen">
+<meta property="og:description" content="本文将以问题与解决方案的方式对Jenkins构建过程中的问题进行收录，后期会在评论中持续收集，如果有相同情况，请自行对照解决；">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/uowhxmph61xngu3l2t4hxamh/image_1c0ptnl2j13mh1mn2hmk18qf7usp.png">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/s46xl40yzd7t5gijpwdippc9/image_1c0pu09in491qq31bqs25f1hbg26.png">
@@ -108,10 +108,10 @@
 <meta property="og:image" content="http://static.zybuluo.com/usiege/f6pv0rsip2oirn32m01agp1l/image_1c0qljaq610ljc02k6g1r821fs5gc.png">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/bzufeuzktht55r97i2bsem18/image_1c0qlt20313duogl2g51hp11nqsgp.png">
 <meta property="og:image" content="http://static.zybuluo.com/usiege/firl86lawiru1uvz1jhelb28/image_1c0qmnlafh2p1j571b4ettv1ncah6.png">
-<meta property="og:updated_time" content="2018-05-04T07:57:28.444Z">
+<meta property="og:updated_time" content="2018-05-04T08:49:15.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jenkins 100次构建失败踩坑全录（一）">
-<meta name="twitter:description" content="本文将以问题与解决方案的方式对Jenkins构建过程中的问题进行收录，后期会在评论中持续收集，如果有相同情况，请自行对照解决； 本文参考：手把手教你利用Jenkins持续集成iOS项目http://www.jianshu.com/p/41ecb06ae95f关于iOS-Jenkins进行持续集成项目部署http://www.jianshu.com/p/54c7daae6c94iOS持续集成：Jen">
+<meta name="twitter:description" content="本文将以问题与解决方案的方式对Jenkins构建过程中的问题进行收录，后期会在评论中持续收集，如果有相同情况，请自行对照解决；">
 <meta name="twitter:image" content="http://static.zybuluo.com/usiege/uowhxmph61xngu3l2t4hxamh/image_1c0ptnl2j13mh1mn2hmk18qf7usp.png">
 
 
@@ -374,7 +374,7 @@
       
 
       
-        <p>本文将以问题与解决方案的方式对Jenkins构建过程中的问题进行收录，后期会在评论中持续收集，如果有相同情况，请自行对照解决；</p>
+        <p>本文将以问题与解决方案的方式对Jenkins构建过程中的问题进行收录，后期会在评论中持续收集，如果有相同情况，请自行对照解决；<br><a id="more"></a></p>
 <p>本文参考：<br>手把手教你利用Jenkins持续集成iOS项目<br><a href="http://www.jianshu.com/p/41ecb06ae95f" target="_blank" rel="noopener">http://www.jianshu.com/p/41ecb06ae95f</a><br>关于iOS-Jenkins进行持续集成项目部署<br><a href="http://www.jianshu.com/p/54c7daae6c94" target="_blank" rel="noopener">http://www.jianshu.com/p/54c7daae6c94</a><br>iOS持续集成：Jenkins篇<br><a href="http://www.jianshu.com/p/faf879b3d182" target="_blank" rel="noopener">http://www.jianshu.com/p/faf879b3d182</a></p>
 <h2 id="关卡1-："><a href="#关卡1-：" class="headerlink" title="关卡1 ："></a>关卡1 ：</h2><p>安装Jenkins：首先你的电脑得有一个Java环境，接下来安装Jenkins。你可以直接去<a href="https://jenkins.io" target="_blank" rel="noopener">Jenkins入口</a>网站，查看安装方式；<br>当然你也可以使用以下方法：</p>
 <ul>

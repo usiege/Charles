@@ -4,6 +4,11 @@ categories: coder
 tags: [CocaoPods]
 -----------
 
+最近公司的项目需要添加几个依赖库，用pod更新的时候发现一直卡在了
+```
+Setting up CocoaPods master repo
+```
+<!-- more -->
 
 最近公司的项目需要添加几个依赖库，用pod更新的时候发现一直卡在了
 ```

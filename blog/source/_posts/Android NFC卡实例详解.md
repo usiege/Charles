@@ -5,6 +5,8 @@ tags: [Android, NFC]
 -----------
 
 公司最近在做一个NFC卡片的工程，经过几天的时间，终于写了一个Demo出来，在此记录下在此过程中遇到的问题。由于之前本人是做iOS的，Android写起来并不是那么的顺手，其中有一些比较基础的问题也会做出解答，水平不高，唯愿不被吐槽。另外最近写java发现，不得不说java还是比较好写的，不用考虑循环引用的问题，而且没有指针的存在理解起来也不是很费劲，内部类用起来的便捷性，底层库也比较好用，下面直接进入Demo吧；
+<!-- more -->
+
 
 项目地址：[NFCDemo](https://github.com/usiege/Android_S/tree/NFC-master/NFCDemo)
 
