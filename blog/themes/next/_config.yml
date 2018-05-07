@@ -40,12 +40,12 @@ keywords: "Hexo, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /atom.xml
 
 footer:
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  #since: 2015
+  since: 2015
 
   # Icon between year and copyright info.
   icon: user
@@ -143,6 +143,8 @@ social:
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
 
+
+# 侧栏社交链接图标设置
 social_icons:
   enable: true
   icons_only: false
@@ -151,15 +153,16 @@ social_icons:
 # Blog rolls
 links_icon: link
 links_title: Links
-links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
+#links_layout: block
+links_layout: inline
+links:
+  😆网易云音乐😆: https://music.163.com/#/user/home?id=86590096
+  
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: /images/monk.png
 
 # Table Of Contents in the Sidebar
 toc:
@@ -199,10 +202,10 @@ sidebar:
   b2t: false
 
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
   # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
+  onmobile: true
 
 
 # ---------------------------------------------------------------
@@ -235,16 +238,16 @@ post_meta:
 # Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
-  wordcount: false
-  min2read: false
+  wordcount: true
+  min2read: true
   totalcount: false
-  separated_meta: true
+  separated_meta: false
 
 # Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+# wechat_subscriber:
+#   enabled: true
+#   qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+#   description: 喜欢魔兽的朋友可以添加我的公众号"艾泽拉斯日常"
 
 # Reward
 #reward_comment: Donate comment here

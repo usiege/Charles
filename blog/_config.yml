@@ -42,7 +42,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
   
 # Home page setting
@@ -82,3 +82,5 @@ deploy:
   type: git
   repo: https://github.com/usiege/usiege.github.io
   branch: master
+
+plugins: hexo-generate-feed
