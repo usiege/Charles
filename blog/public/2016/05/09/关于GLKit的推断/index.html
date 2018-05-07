@@ -83,11 +83,11 @@
 <meta name="keywords" content="opengles,GLKit">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于GLKit的推断">
-<meta property="og:url" content="http://uwuneng.com/2016/05/09/关于GLKit的推断/index.html">
+<meta property="og:url" content="http://charlesblog.site/2016/05/09/关于GLKit的推断/index.html">
 <meta property="og:site_name" content="NOTHING">
 <meta property="og:description" content="Summary:本篇是对OpenGLES_Ch2_1中的缓存管理代码的简单重用和重构，用以加深对GLKView的理解。苹果的GLKit框架封装了gl的具体实现，以便使用gl的用户减少编写gl的代码量以及避免不必要的错误。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-04T16:23:39.590Z">
+<meta property="og:updated_time" content="2018-05-07T02:17:42.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于GLKit的推断">
 <meta name="twitter:description" content="Summary:本篇是对OpenGLES_Ch2_1中的缓存管理代码的简单重用和重构，用以加深对GLKView的理解。苹果的GLKit框架封装了gl的具体实现，以便使用gl的用户减少编写gl的代码量以及避免不必要的错误。">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://uwuneng.com/2016/05/09/关于GLKit的推断/"/>
+  <link rel="canonical" href="http://charlesblog.site/2016/05/09/关于GLKit的推断/"/>
 
 
 
@@ -139,6 +139,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
 
   
   
@@ -263,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://uwuneng.com/2016/05/09/关于GLKit的推断/">
+    <link itemprop="mainEntityOfPage" href="http://charlesblog.site/2016/05/09/关于GLKit的推断/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Charles">
@@ -566,6 +567,40 @@ GL_STENCIL_BUFFER_BIT:  模板缓冲
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/usiege" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/8a7d7e6876ab" target="_blank" title="Jianshu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Jianshu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/jianin45" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/jianin45" target="_blank" title="weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i>weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://blog.sina.com.cn/tjfcg45" target="_blank" title="Blog">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Blog</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -673,6 +708,8 @@ GL_STENCIL_BUFFER_BIT:  模板缓冲
   
 
 
+  
+
 
 
 
@@ -711,6 +748,11 @@ GL_STENCIL_BUFFER_BIT:  模板缓冲
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -791,6 +833,14 @@ GL_STENCIL_BUFFER_BIT:  模板缓冲
 
   
 
+  
+
+
+  
+    <script type="text/javascript"
+      color="0,0,255" opacity='0.7' zIndex="-2" count="30" 
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
   
 
 </body>

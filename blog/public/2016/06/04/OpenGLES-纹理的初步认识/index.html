@@ -83,11 +83,11 @@
 <meta name="keywords" content="opengles,texture">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenGLES-纹理的初步认识">
-<meta property="og:url" content="http://uwuneng.com/2016/06/04/OpenGLES-纹理的初步认识/index.html">
+<meta property="og:url" content="http://charlesblog.site/2016/06/04/OpenGLES-纹理的初步认识/index.html">
 <meta property="og:site_name" content="NOTHING">
 <meta property="og:description" content="Summary:  上周看书学习OpenGLES关于纹理的知识，云里雾里的，看完的感觉是好多东西都明白，涉及到许多opengl的内容，不过照着书里的内容运行了几个Demo，大致算是有些总结，现做一下回顾，上几个例子。不过这里有一点，这本书看完下一步还是要细研究一下opengl，初步决定从《计算机图形学》这本书入手。好了，之后的事情不多说，先做好当下的事情。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-04T12:25:57.867Z">
+<meta property="og:updated_time" content="2018-05-07T02:17:42.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenGLES-纹理的初步认识">
 <meta name="twitter:description" content="Summary:  上周看书学习OpenGLES关于纹理的知识，云里雾里的，看完的感觉是好多东西都明白，涉及到许多opengl的内容，不过照着书里的内容运行了几个Demo，大致算是有些总结，现做一下回顾，上几个例子。不过这里有一点，这本书看完下一步还是要细研究一下opengl，初步决定从《计算机图形学》这本书入手。好了，之后的事情不多说，先做好当下的事情。">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://uwuneng.com/2016/06/04/OpenGLES-纹理的初步认识/"/>
+  <link rel="canonical" href="http://charlesblog.site/2016/06/04/OpenGLES-纹理的初步认识/"/>
 
 
 
@@ -139,6 +139,7 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
 
   
   
@@ -263,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://uwuneng.com/2016/06/04/OpenGLES-纹理的初步认识/">
+    <link itemprop="mainEntityOfPage" href="http://charlesblog.site/2016/06/04/OpenGLES-纹理的初步认识/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Charles">
@@ -388,7 +389,7 @@
 <p>上面的这个constantColor,说是顶点缓冲，这里可能是顶点的颜色缓存，具体应该是与opengl相关的东西，这里这么用着，我改过这里的值，会修改渲染出来图的背景色，暂且认为是渲染用的一个底色吧；</p>
 <p>设置当前上下文的“清除颜色”：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// Set the background color stored in the current context</span><br><span class="line">GLKVector4 clearColorRGBA = GLKVector4Make(</span><br><span class="line">      1.0f, // Red</span><br><span class="line">      1.0f, // Green</span><br><span class="line">      1.0f, // Blue</span><br><span class="line">      1.0f);// Alpha </span><br><span class="line">glClearColor(</span><br><span class="line">      clearColorRGBA.r, </span><br><span class="line">      clearColorRGBA.g, </span><br><span class="line">      clearColorRGBA.b, </span><br><span class="line">      clearColorRGBA.a);</span><br></pre></td></tr></table></figure>
-<p>接下来要进行渲染图片了，大致与渲染一个三角形的过程差不多，可对照<a href="http://uwuneng.com/opengles_start.html">开始OpenGLES的探索</a>，同样也是6步：</p>
+<p>接下来要进行渲染图片了，大致与渲染一个三角形的过程差不多，可对照<a href="http://uwuneng.com/opengles_start.html" target="_blank" rel="noopener">开始OpenGLES的探索</a>，同样也是6步：</p>
 <p>这里我们自定义了一个<code>AGLKVertexAttribArrayBuffer</code>封装了关于一些OGE的操作，来说明一下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// This data type is used to store information for each vertex</span><br><span class="line">//这个类型用来保存每个顶点的信息</span><br><span class="line"> typedef struct &#123;</span><br><span class="line">   GLKVector3  positionCoords;</span><br><span class="line">   GLKVector2  textureCoords;</span><br><span class="line">&#125;SceneVertex;</span><br><span class="line"></span><br><span class="line">// Define    data for a triangle to use in example</span><br><span class="line">//定义三角形顶点</span><br><span class="line">static const SceneVertex vertices[] = </span><br><span class="line">&#123;</span><br><span class="line">   &#123;&#123;-0.5f, -0.5f, 0.0f&#125;, &#123;0.0f, 0.0f&#125;&#125;, // lower left corner</span><br><span class="line">   &#123;&#123; 0.5f, -0.5f, 0.0f&#125;, &#123;1.0f, 0.0f&#125;&#125;, // lower right corner</span><br><span class="line">   &#123;&#123;-0.5f,  0.5f, 0.0f&#125;, &#123;0.0f, 1.0f&#125;&#125;, // upper left corner</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// Create vertex buffer containing vertices to draw</span><br><span class="line">//这里是定义渲染区域</span><br><span class="line">   self.vertexBuffer = [[AGLKVertexAttribArrayBuffer alloc]</span><br><span class="line">      initWithAttribStride:sizeof(SceneVertex)</span><br><span class="line">      numberOfVertices:sizeof(vertices) / sizeof(SceneVertex)</span><br><span class="line">      bytes:vertices</span><br><span class="line">      usage:GL_STATIC_DRAW];</span><br><span class="line"></span><br><span class="line">self.baseEffect.texture2d0.name = textureInfo.name;</span><br><span class="line">self.baseEffect.texture2d0.target = textureInfo.target;</span><br></pre></td></tr></table></figure>
 <p>下面是init方法：</p>
@@ -567,6 +568,40 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/usiege" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.jianshu.com/u/8a7d7e6876ab" target="_blank" title="Jianshu">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Jianshu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/jianin45" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/jianin45" target="_blank" title="weibo">
+                      
+                        <i class="fa fa-fw fa-globe"></i>weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://blog.sina.com.cn/tjfcg45" target="_blank" title="Blog">
+                      
+                        <i class="fa fa-fw fa-globe"></i>Blog</a>
+                  </span>
+                
+            </div>
+          
 
           
           
@@ -674,6 +709,8 @@
   
 
 
+  
+
 
 
 
@@ -712,6 +749,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -792,6 +834,14 @@
 
   
 
+  
+
+
+  
+    <script type="text/javascript"
+      color="0,0,255" opacity='0.7' zIndex="-2" count="30" 
+      src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
   
 
 </body>

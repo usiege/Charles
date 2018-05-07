@@ -6,7 +6,7 @@
 title: NOTHING
 subtitle: NOTHING IS EVERYTHING.
 description: Nothing is true,every is permitted.
-keywords:
+keywords: NOTHING
 author: Charles
 language: zh-CN 
 email: 2275572017@qq.com
@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://uwuneng.com
+url: http://charlesblog.site
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
