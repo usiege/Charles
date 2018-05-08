@@ -1,6 +1,7 @@
 # I am Charles 
 
 [@消失的指针](http://weibo.com/230126045)
+[我的主页](http://charlesblog.site)
 
 Finally! 
 
@@ -13,7 +14,6 @@ Finally!
 ### iOS
 
 * [MGJRouter你的代码分析](https://www.jianshu.com/p/372560dcbc6f)
-
 
 ### wow
 
@@ -30,5 +30,8 @@ Finally!
 ### 或许可以有些开源
 
 ### 一定有你想要的
+
+* 2018.05.08 添加了Python Crawler Django；
+* 2018.05.08 添加了Cocos2d-js两个H5游戏；
 
 ### 分享&总结
