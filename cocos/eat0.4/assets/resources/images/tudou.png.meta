@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "2afe2439-ca2e-475b-891a-10db358b5789",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "tudou": {
+      "ver": "1.0.3",
+      "uuid": "2f96b9b0-86c1-4646-aee5-5c6d81b47fcd",
+      "rawTextureUuid": "2afe2439-ca2e-475b-891a-10db358b5789",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 76,
+      "height": 46,
+      "rawWidth": 76,
+      "rawHeight": 46,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
