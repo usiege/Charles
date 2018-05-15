@@ -7,7 +7,7 @@
 -------
 
 * 2018.05.15 记录开始：
-	1. [DNN-Theano](https://github.com/usiege/Machine-Learning/blob/master/0515-Theano%20DNN.pdf)；
+	1. [DNN-Theano.pdf](https://github.com/usiege/Machine-Learning/blob/master/0515-Theano%20DNN.pdf)；
 
 * 2018.05.14 
 	1. [Youtube-Regression](https://www.youtube.com/watch?v=fegAeph9UaA&list=PLJV_el3uVTsPy9oCRY30oBPNLCo89yu49&index=2);
