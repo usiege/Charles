@@ -23,7 +23,8 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 ```
 [安装错误参考](http://macappstore.org/clang-omp/)，用以上方法发现未解决问题；
 
-> fatal: unable to access 'https://github.com/Homebrew/homebrew-core/': LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
+> fatal: unable to access [https://github.com/Homebrew/homebrew-core](https://github.com/Homebrew/homebrew-core/): 
+LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
 Error: Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core failed!
 Error: Could not link:
 /usr/local/share/man/man1/brew.1

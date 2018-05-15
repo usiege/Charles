@@ -31,7 +31,4 @@ Finally!
 
 ### 一定有你想要的
 
-* 2018.05.08 添加了Python Crawler Django；
-* 2018.05.08 添加了Cocos2d-js两个H5游戏；
-
 ### 分享&总结
