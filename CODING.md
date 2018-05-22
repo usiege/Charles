@@ -5,6 +5,9 @@
 
 -------
 
+* 2018.05.22
+  - [人工智能的知识表示](https://github.com/usiege/Exercise/blob/master/AI-人工智能概论/人工智能的知识表示.md)
+
 * 2018.05.18 
   - [Youtube-Regression](https://www.youtube.com/watch?v=fegAeph9UaA&list=PLJV_el3uVTsPy9oCRY30oBPNLCo89yu49&index=2)
 
