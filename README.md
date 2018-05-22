@@ -8,7 +8,7 @@
 
 ## 🐳 Coding
 
-<table>
+<table style="display: table;">
     <tr>
         <td>Project</td>
         <td>Classes</td>
@@ -99,7 +99,7 @@
 
 ## Azeroth
 
-<table>
+<table style="display: table;">
     <tr>
         <td>Project</td>
         <td>Classes</td>
