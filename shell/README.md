@@ -1,3 +1,9 @@
-# 给你的mac瘦身
-# 好多空间啊
+# shell
+
+## 文档
+
+* integration.sh xcode打包脚本
+* mac_clear_cache.sh mac系统清除缓存
+
+
 
