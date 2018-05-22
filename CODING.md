@@ -6,7 +6,7 @@
 -------
 
 * 2018.05.18 
-  1.[Youtube-Regression](https://www.youtube.com/watch?v=fegAeph9UaA&list=PLJV_el3uVTsPy9oCRY30oBPNLCo89yu49&index=2)
+  - [Youtube-Regression](https://www.youtube.com/watch?v=fegAeph9UaA&list=PLJV_el3uVTsPy9oCRY30oBPNLCo89yu49&index=2)
 
 * 2018.05.16
   - [我们来探讨一下函数式编程](https://github.com/usiege/Charles/blob/master/blog/source/_posts/我们来探讨一下函数式编程.md)
@@ -18,8 +18,10 @@
   1. [Youtube-Regression](https://www.youtube.com/watch?v=fegAeph9UaA&list=PLJV_el3uVTsPy9oCRY30oBPNLCo89yu49&index=2);
   2. [Regression (v6).pdf](https://github.com/usiege/Machine-Learning/blob/master/0514-Regression%20(v6).pdf);
 
-* 2018.05.08 [添加了Cocos2d-js-H5游戏](https://github.com/usiege/Charles/tree/master/cocos/eat0.4)；
+* 2018.05.08 
+  - [添加了Cocos2d-js-H5游戏](https://github.com/usiege/Charles/tree/master/cocos/eat0.4)；
 
-* 2018.05.08 [添加了Python Crawler Django](https://github.com/usiege/Python)；
+* 2018.05.08 
+  - [添加了Python Crawler Django](https://github.com/usiege/Python)；
 
 > 2018.05.15日，突发奇想记录每天遇到的问题，从下至上
