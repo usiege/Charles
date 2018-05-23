@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextProblemView: UITextView {
+class ProblemView: UITextView {
 
     /*
     // Only override draw() if you perform custom drawing.
