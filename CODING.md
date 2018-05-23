@@ -4,6 +4,8 @@
 
 
 -------
+* 2018.05.23
+  - [OpenMP Core Feature](https://github.com/usiege/Exercise/blob/master/2-%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/OpenMP%20Core%20Features.md)
 
 * 2018.05.22
   - [人工智能的知识表示](https://github.com/usiege/Exercise/blob/master/AI-人工智能概论/人工智能的知识表示.md)
