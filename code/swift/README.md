@@ -1,4 +1,4 @@
-# Python
+# Swift
 
 <p align='center'>
 <img src='bg.png'>
