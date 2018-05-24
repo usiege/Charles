@@ -25,7 +25,7 @@
 
 ## 🐳 CODING-LIFE
 
-<table style="display: table;">
+<table style="display: table!important;">
     <tr>
         <td>Project</td>
         <td>Classes</td>
@@ -97,6 +97,14 @@
         </td>
     </tr>
     <tr>
+        <td rowspan=1>WOW</td> <!-- 这个数字表示合并的行数 -->
+        <td>wow addons</td>
+        <td>
+            <a href="https://blog.csdn.net/jianin45/article/details/52152345">关于wow游戏插件制作之前的几件事</a><br>
+            <a href="https://blog.csdn.net/jianin45/article/details/52312859">wow插件的构成</a><br>
+        </td>
+    </tr>
+    <tr>
         <td rowspan=1>Other</td> <!-- 这个数字表示合并的行数 -->
         <td>...</td>
         <td>
@@ -117,21 +125,6 @@
 
 ## 🌎 Azeroth
 
-<table style="display: table;">
-    <tr>
-        <td>Project</td>
-        <td>Classes</td>
-        <td>Article</td> 
-   </tr>
-   <tr>
-        <td rowspan=1>WOWER</td> <!-- 这个数字表示合并的行数 -->
-        <td>wow script</td>
-        <td>
-        	<a href="https://blog.csdn.net/jianin45/article/details/52152345">关于wow游戏插件制作之前的几件事</a><br>
-        	<a href="https://blog.csdn.net/jianin45/article/details/52312859">wow插件的构成</a><br>
-        </td> 
-    </tr>
-</table>
 
 -------------------------------
 
