@@ -32,7 +32,7 @@
         <td>   Article </td> 
     </tr>
     <tr>
-        <td colspan="3"><img src="contents/images/coding_bg2.png"></td>
+        <td colspan="3"><img src="contents/images/coding_bg3.png"></td>
     </tr>
     <tr>
         <td rowspan=2>📱 iOS</td> <!-- 这个数字表示合并的行数 -->
