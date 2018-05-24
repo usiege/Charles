@@ -128,9 +128,9 @@
 
 ## 🌎 Azeroth
 
-|艾泽拉斯日常|
-|-------|
-| [魔兽世界的历史从这里开始](https://www.jianshu.com/p/75bef5b67399)<br>|
+|艾泽拉斯日常|公众号(ID:Azeroth-daily-work)|
+|-------|---------|
+|<img src="contents/images/wow_bg2.png">|<img src="contents/images/wechat.png">|
 
 -------------------------------
 
