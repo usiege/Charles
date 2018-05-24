@@ -25,7 +25,7 @@
 
 ## 🐳 CODING-LIFE
 
-<table style="display: table!important;">
+<table style="display: table;">
     <tr>
         <td>Project</td>
         <td>Classes</td>
