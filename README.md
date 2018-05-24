@@ -131,6 +131,20 @@
 |艾泽拉斯日常|公众号(ID:Azeroth-daily-work)|
 |-------|---------|
 |<img src="contents/images/wow_bg2.png">|<img src="contents/images/wechat.png">|
+|[雷神陨落与巨魔日衰](https://www.jianshu.com/p/1c803efe8a49)|2016.09.17|
+|[魔古帝国的形成与始皇帝雷神](https://www.jianshu.com/p/f20f05f5af03)|2016.08.28|
+|[巨魔与虫族的世纪之战](https://www.jianshu.com/p/f22449cbfa6f)|2016.08.26|
+|[人类是如何产生的？魔兽告诉你](https://www.jianshu.com/p/d54f04aa9335)|2016.08.18|
+|[艾泽拉斯早期的世界格局](https://www.jianshu.com/p/eaafa9ead73e)|2016.08.14|
+|[北欧神话拾遗：“奥丁”，“英灵殿”，“提尔”，“西芙”...](https://www.jianshu.com/p/cdbc062b8f8f)|2016.08.17|
+|[艾泽拉斯龙族的诞生](https://www.jianshu.com/p/bb9b81b04851)|2016.08.16|
+|[魔兽也有宝宝的故事：小三与兄弟反目](https://www.jianshu.com/p/49c49ea4f4fb)|2016.08.15|
+|[守护者与上古神的战斗](https://www.jianshu.com/p/fec6692cceee)|2016.08.13|
+|[艾泽拉斯上古探秘](https://www.jianshu.com/p/ad6e74382e1d)|2016.08.12|
+|[对啊，对啊！我就是这么堕落！](https://www.jianshu.com/p/b34f04552f15)|2016.08.11|
+|[宇宙恐怖组织的形成](https://www.jianshu.com/p/3d20d3c821c3)|2016.08.10|
+|[魔兽世界的历史从这里开始](https://www.jianshu.com/p/75bef5b67399)|2016.08.09|
+
 
 -------------------------------
 
