@@ -6,6 +6,17 @@
 
 -------------------------------
 
+## YOU-WNAT
+
+* [CODING](https://github.com/usiege/Charles/blob/master/CODING.md)
+* [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
+
+## LEARING-CIRCLE
+
+* [UCAS-EXERCISE](https://github.com/usiege/Exercise)
+* [DEEP-LEARNING](https://github.com/usiege/Deep-Learning)
+* [MACHINE-LEARNING](https://github.com/usiege/Machine-Learning)
+
 ## 🐳 CODING
 
 <table style="display: table;">
@@ -117,17 +128,6 @@
 </table>
 
 -------------------------------
-
-## WHAT-YOU-WNAT
-
-* [CODING](https://github.com/usiege/Charles/blob/master/CODING.md)
-* [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
-
-## LEARING-CIRCLE
-
-* [UCAS-EXERCISE](https://github.com/usiege/Exercise)
-* [DEEP-LEARNING](https://github.com/usiege/Deep-Learning)
-* [MACHINE-LEARNING](https://github.com/usiege/Machine-Learning)
 
 ## 或许可以有些开源
 
