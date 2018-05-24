@@ -18,18 +18,16 @@
 
 ## 🌟 DAILY
 
-* [CODING](https://github.com/usiege/Charles/blob/master/CODING.md)
-* [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
+|1|2|3|4|5|
+|------|------|------|------|------|
+|[CODING](https://github.com/usiege/Charles/blob/master/CODING.md)|[ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)|[NOTHING](https://github.com/usiege/Nothing)|[GAMEING](https://github.com/usiege/GAMEING)|[DOCUMENTS](https://github.com/usiege/Documents)|
 
-* [NOTHING](https://github.com/usiege/Nothing)
-* [GAMEING](https://github.com/usiege/GAMEING)
-* [DOCUMENTS](https://github.com/usiege/Documents)
 
 ## 🎾 LEARING
 
-* [UCAS-EXERCISE](https://github.com/usiege/Exercise)
-* [DEEP-LEARNING](https://github.com/usiege/Deep-Learning)
-* [MACHINE-LEARNING](https://github.com/usiege/Machine-Learning)
+|1|2|3|
+|------|------|------|
+|[UCAS-EXERCISE](https://github.com/usiege/Exercise)|[DEEP-LEARNING](https://github.com/usiege/Deep-Learning)|[MACHINE-LEARNING](https://github.com/usiege/Machine-Learning)|
 
 
 ## 🐳 CODING-LIFE
