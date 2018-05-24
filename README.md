@@ -1,7 +1,7 @@
 # I AM CHARLES 
 
 <p align='center'>
-<img src='contents/images/background-cover_.png'>
+<img src='contents/images/background_cover.png'>
 </p>
 
 [@消失的指针](http://weibo.com/230126045)
@@ -25,11 +25,14 @@
 
 ## 🐳 CODING-LIFE
 
-<table style="display: table!important;">
+<table style="display: table;">
     <tr>
         <td>Project</td>
         <td>Classes</td>
         <td>   Article </td> 
+    </tr>
+    <tr>
+        <td colspan="3"><img src="contents/images/coding_bg.png"></td>
     </tr>
     <tr>
         <td rowspan=2>📱 iOS</td> <!-- 这个数字表示合并的行数 -->
@@ -125,6 +128,9 @@
 
 ## 🌎 Azeroth
 
+|aa|bb|dd|
+|-------|-------|-------|
+| ddd|dff|
 
 -------------------------------
 
