@@ -1,5 +1,9 @@
 # I AM CHARLES 
 
+<p align='center'>
+<img src='contents/images/background-cover_.png'>
+</p>
+
 [@消失的指针](http://weibo.com/230126045)
 
 📖 [BLOG](http://charlesblog.site)
@@ -10,12 +14,14 @@
 
 * [CODING](https://github.com/usiege/Charles/blob/master/CODING.md)
 * [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
+* [DOCUMENTS](https://github.com/usiege/Documents)
 
 ## 🎾 LEARING
 
 * [UCAS-EXERCISE](https://github.com/usiege/Exercise)
 * [DEEP-LEARNING](https://github.com/usiege/Deep-Learning)
 * [MACHINE-LEARNING](https://github.com/usiege/Machine-Learning)
+
 
 ## 🐳 CODING-LIFE
 
