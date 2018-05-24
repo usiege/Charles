@@ -4,7 +4,13 @@
 <img src='contents/images/background_cover.png'>
 </p>
 
-[@消失的指针](http://weibo.com/230126045)
+<p align='center'>
+    <img src="https://img.shields.io/badge/build-passing-brightgreen.svg">
+    <img src="https://img.shields.io/badge/platform-iOS-ff69b4.svg">
+    <img src="https://img.shields.io/badge/language-Swift-abcdef.svg">
+    <img src="https://img.shields.io/badge/language-Objective--C-orange.svg">
+    <a href="http://weibo.com/230126045">@消失的指针</a>
+</p>
 
 📖 [BLOG](http://charlesblog.site)
 
