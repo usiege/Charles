@@ -121,9 +121,16 @@
 
 ## 其它
 
+* [MACHINE-LEARNING](https://github.com/usiege/Deep-Learning)
+* [DEEP-LEARNING](https://github.com/usiege/Machine-Learning)
+* [UCAS-EXERCISE](https://github.com/usiege/Exercise)
+
 ## 或许可以有些开源
 
 ## 一定有你想要的
+
+* [CODING](https://github.com/usiege/Charles/blob/master/CODING.md)
+* [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
 
 -------------------------------
 ## 分享&总结
