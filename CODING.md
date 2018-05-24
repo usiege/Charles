@@ -26,7 +26,7 @@
   2. [Regression (v6).pdf](https://github.com/usiege/Machine-Learning/blob/master/0514-Regression%20(v6).pdf);
 
 * 2018.05.08 
-  - [添加了Cocos2d-js-H5游戏](https://github.com/usiege/Charles/tree/master/cocos/eat0.4)；
+  - [添加了Cocos2d-js-H5游戏](https://github.com/usiege/Charles/tree/master/code/cocos)；
 
 * 2018.05.08 
   - [添加了Python Crawler Django](https://github.com/usiege/Python)；
