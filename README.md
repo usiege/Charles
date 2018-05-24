@@ -1,12 +1,12 @@
-# I am Charles 
+# I AM CHARLES 
 
 [@消失的指针](http://weibo.com/230126045)
 
-📖 [我的主页](http://charlesblog.site)
+📖 [BLOG](http://charlesblog.site)
 
 -------------------------------
 
-## 🐳 Coding
+## 🐳 CODING
 
 <table style="display: table;">
     <tr>
@@ -118,19 +118,19 @@
 
 -------------------------------
 
-
-## 其它
-
-* [MACHINE-LEARNING](https://github.com/usiege/Deep-Learning)
-* [DEEP-LEARNING](https://github.com/usiege/Machine-Learning)
-* [UCAS-EXERCISE](https://github.com/usiege/Exercise)
-
-## 或许可以有些开源
-
-## 一定有你想要的
+## WHAT-YOU-WNAT
 
 * [CODING](https://github.com/usiege/Charles/blob/master/CODING.md)
 * [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
+
+## LEARING-CIRCLE
+
+* [UCAS-EXERCISE](https://github.com/usiege/Exercise)
+* [DEEP-LEARNING](https://github.com/usiege/Deep-Learning)
+* [MACHINE-LEARNING](https://github.com/usiege/Machine-Learning)
+
+## 或许可以有些开源
+
 
 -------------------------------
 ## 分享&总结
