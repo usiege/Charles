@@ -5,7 +5,6 @@
 -------
 
 
-
 * 2018.05.23
   - [OpenMP Core Feature](https://github.com/usiege/Exercise/blob/master/2-%E5%B9%B6%E8%A1%8C%E8%AE%A1%E7%AE%97/OpenMP%20Core%20Features.md)
 
