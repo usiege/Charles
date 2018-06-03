@@ -4,6 +4,8 @@
 
 -------
 
+### 2018.06.03
+  - [手把手教你swift项目添加cocos2dx-lua](https://github.com/usiege/CocosLua)
 
 
 ### 2018.05.27

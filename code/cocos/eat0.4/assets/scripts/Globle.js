@@ -1,3 +1,0 @@
-window.Global = {
-    backNode: null,
-    };
