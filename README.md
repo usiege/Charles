@@ -89,7 +89,10 @@
         <td rowspan=1>Cocos2dx</td> <!-- 这个数字表示合并的行数 -->
         <td>cocos2d-x</td>
         <td>
-        	<a href="https://blog.csdn.net/jianin45/article/details/45887289">Cocos2d-x::截图保存、CCArray</a><br>
+            <a href="https://blog.csdn.net/jianin45/article/details/80599865">Cocos2dx-js与swift项目的互相调用</a><br>
+            <a href="https://blog.csdn.net/jianin45/article/details/80595659">手把手教你swift项目集成cocos2dx-js模块</a><br>
+        	<a href="https://blog.csdn.net/jianin45/article/details/80561373">手把手教你swift项目添加cocos2dx-lua</a><br>
+            <a href="https://blog.csdn.net/jianin45/article/details/45887289">Cocos2d-x::截图保存、CCArray</a><br>
         	<a href="https://blog.csdn.net/jianin45/article/details/45887287">Cocos2d-x::内存管理</a><br>
         	<a href="https://blog.csdn.net/jianin45/article/details/45887285">Cocos2d-x::TableView关卡设计</a><br>
         	<a href="https://blog.csdn.net/jianin45/article/details/45887283">Cocos2d-x::坐标系、定时器、菜单</a><br>
