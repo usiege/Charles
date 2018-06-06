@@ -4,6 +4,9 @@
 
 -------
 
+### 2018.06.06
+  - [手把手教你swift项目集成cocos2dx-js模块](https://github.com/usiege/CocosJS)
+
 ### 2018.06.03
   - [手把手教你swift项目添加cocos2dx-lua](https://github.com/usiege/CocosLua)
 
