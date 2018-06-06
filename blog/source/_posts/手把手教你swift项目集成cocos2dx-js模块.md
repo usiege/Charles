@@ -1,8 +1,15 @@
-﻿# 手把手教你swift项目集成cocos2dx-js模块
+﻿
+title: 手把手教你swift项目集成cocos2dx-js模块
+date: 2018-06-06 12:00:00
+categories: coder
+tags: [swift,js,cocos2dx]
+-----------
 
-标签（空格分隔）： swift iOS
+>本文所用各版本信息：
+Xcode9.2 + swift4版本
+cocos2d-x v3.17 [中文官方网站](http://www.cocos.com/?v=CN)
 
----
+<!-- more -->
 
 前几天在swift项目中集成了Lua模块，使得在swift工程中用Lua写游戏逻辑成为了可能，具体工程及配置见[手把手教你swift项目添加cocos2dx-lua](https://github.com/usiege/CocosLua)，由于公司最近要把js做的小游戏集成到iOS原生应用中，于是我们将解锁另外一个场景，好了，下面开始；
 
