@@ -4,6 +4,31 @@
 
 -------
 
+### 2018.11.26
+- [InfiniTAM在win10下的cuda问题（后续）](https://www.jianshu.com/p/1fb678b4ee8d)
+
+
+### 2018.11.25
+- [并行计算作业补充（Python实现）](https://www.jianshu.com/p/f05b2d1594d5)
+- [解决InfiniTAM在windows下的cuda问题](https://www.jianshu.com/p/7657183cc613)
+
+
+### 2018.11.22
+  - [给小美的感恩节表白](https://www.jianshu.com/p/d7334796f407)
+
+### 2018.11.20
+  - [解决InfiniTAM在windows下的驱动问题](https://www.jianshu.com/p/dae753f1f07a)
+  - [InfiniTAM在Windows10的配置](https://www.jianshu.com/p/1dcf4355faa6)
+  - [InfiniTAM项目配置(Ubuntu下)](https://www.jianshu.com/p/58b7185d1fa7)
+
+
+### 2018.11.14
+  - [关于深度相机的精度问题](https://www.jianshu.com/p/1a916ed3c503)
+  - [基于体感的MMORPG游戏计划书(需要密码)](https://www.zybuluo.com/usiege/note/1337530)
+
+### 2018.11.12
+  - [Python学习记录-20181107](https://www.jianshu.com/p/173edef43ff0)
+
 ### 2018.10.17
   - [Python学习记录-20181017](https://www.jianshu.com/p/c320aabb2507)
 
