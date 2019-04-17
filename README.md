@@ -1,4 +1,4 @@
-# I AM CHARLES 
+# I AM CHARLES
 
 <p align='center'>
 <img src='contents/images/background_cover.png'>
@@ -11,8 +11,9 @@
     <img src="https://img.shields.io/badge/language-Objective--C-orange.svg">
     <a href="http://weibo.com/230126045">@消失的指针</a>
 </p>
-
 📖 [BLOG](http://charlesblog.site)
+
+[TOC]
 
 -------------------------------
 
@@ -22,13 +23,21 @@
 * [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
 * [DOCUMENTS](https://github.com/usiege/Documents)
 
-
 ## 🎾 LEARING
 
 * [CASIA](https://github.com/usiege/CASIA)
 * [UCAS](https://github.com/usiege/Exercise)
 * [PROGRAM](https://github.com/usiege/Charles/tree/master/code)
 
+## 🎨 DEEP-LEARNING
+
+<table style="display: table;">
+  <tr>
+    <td>Project</td>
+    <td>Classes</td>
+    <td>  Article </td> 
+  </tr>
+</table>
 
 ## 🐳 CODING-LIFE
 
@@ -155,11 +164,9 @@
 |[宇宙恐怖组织的形成](https://www.jianshu.com/p/3d20d3c821c3)|2016.08.10|
 |[魔兽世界的历史从这里开始](https://www.jianshu.com/p/75bef5b67399)|2016.08.09|
 
-
 -------------------------------
 
 ## 🍊 或许可以有些开源
-
 
 -------------------------------
 ## 🌈 分享&总结
