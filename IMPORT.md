@@ -1,8 +1,14 @@
 # import article
 
 
-## 2019.05.31
 
+## 2019.06.19
+- [你写论文时发现了哪些神网站？](https://www.zhihu.com/question/35931336/answer/71654690)
+
+## 2019.06.08
+- [wxPython: python首选GUI库](http://python.jobbole.com/89319/)
+
+## 2019.05.31
 - [目标分类和目标检测综述（2D和3D数据）](https://arxiv.org/pdf/1905.12683)
 
 ## 2019.05.30
