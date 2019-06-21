@@ -12,7 +12,10 @@
     <a href="http://weibo.com/230126045">@消失的指针</a>
 </p>
 
-📖 [BLOG](http://)
+- 📖 [主站](https://usiege.github.io)
+- 🌎 [简书](https://www.jianshu.com/u/8a7d7e6876ab)
+- 🌍 [CSDN](http://blog.csdn.net/jianin45)
+- 🌏 [新浪博客](http://blog.sina.com.cn/tjfcg45)
 
 -------------------------------
 
@@ -24,9 +27,8 @@
 
 ## 🚗 300
 
-* [Keep-Running](https://github.com/usiege/Keep-Running)
-* [Interview](https://github.com/usiege/Interview)
 * [Keep-Alive](https://github.com/usiege/Keep-Alive)
+* [Keep-Running](https://github.com/usiege/Keep-Running)
 * [Paper-Reading](https://github.com/usiege/Paper-Reading)
 
 ## 🌟 DAILY
@@ -34,6 +36,7 @@
 * [PYTHON](https://github.com/usiege/Python)
 * [IMPORT](https://github.com/usiege/Charles/blob/master/IMPORT.md)
 * [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
+* [Interview](https://github.com/usiege/Interview)
 * [DOCUMENTS](https://github.com/usiege/Documents)
 
 ## 🎾 LEARING
