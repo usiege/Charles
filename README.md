@@ -17,17 +17,25 @@
 
 -------------------------------
 
+## 🚗 300
+
+* [Keep-Running](https://github.com/usiege/Keep-Running)
+* [Interview](https://github.com/usiege/Interview)
+* [Keep-Alive](https://github.com/usiege/Keep-Alive)
+* [Paper-Reading](https://github.com/usiege/Paper-Reading)
+
 ## 🌟 DAILY
 
+* [PYTHON](https://github.com/usiege/Python)
 * [CODING](https://github.com/usiege/Charles/blob/master/CODING.md)
 * [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
 * [DOCUMENTS](https://github.com/usiege/Documents)
 
 ## 🎾 LEARING
 
-* [CASIA](https://github.com/usiege/CASIA)
 * [UCAS](https://github.com/usiege/Exercise)
-* [PROGRAM](https://github.com/usiege/Charles/tree/master/code)
+* [CASIA](https://github.com/usiege/CASIA)
+* [CODE-CHIPS](https://github.com/uwuneng/Code-Chips)
 
 ## 🎨 DEEP-LEARNING
 
