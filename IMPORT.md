@@ -2,6 +2,14 @@
 
 
 
+## 2019.06.24
+
+- [【计算机视觉算法岗面经】“吐血”整理：2019秋招资料](https://blog.csdn.net/liuxiao214/article/details/83043170)
+
+## 2019.06.20
+
+- [时下流行的深度学习数据标注工具](https://blog.csdn.net/minstyrain/article/details/82385580)
+
 ## 2019.06.19
 - [你写论文时发现了哪些神网站？](https://www.zhihu.com/question/35931336/answer/71654690)
 
