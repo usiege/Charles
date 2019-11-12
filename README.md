@@ -163,7 +163,7 @@
 
 ## 🌎 Azeroth
 
-|艾泽拉斯日常|公众号(ID:Azeroth-daily-work)|
+|艾泽拉斯日常|公众号(ID:azeroth-daily)|
 |-------|---------|
 |<img src="contents/images/wow_bg2.png">|<img src="contents/images/wechat.png">|
 |[雷神陨落与巨魔日衰](https://www.jianshu.com/p/1c803efe8a49)|2016.09.17|
