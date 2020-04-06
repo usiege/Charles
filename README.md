@@ -21,39 +21,6 @@
 
 [TOC]
 
-## 🚗 300
-
-* [Keep-Alive](https://github.com/usiege/Keep-Alive)
-* [Keep-Running](https://github.com/usiege/Keep-Running)
-* [Paper-Reading](https://github.com/usiege/Paper-Reading)
-
-## 🌟 DAILY
-
-* [PYTHON](https://github.com/usiege/Python)
-* [IMPORT](https://github.com/usiege/Charles/blob/master/IMPORT.md)
-* [Interview](https://github.com/usiege/Interview)
-* [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
-* [DOCUMENTS](https://github.com/usiege/Documents)
-
-## 🎾 LEARING
-
-* [UCAS](https://github.com/usiege/Exercise)
-* [CASIA](https://github.com/usiege/CASIA)
-* [CODE-CHIPS](https://github.com/uwuneng/Code-Chips)
-
-## 🎨 DEEP-LEARNING
-
-<table style="display: table;">
-  <tr>
-    <td>Project</td>
-    <td>Classes</td>
-    <td>  Article </td> 
-  </tr>
-</table>
-
-## LIFE FROM 2019
-
-- [2019](https://github.com/usiege/Charles/blob/master/2019.md)
 
 ## 🐳 CODING-LIFE
 
@@ -167,6 +134,37 @@
 |-------|---------|
 |<img src="contents/images/wow_bg2.png">|<img src="contents/images/wechat.png">|
 
+## 🚗 Keep
+
+
+* [Keep-Alive](https://github.com/usiege/Keep-Alive)
+* [Keep-Coding](https://github.com/usiege/Keep-Coding)
+* [Keep-Running](https://github.com/usiege/Keep-Running)
+* [Paper-Reading](https://github.com/usiege/Paper-Reading)
+
+## 🌟 DAILY
+
+* [PYTHON](https://github.com/usiege/Python)
+* [IMPORT](https://github.com/usiege/Charles/blob/master/IMPORT.md)
+* [ENGLISH](https://github.com/usiege/Charles/blob/master/ENGLISH.md)
+* [DOCUMENTS](https://github.com/usiege/Documents)
+* [Interview](https://github.com/usiege/Interview)
+
+## 🎾 LEARING
+
+* [UCAS](https://github.com/usiege/Exercise)
+* [CASIA](https://github.com/usiege/CASIA)
+* [CODE-CHIPS](https://github.com/uwuneng/Code-Chips)
+
+## 🎨 DEEP-LEARNING
+
+<table style="display: table;">
+  <tr>
+    <td>Project</td>
+    <td>Classes</td>
+    <td>  Article </td> 
+  </tr>
+</table>
 
 -------------------------------
 
